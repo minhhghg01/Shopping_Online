@@ -1,21 +1,25 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Shopping_Online.Data;
 using Shopping_Online.Models;
 
 namespace Shopping_Online.Controllers;
 
 public class HomeController : Controller
 {
+    private readonly DataContext _dataContext;
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, DataContext context)
     {
         _logger = logger;
+        _dataContext = context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        var products = _dataContext.Products.ToList();
+        return View(products);
     }
 
     public IActionResult Privacy()
