@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Shopping_Online/1.0.0": {
+        "runtime": {
+          "Shopping_Online.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shopping_Online/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
