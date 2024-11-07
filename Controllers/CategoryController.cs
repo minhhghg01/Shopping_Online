@@ -24,7 +24,5 @@ namespace Shopping_Online.Controllers
             return View(await productByCategory.OrderBy(p => p.Id).ToListAsync() );
         }
         
-
-
     }
 }
