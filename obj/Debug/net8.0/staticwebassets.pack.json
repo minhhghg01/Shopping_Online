@@ -321,8 +321,24 @@
       "PackagePath": "staticwebassets\\media\\products\\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png"
     },
     {
-      "Id": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\5776a847-baec-4b56-bb31-a62f53acb463_1.jpg",
-      "PackagePath": "staticwebassets\\media\\products\\5776a847-baec-4b56-bb31-a62f53acb463_1.jpg"
+      "Id": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\2f9fe997-a57d-4e05-9e2b-1d10fa4bb6c0_25405-black-friday-gaming-03.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\2f9fe997-a57d-4e05-9e2b-1d10fa4bb6c0_25405-black-friday-gaming-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\459f944a-b1c8-4e6f-ac3b-872a40e67895_2.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\459f944a-b1c8-4e6f-ac3b-872a40e67895_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\760a1322-f929-4c22-9150-3426fd44b5de_MacBook_Pro.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\760a1322-f929-4c22-9150-3426fd44b5de_MacBook_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\7bf161fc-ae4a-4b03-8b58-16621dc0de9b_1.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\7bf161fc-ae4a-4b03-8b58-16621dc0de9b_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\d481c8be-da63-4a5b-a757-6ce163b833ee_26728-khung-pc-1.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\d481c8be-da63-4a5b-a757-6ce163b833ee_26728-khung-pc-1.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Shopping_Online.Microsoft.AspNetCore.StaticWebAssets.props",
