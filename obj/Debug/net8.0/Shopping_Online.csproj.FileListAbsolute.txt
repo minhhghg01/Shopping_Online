@@ -142,3 +142,4 @@ C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\bin\Debug\net8.0\runtimes
 C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\obj\Debug\net8.0\Shopping_Online.csproj.AssemblyReference.cache
 C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\obj\Debug\net8.0\Shopping.1D2D0BA4.Up2Date
 C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
