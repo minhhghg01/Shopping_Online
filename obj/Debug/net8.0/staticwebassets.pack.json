@@ -313,6 +313,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png",
+      "PackagePath": "staticwebassets\\media\\products\\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Shopping_Online.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

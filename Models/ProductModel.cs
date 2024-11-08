@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Shopping_Online.Data.Validation;
 
 namespace Shopping_Online.Models
 {
@@ -6,19 +8,24 @@ namespace Shopping_Online.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required, MinLength(4, ErrorMessage = "Nhập tên Sản phẩm")]
+        [Required(ErrorMessage = "Nhập tên Sản phẩm")]
         public string Name { get; set; }
-        [Required, MinLength(4, ErrorMessage = "Nhập mô tả Sản phẩm")]
-        public string Description { get; set; }
         public string Slug { get; set; }
-        [Required, MinLength(4, ErrorMessage = "Nhập giá Sản phẩm")]
+        [Required,MinLength(4, ErrorMessage = "Nhập mô tả Sản phẩm")]
+        public string Description { get; set; }
+        [Required(ErrorMessage = "Nhập giá Sản phẩm")]
         public int Price { get; set; }
-        public string Image { get; set; }
-
+        [Required, Range(1, int.MaxValue, ErrorMessage = "Chọn một Thương hiệu")]
         public int BrandId { get; set; }
+        [Required, Range(1, int.MaxValue, ErrorMessage = "Chọn một Danh mục")]
         public int CategoryId { get; set; }
 
         public BrandModel Brand { get; set; }
         public CategoryModel Category { get; set; }
+        public string Image { get; set; }
+
+        [NotMapped]
+        [FileExtension]
+        public IFormFile ImageUpload { get; set; }
     }
 }
