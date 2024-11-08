@@ -43,6 +43,7 @@ namespace Shopping_Online.Controllers
                 cartItem.Quantity++;
             }
             HttpContext.Session.SetJson("Cart", cart);
+            TempData["success"] = $"{product.Name} added to cart";
             return Redirect(Request.Headers["Referer"].ToString());
         }
 
@@ -68,7 +69,7 @@ namespace Shopping_Online.Controllers
             {
                 HttpContext.Session.SetJson("Cart", cart);
             }
-
+        TempData["success"] = "-1 item";
             return RedirectToAction("Index");
         }
 
@@ -94,6 +95,7 @@ namespace Shopping_Online.Controllers
             {
                 HttpContext.Session.SetJson("Cart", cart);
             }
+        TempData["success"] = "+1 item";
 
             return RedirectToAction("Index");
         }
@@ -112,6 +114,7 @@ namespace Shopping_Online.Controllers
             {
                 HttpContext.Session.SetJson("Cart", cart);
             }
+        TempData["success"] = "Remove item";
 
             return RedirectToAction("Index");
         }
@@ -119,6 +122,7 @@ namespace Shopping_Online.Controllers
         public async Task<IActionResult> Clear()
         {
             HttpContext.Session.Remove("Cart");
+        TempData["success"] = "Clear all item";
             return RedirectToAction("Index");
         }
     }
