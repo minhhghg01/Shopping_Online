@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Wxm75/UekyYB5fzQA8iRii4Ldx4lYDHKtyFjCjTBGbw=",
+  "Hash": "6zcr0OowXfvwSkeIlQY/YFtcRDNW3kAsO9Jv0Pb7qkI=",
   "Source": "Shopping_Online",
   "BasePath": "_content/Shopping_Online",
   "Mode": "Default",
@@ -1556,12 +1556,12 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\5dd73c23-9da8-4dc1-917a-233b9fcbcef9_2.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\5776a847-baec-4b56-bb31-a62f53acb463_1.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
-      "RelativePath": "media/products/5dd73c23-9da8-4dc1-917a-233b9fcbcef9_2.jpg",
+      "RelativePath": "media/products/5776a847-baec-4b56-bb31-a62f53acb463_1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1572,7 +1572,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\media\\products\\5dd73c23-9da8-4dc1-917a-233b9fcbcef9_2.jpg"
+      "OriginalItemSpec": "wwwroot\\media\\products\\5776a847-baec-4b56-bb31-a62f53acb463_1.jpg"
     }
   ]
 }
