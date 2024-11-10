@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zHJNaZirdtjEttEVS4b81cOWAz/3F0cbzF1w3XWcj/8=",
+  "Hash": "2sRtqs0yQH7xk0xaHPktBetOA5ejrv3pJlnbySMnWp4=",
   "Source": "Shopping_Online",
   "BasePath": "_content/Shopping_Online",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Shopping_Online.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\backend\\js\\site.js",
+      "SourceId": "Shopping_Online",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "BasePath": "_content/Shopping_Online",
+      "RelativePath": "backend/js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\backend\\js\\site.js"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\css\\animate.css",
