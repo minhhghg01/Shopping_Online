@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NuKm/IE73PyIs0HW3MbdEHYXJjvjdYmin3GIuCIirW8=",
+  "Hash": "zHJNaZirdtjEttEVS4b81cOWAz/3F0cbzF1w3XWcj/8=",
   "Source": "Shopping_Online",
   "BasePath": "_content/Shopping_Online",
   "Mode": "Default",
@@ -1630,6 +1630,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\media\\products\\7bf161fc-ae4a-4b03-8b58-16621dc0de9b_1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\7d6d1d2b-710c-434f-808e-efeea24e76da_macbook pro16inch 2021.jpg",
+      "SourceId": "Shopping_Online",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "BasePath": "_content/Shopping_Online",
+      "RelativePath": "media/products/7d6d1d2b-710c-434f-808e-efeea24e76da_macbook pro16inch 2021.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\7d6d1d2b-710c-434f-808e-efeea24e76da_macbook pro16inch 2021.jpg"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\d481c8be-da63-4a5b-a757-6ce163b833ee_26728-khung-pc-1.jpg",
