@@ -37,6 +37,16 @@ namespace Shopping_Online.Areas.Admin.Controllers
                 var createUserResult = await _userManager.CreateAsync(user, user.PasswordHash);
                 if (createUserResult.Succeeded)
                 {
+                    var createUser = await _userManager.FindByEmailAsync(user.Email);
+                    var userId = createUser.Id;
+                    var role = _roleManager.FindByIdAsync(user.RoleId);
+
+                    // var addToRoleResult = await _userManager.AddToRoleAsync(createUser, role.Result.Name);
+                    // if (!addToRoleResult.Succeeded)
+                    // {
+                    //     TempData["error"] = "Lỗi";
+                    //     return BadRequest();
+                    // }
                     TempData["success"] = "Tạo tài khoản thành công";
                     return RedirectToAction("Index");
                 }
