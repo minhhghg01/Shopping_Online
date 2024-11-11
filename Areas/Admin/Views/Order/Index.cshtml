@@ -37,8 +37,8 @@
                 </td>
                 <td>
                     <a asp-action="ViewOrder" class="btn btn-warning btn-sm" asp-controller="Order"
-                        asp-route-id="@item.OrderCode">
-                        View </a>
+                        asp-route-orderCode="@item.OrderCode">
+                        View Order</a>
                     <a asp-action="Delete" class="btn btn-danger btn-sm confirmDeletion" asp-controller="Order"
                         asp-route-id="@item.Id">
                         Delete </a>

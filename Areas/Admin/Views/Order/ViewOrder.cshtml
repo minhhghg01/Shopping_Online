@@ -1,0 +1,37 @@
+@model IEnumerable<OrderDetails>
+@{
+    ViewData["title"] = "Order Details";
+}
+
+<h3>list Order</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Order Code</th>
+            <th scope="col">UserName</th>
+            <th scope="col">Product Id</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1; // Khai báo biến trong khối mã Razor
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@index</td>
+                <th scope="row">@item.OrderCode</th>
+                <td>@item.UserName</td>
+                <td>@item.ProductId</td>
+                <td>$@item.Price</td>
+                <td>@item.Quantity</td>
+                <td>$@(item.Price * item.Quantity)</td>
+            </tr>
+            index++; // Tăng biến index sau mỗi vòng lặp
+        }
+    </tbody>
+</table>

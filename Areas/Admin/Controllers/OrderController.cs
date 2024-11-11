@@ -18,6 +18,11 @@ namespace Shopping_Online.Areas.Admin.Controllers
         {
             return View(await _dataContext.Orders.OrderByDescending(p => p.Id).ToListAsync());
         }
-        
+        public async Task<IActionResult> ViewOrder(string orderCode)
+        {
+            var DetailsOrder = await _dataContext.OrderDetails.Include(od => od.Product).Where(od => od.OrderCode == orderCode).ToListAsync();
+            return View(DetailsOrder);
+        }
+
     }
 }
