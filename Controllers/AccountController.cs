@@ -47,7 +47,7 @@ namespace Shopping_Online.Controllers
                     UserName = user.UserName,
                     Email = user.Email
                 };
-                IdentityResult result = await _userManager.CreateAsync(newUser);
+                IdentityResult result = await _userManager.CreateAsync(newUser, user.Password);
                 if (result.Succeeded)
                 {
                     TempData["success"] = "Đăng ký thành công";
@@ -56,5 +56,11 @@ namespace Shopping_Online.Controllers
             }
             return View(user);
         }
+        public async Task<IActionResult> Logout(string returnUrl = "/")
+        {
+            await _signInManager.SignOutAsync();
+            return Redirect(returnUrl);
+        }
+
     }
 }
