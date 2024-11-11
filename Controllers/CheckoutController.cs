@@ -1,13 +1,52 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
+using Shopping_Online.Data;
+using Shopping_Online.Models;
 
 namespace Shopping_Online.Controllers
 {
     public class CheckoutController : Controller
     {
-        public IActionResult Index()
+        private readonly DataContext _dataContext;
+        public CheckoutController(DataContext context)
         {
-            return View();
+            _dataContext = context;
         }
-        
+        // [HttpPost]
+        public async Task<IActionResult> Checkout()
+        {
+            var userEmail = User.FindFirstValue(ClaimTypes.Email);
+            if (userEmail == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            else
+            {
+                var orderCode = Guid.NewGuid().ToString();
+                var orderItem = new OrderModel();
+                orderItem.OrderCode = orderCode;
+                orderItem.UserName = userEmail;
+                orderItem.Status = 1;
+                orderItem.CreateDate = DateTime.Now;
+                _dataContext.Add(orderItem);
+                await _dataContext.SaveChangesAsync();
+                List<CartItemModel> cartItems = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
+                foreach (var item in cartItems)
+                {
+                    var orderDetail = new OrderDetails();
+                    orderDetail.UserName = userEmail;
+                    orderDetail.OrderCode = orderCode;
+                    orderDetail.ProductId = item.ProductId;
+                    orderDetail.Price = item.Price;
+                    orderDetail.Quantity = item.Quantity;
+                    _dataContext.Add(orderDetail);
+                    await _dataContext.SaveChangesAsync();
+                }
+                HttpContext.Session.Remove("Cart");
+                TempData["success"] = "Đặt hàng thành công";
+                return RedirectToAction("Index", "Cart");
+            }
+        }
+
     }
 }
