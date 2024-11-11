@@ -9,7 +9,7 @@ using Shopping_Online.Models;
 namespace Shopping_Online.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class ProductController : Controller
     {
         private readonly DataContext _dataContext;

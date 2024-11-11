@@ -21,8 +21,8 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// builder.Services.AddIdentity<AppUserModel, IdentityRole>()
-//     .AddEntityFrameworkStores<DbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<AppUserModel, IdentityRole>()
+    .AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
@@ -35,10 +35,6 @@ builder.Services.Configure<IdentityOptions>(options =>
 
     options.User.RequireUniqueEmail = true;
 });
-
-builder.Services.AddIdentity<AppUserModel, IdentityRole>()
-    .AddEntityFrameworkStores<DataContext>()
-    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
