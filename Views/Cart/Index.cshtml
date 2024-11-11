@@ -51,7 +51,7 @@
                                 <td class="cart_total">
                                     <p class="cart_total_price">
                                         $@Model.CartItems.Where(x => x.ProductId == @item.ProductId).Sum(x =>
-                                                 x.Quantity * x.Price).ToString()</p>
+                                                x.Quantity * x.Price).ToString()</p>
                                 </td>
                                 <td class="cart_delete">
                                     <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -62,7 +62,13 @@
                             <td colspan="6"> Grand Total: <p class="cart_total_price">$@Model.GrandTotal.ToString()</p>
                             </td>
                             <td><a class="btn btn-danger btn-sm" asp-controller="Cart" asp-action="Clear"> Clear </a>
-                            </td>
+                                @if (User.Identity?.IsAuthenticated ?? false)
+                                {
+                                <td><a class="btn btn-primary btn-sm" asp-controller="Checkout" asp-action="Clear"> Checkout
+                                    </a>
+                                </td>
+                                }
+
                         </tr>
                     }
                     else

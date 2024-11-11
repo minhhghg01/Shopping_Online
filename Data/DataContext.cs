@@ -13,7 +13,8 @@ namespace Shopping_Online.Data
         public DbSet<CategoryModel> Categories { get; set; }
         public DbSet<BrandModel> Brands { get; set; }
         public DbSet<AppUserModel> AppUsers { get; set; }
-      
+        public DbSet<OrderModel> Orders { get; set; }
+        public DbSet<OrderDetails> OrderDetails { get; set; }      
 
     }
 }
