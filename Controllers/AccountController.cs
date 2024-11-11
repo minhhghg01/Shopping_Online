@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Shopping_Online.Models;
+using Shopping_Online.Models.ViewModels;
 
 namespace Shopping_Online.Controllers
 {
@@ -13,13 +14,24 @@ namespace Shopping_Online.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Login(string returnUrl)
         {
-            return View();
+            return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
-        public async Task<IActionResult> Login()
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel loginVM)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(loginVM.UserName, loginVM.Password, false, false);
+                if (result.Succeeded)
+                {
+                    return Redirect(loginVM.ReturnUrl ?? "/");
+                }
+                ModelState.AddModelError("", "Invalid UserName & Password");
+            }
+            return View(loginVM);
         }
         public IActionResult Create()
         {
@@ -39,7 +51,7 @@ namespace Shopping_Online.Controllers
                 if (result.Succeeded)
                 {
                     TempData["success"] = "Đăng ký thành công";
-                    return Redirect("/account");
+                    return Redirect("/account/login");
                 }
             }
             return View(user);
