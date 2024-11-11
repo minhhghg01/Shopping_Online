@@ -143,3 +143,8 @@ C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\obj\Debug\net8.0\Shopping
 C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\obj\Debug\net8.0\Shopping.1D2D0BA4.Up2Date
 C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

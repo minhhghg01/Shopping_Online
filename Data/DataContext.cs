@@ -1,9 +1,10 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Models;
 
 namespace Shopping_Online.Data
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<AppUserModel>
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -11,6 +12,7 @@ namespace Shopping_Online.Data
         public DbSet<ProductModel> Products { get; set; }
         public DbSet<CategoryModel> Categories { get; set; }
         public DbSet<BrandModel> Brands { get; set; }
+        public DbSet<AppUserModel> AppUsers { get; set; }
       
 
     }
