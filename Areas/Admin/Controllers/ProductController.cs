@@ -9,7 +9,7 @@ using Shopping_Online.Models;
 namespace Shopping_Online.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly DataContext _dataContext;
@@ -102,7 +102,7 @@ namespace Shopping_Online.Areas.Admin.Controllers
                     string uploadsDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/products");
                     string imageName = Guid.NewGuid().ToString() + "_" + product.ImageUpload.FileName;
                     string filePath = Path.Combine(uploadsDir, imageName);
-
+  
                     // delete old img
                     string oldfileImage = Path.Combine(uploadsDir, existed_product.Image);
                     if (System.IO.File.Exists(oldfileImage))
@@ -113,7 +113,7 @@ namespace Shopping_Online.Areas.Admin.Controllers
                     FileStream fs = new FileStream(filePath, FileMode.Create);
                     await product.ImageUpload.CopyToAsync(fs);
                     fs.Close();
-                    existed_product.Image = imageName;
+                    existed_product.Image = imageName;  
                 }
 
                 //update product

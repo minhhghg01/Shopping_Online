@@ -6,7 +6,7 @@ using Shopping_Online.Data;
 namespace Shopping_Online.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly DataContext _dataContext;

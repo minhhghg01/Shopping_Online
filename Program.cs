@@ -21,8 +21,8 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-builder.Services.AddIdentity<AppUserModel, IdentityRole>()
-    .AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
+// builder.Services.AddIdentity<AppUserModel, IdentityRole>()
+//     .AddEntityFrameworkStores<DbContext>().AddDefaultTokenProviders();
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
