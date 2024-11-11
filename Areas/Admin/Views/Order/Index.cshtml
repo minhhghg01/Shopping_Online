@@ -1,0 +1,50 @@
+@model IEnumerable<OrderModel>
+@{
+    ViewData["title"] = "Order Listed";
+}
+
+<h3>list Order</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Order Code</th>
+            <th scope="col">UserName</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Order Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1; // Khai báo biến trong khối mã Razor
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@index</td>
+                <th scope="row">@item.OrderCode</th>
+                <td>@item.UserName</td>
+                <td>@item.CreateDate</td>
+                <td>
+                    @if (@item.Status == 1)
+                    {
+                        <span class="text text-success">Đơn hàng mới</span>
+                    }
+                    else
+                    {
+                        <span class="text text-danger">Đơn hàng thành công</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="ViewOrder" class="btn btn-warning btn-sm" asp-controller="Order"
+                        asp-route-id="@item.OrderCode">
+                        View </a>
+                    <a asp-action="Delete" class="btn btn-danger btn-sm confirmDeletion" asp-controller="Order"
+                        asp-route-id="@item.Id">
+                        Delete </a>
+                </td>
+            </tr>
+            index++; // Tăng biến index sau mỗi vòng lặp
+        }
+    </tbody>
+</table>
