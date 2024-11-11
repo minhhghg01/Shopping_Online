@@ -29,9 +29,9 @@
 
         <div class="form-group">
             <label>Roles</label>
-            <select asp-for="RoleId" class="form-control" >
-                <option value="1">Admin</option>
-                <option value="0">Guest</option>
+            <select asp-for="RoleId" class="form-control" asp-items="ViewBag.Roles">
+                @* <option value="1">Admin</option>
+                <option value="0">Guest</option> *@
             </select>
             <span asp-validation-for="RoleId" class="text-danger" />
         </div>

@@ -41,12 +41,12 @@ namespace Shopping_Online.Areas.Admin.Controllers
                     var userId = createUser.Id;
                     var role = _roleManager.FindByIdAsync(user.RoleId);
 
-                    // var addToRoleResult = await _userManager.AddToRoleAsync(createUser, role.Result.Name);
-                    // if (!addToRoleResult.Succeeded)
-                    // {
-                    //     TempData["error"] = "Lỗi";
-                    //     return BadRequest();
-                    // }
+                    var addToRoleResult = await _userManager.AddToRoleAsync(createUser, role.Result.Name);
+                    if (!addToRoleResult.Succeeded)
+                    {
+                        TempData["error"] = "Lỗi";
+                        return BadRequest();
+                    }
                     TempData["success"] = "Tạo tài khoản thành công";
                     return RedirectToAction("Index");
                 }
