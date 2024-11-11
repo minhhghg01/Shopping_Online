@@ -35,7 +35,7 @@
                                     <h4><a href="">@item.ProductName</a></h4>
                                 </td>
                                 <td class="cart_price">
-                                    <p>@item.Price</p>
+                                    <p>$@item.Price</p>
                                 </td>
                                 <td class="cart_quantity">
                                     <a class="btn btn-default btn-sm" asp-controller="Cart" asp-action="Increase"
@@ -50,7 +50,7 @@
                                 </td>
                                 <td class="cart_total">
                                     <p class="cart_total_price">
-                                        @Model.CartItems.Where(x => x.ProductId == @item.ProductId).Sum(x =>
+                                        $@Model.CartItems.Where(x => x.ProductId == @item.ProductId).Sum(x =>
                                                  x.Quantity * x.Price).ToString()</p>
                                 </td>
                                 <td class="cart_delete">
@@ -59,7 +59,7 @@
                             </tr>
                         }
                         <tr rowspan="6">
-                            <td colspan="6"> Grand Total: <p class="cart_total_price"> @Model.GrandTotal.ToString()</p>
+                            <td colspan="6"> Grand Total: <p class="cart_total_price">$@Model.GrandTotal.ToString()</p>
                             </td>
                             <td><a class="btn btn-danger btn-sm" asp-controller="Cart" asp-action="Clear"> Clear </a>
                             </td>
