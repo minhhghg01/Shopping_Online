@@ -1,0 +1,36 @@
+@model IEnumerable<AppUserModel>
+@{
+    ViewData["title"] = "User Listed";
+}
+
+<h3>list User</h3>
+<a asp-action="Create" asp-controller="User"> Create User </a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">UserName</th>
+            <th scope="col">Email</th>
+            <th scope="col">PasswordHash</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserName</td>
+                <td>@item.Email</td>
+                <td>@item.PasswordHash</td>
+                <td>@item.PhoneNumber</td>
+                
+                <td>
+                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="User" asp-route-id="@item.Id">
+                        Edit </a>
+                    <a asp-action="Delete" class="btn btn-danger btn-sm confirmDeletion" asp-controller="User" asp-route-id="@item.Id">
+                        Delete </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
