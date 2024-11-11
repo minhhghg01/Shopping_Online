@@ -12,14 +12,25 @@ namespace Shopping_Online.Areas.Admin.Controllers
     {
         private readonly UserManager<AppUserModel> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        public UserController(UserManager<AppUserModel> userManager, RoleManager<IdentityRole> roleManager)
+        private readonly DataContext _dataContext;
+        public UserController(UserManager<AppUserModel> userManager, RoleManager<IdentityRole> roleManager, DataContext dataContext)
         {
+            _dataContext = dataContext;
             _userManager = userManager;
             _roleManager = roleManager;
         }
+
         public async Task<IActionResult> Index()
         {
-            return View(await _userManager.Users.OrderByDescending(p => p.Id).ToListAsync());
+            var usersWithRoles = await (from u in _dataContext.Users
+                                        join ur in _dataContext.UserRoles on u.Id equals ur.UserId
+                                        join r in _dataContext.Roles on ur.RoleId equals r.Id
+                                        select new
+                                        {
+                                            User = u,
+                                            RoleName = r.Name
+                                        }).ToListAsync();
+            return View(usersWithRoles);
         }
         [HttpGet]
         public async Task<IActionResult> Create()

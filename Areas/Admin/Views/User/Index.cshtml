@@ -1,4 +1,3 @@
-@model IEnumerable<AppUserModel>
 @{
     ViewData["title"] = "User Listed";
 }
@@ -16,18 +15,19 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var usersWithRoles in Model)
         {
             <tr>
-                <td>@item.UserName</td>
-                <td>@item.Email</td>
-                <td>@item.PasswordHash</td>
-                <td>@item.PhoneNumber</td>
+                <td>@usersWithRoles.User.UserName</td>
+                <td>@usersWithRoles.User.Email</td>
+                <td>@usersWithRoles.User.PasswordHash</td>
+                <td>@usersWithRoles.User.PhoneNumber</td>
+                <td>@usersWithRoles.RoleName</td>
                 
                 <td>
-                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="User" asp-route-id="@item.Id">
+                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="User" asp-route-id="@usersWithRoles.User.Id">
                         Edit </a>
-                    <a asp-action="Delete" class="btn btn-danger btn-sm confirmDeletion" asp-controller="User" asp-route-id="@item.Id">
+                    <a asp-action="Delete" class="btn btn-danger btn-sm confirmDeletion" asp-controller="User" asp-route-id="@usersWithRoles.User.Id">
                         Delete </a>
                 </td>
             </tr>
