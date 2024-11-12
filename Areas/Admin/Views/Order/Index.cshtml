@@ -1,6 +1,12 @@
 @model IEnumerable<OrderModel>
 @{
     ViewData["title"] = "Order Listed";
+    Paginate pager = new Paginate();
+    int pageNo = 0;
+    if(ViewBag.Pager != null) {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
 }
 
 <h3>list Order</h3>
@@ -48,3 +54,4 @@
         }
     </tbody>
 </table>
+<partial name="_paging" model="@pager" />

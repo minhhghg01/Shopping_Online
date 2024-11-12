@@ -21,9 +21,14 @@ namespace Shopping_Online.Areas.Admin.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
         }
-
-        public async Task<IActionResult> Index()
+        [HttpGet]
+        public async Task<IActionResult> Index(int pg = 1)
         {
+            const int pageSize = 10;
+            if (pg < 1)
+            {
+                pg = 1;
+            }
             var usersWithRoles = await (from u in _dataContext.Users
                                         join ur in _dataContext.UserRoles on u.Id equals ur.UserId
                                         join r in _dataContext.Roles on ur.RoleId equals r.Id
@@ -32,7 +37,13 @@ namespace Shopping_Online.Areas.Admin.Controllers
                                             User = u,
                                             RoleName = r.Name
                                         }).ToListAsync();
-            return View(usersWithRoles);
+
+            int recsCount = usersWithRoles.Count();
+            var pager = new Paginate(recsCount, pg, pageSize);
+            int recSkip = (pg - 1) * pageSize;
+            var data = usersWithRoles.Skip(recSkip).Take(pager.PageSize).ToList();
+            ViewBag.Pager = pager;
+            return View(data);
         }
         [HttpGet]
         public async Task<IActionResult> Create()

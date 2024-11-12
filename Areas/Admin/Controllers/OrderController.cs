@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Data;
+using Shopping_Online.Models;
 
 namespace Shopping_Online.Areas.Admin.Controllers
 {
@@ -14,9 +15,21 @@ namespace Shopping_Online.Areas.Admin.Controllers
         {
             _dataContext = context;
         }
-        public async Task<IActionResult> Index()
+        [HttpGet]
+        public async Task<IActionResult> Index(int pg = 1)
         {
-            return View(await _dataContext.Orders.OrderByDescending(p => p.Id).ToListAsync());
+            List<OrderModel> order = _dataContext.Orders.ToList();
+            const int pageSize = 10; 
+            if (pg < 1) 
+            {
+                pg = 1;
+            }
+            int recsCount = order.Count(); 
+            var pager = new Paginate(recsCount, pg, pageSize);
+            int recSkip = (pg - 1) * pageSize; 
+            var data = order.Skip(recSkip).Take(pager.PageSize).ToList();
+            ViewBag.Pager = pager;
+            return View(data);
         }
         public async Task<IActionResult> ViewOrder(string orderCode)
         {
