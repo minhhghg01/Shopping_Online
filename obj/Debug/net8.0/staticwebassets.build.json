@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LsYhNYV7vovKt7ZxCfYxjHW+MiOH2B8piz29ui5fXDs=",
+  "Hash": "CC4ha0PUgskiAQhD16u/NHxiIV+v5CxBuRdxu0GgVWw=",
   "Source": "Shopping_Online",
   "BasePath": "_content/Shopping_Online",
   "Mode": "Default",
@@ -1782,6 +1782,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\media\\products\\ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\cb2b4768-a311-4b9b-9b87-e51b878c1443_mouse.jpg",
+      "SourceId": "Shopping_Online",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "BasePath": "_content/Shopping_Online",
+      "RelativePath": "media/products/cb2b4768-a311-4b9b-9b87-e51b878c1443_mouse.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\cb2b4768-a311-4b9b-9b87-e51b878c1443_mouse.jpg"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\d481c8be-da63-4a5b-a757-6ce163b833ee_26728-khung-pc-1.jpg",
