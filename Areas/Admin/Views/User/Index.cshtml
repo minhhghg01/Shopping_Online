@@ -10,7 +10,7 @@
 
 <h3>list User</h3>
 <a asp-action="Create" asp-controller="User"> Create User </a>
-<table class="table myTable">
+<table class="table " id="myTable">
     <thead>
         <tr>
             <th scope="col">UserName</th>
@@ -50,4 +50,4 @@
         }
     </tbody>
 </table>
-@* <partial name="_paging" model="@pager" /> *@
+<partial name="_paging" model="@pager" />

@@ -11,7 +11,7 @@
 
 <h3>list Category</h3>
 <a asp-action="Create" asp-controller="Category"> Create Category </a>
-<table class="table myTable">
+<table class="table " id="myTable">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -50,4 +50,4 @@
         }
     </tbody>
 </table>
-@* <partial name="_paging" model="@pager" /> *@
+<partial name="_paging" model="@pager" />
