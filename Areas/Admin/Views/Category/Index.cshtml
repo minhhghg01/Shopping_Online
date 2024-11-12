@@ -11,7 +11,7 @@
 
 <h3>list Category</h3>
 <a asp-action="Create" asp-controller="Category"> Create Category </a>
-<table class="table">
+<table class="table myTable">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -19,6 +19,7 @@
             <th scope="col">Category Description</th>
             <th scope="col">Category Slug</th>
             <th scope="col">Category Status</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -49,4 +50,4 @@
         }
     </tbody>
 </table>
-<partial name="_paging" model="@pager" />
+@* <partial name="_paging" model="@pager" /> *@

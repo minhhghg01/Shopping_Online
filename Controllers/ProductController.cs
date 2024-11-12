@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Data;
 
 namespace Shopping_Online.Controllers
@@ -13,6 +14,14 @@ namespace Shopping_Online.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public async Task<IActionResult> Search(string searchTerm)
+        {
+            var products = await _dataContext.Products
+            .Where(p => p.Name.Contains(searchTerm) || p.Description.Contains(searchTerm))
+            .ToListAsync();
+            ViewBag.Keyword = searchTerm;
+            return View(products);
         }
         public async Task<IActionResult> Details(int Id)
         {
