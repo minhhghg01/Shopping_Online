@@ -1264,6 +1264,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\0b45f2a5-90b5-4538-8eb7-369f79a2bedc_Screenshot 2024-09-16 192022.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\15430cd5-04b3-44ab-bf9c-1c86cb74514e_ipad air 11.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Online</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Online</BasePath>
+      <RelativePath>media/products/15430cd5-04b3-44ab-bf9c-1c86cb74514e_ipad air 11.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\15430cd5-04b3-44ab-bf9c-1c86cb74514e_ipad air 11.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Online</SourceId>
@@ -1279,6 +1295,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\23a72b0f-485d-4b8f-b165-115615f7ceb4_msi vector.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Online</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Online</BasePath>
+      <RelativePath>media/products/23a72b0f-485d-4b8f-b165-115615f7ceb4_msi vector.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\23a72b0f-485d-4b8f-b165-115615f7ceb4_msi vector.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\2f9fe997-a57d-4e05-9e2b-1d10fa4bb6c0_25405-black-friday-gaming-03.jpg))">
       <SourceType>Package</SourceType>
@@ -1296,6 +1328,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\2f9fe997-a57d-4e05-9e2b-1d10fa4bb6c0_25405-black-friday-gaming-03.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\33d67bf7-9e3f-44a3-9cb8-1cfb76f515f1_iPadOS18.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Online</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Online</BasePath>
+      <RelativePath>media/products/33d67bf7-9e3f-44a3-9cb8-1cfb76f515f1_iPadOS18.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\33d67bf7-9e3f-44a3-9cb8-1cfb76f515f1_iPadOS18.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\459f944a-b1c8-4e6f-ac3b-872a40e67895_2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Online</SourceId>
@@ -1311,6 +1359,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\459f944a-b1c8-4e6f-ac3b-872a40e67895_2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\6072f7c2-c767-43bb-aeef-3fc9e0560fee_msi gs 16.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Online</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Online</BasePath>
+      <RelativePath>media/products/6072f7c2-c767-43bb-aeef-3fc9e0560fee_msi gs 16.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\6072f7c2-c767-43bb-aeef-3fc9e0560fee_msi gs 16.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\760a1322-f929-4c22-9150-3426fd44b5de_MacBook_Pro.jpg))">
       <SourceType>Package</SourceType>
@@ -1359,6 +1423,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\7d6d1d2b-710c-434f-808e-efeea24e76da_macbook pro16inch 2021.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\9ede1a45-c6b5-4d2e-8544-cb6eb20a81c6_taiNghe.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Online</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Online</BasePath>
+      <RelativePath>media/products/9ede1a45-c6b5-4d2e-8544-cb6eb20a81c6_taiNghe.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\9ede1a45-c6b5-4d2e-8544-cb6eb20a81c6_taiNghe.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Online</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Online</BasePath>
+      <RelativePath>media/products/ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\media\products\d481c8be-da63-4a5b-a757-6ce163b833ee_26728-khung-pc-1.jpg))">
       <SourceType>Package</SourceType>
