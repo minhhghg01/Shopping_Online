@@ -18,24 +18,54 @@ namespace Shopping_Online.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int pg = 1)
         {
-            List<OrderModel> order = _dataContext.Orders.ToList();
-            const int pageSize = 10; 
-            if (pg < 1) 
+            List<OrderModel> order = await _dataContext.Orders.ToListAsync();
+            const int pageSize = 10;
+            if (pg < 1)
             {
                 pg = 1;
             }
-            int recsCount = order.Count(); 
+            int recsCount = order.Count();
             var pager = new Paginate(recsCount, pg, pageSize);
-            int recSkip = (pg - 1) * pageSize; 
+            int recSkip = (pg - 1) * pageSize;
             var data = order.Skip(recSkip).Take(pager.PageSize).ToList();
             ViewBag.Pager = pager;
             return View(data);
         }
+        [HttpGet]
         public async Task<IActionResult> ViewOrder(string orderCode)
         {
-            var DetailsOrder = await _dataContext.OrderDetails.Include(od => od.Product).Where(od => od.OrderCode == orderCode).ToListAsync();
+            var DetailsOrder = await _dataContext.OrderDetails.Include(od => od.Product)
+            .Where(od => od.OrderCode == orderCode).ToListAsync();
             return View(DetailsOrder);
         }
-
+        [HttpGet]
+        public async Task<IActionResult> EditOrder(string ordercode)
+        {
+            var order = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderCode == ordercode);
+            if (order == null)
+            {
+                return NotFound();
+            }
+            return View(order);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateOrder(OrderModel orderModel)
+        {
+            var order = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderCode == orderModel.OrderCode);
+            if (order == null)
+            {
+                return NotFound();
+            }
+            order.Status = orderModel.Status;
+            try
+            {
+                await _dataContext.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error");
+            }
+        }
     }
 }

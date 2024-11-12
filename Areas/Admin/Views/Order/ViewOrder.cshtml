@@ -1,6 +1,8 @@
 @model IEnumerable<OrderDetails>
 @{
     ViewData["title"] = "Order Details";
+    decimal total = 0;
+    decimal subtotal = 0;
 }
 
 <h3>list Order</h3>
@@ -13,7 +15,7 @@
             <th scope="col">Product Id</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
-            <th scope="col">Total</th>
+            <th scope="col">SubTotal</th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +24,8 @@
         }
         @foreach (var item in Model)
         {
+            subtotal = item.Quantity * item.Price;
+            total += subtotal;
             <tr>
                 <td>@index</td>
                 <th scope="row">@item.OrderCode</th>
@@ -29,9 +33,47 @@
                 <td>@item.ProductId</td>
                 <td>$@item.Price</td>
                 <td>@item.Quantity</td>
-                <td>$@(item.Price * item.Quantity)</td>
+                <td>@subtotal.ToString("C")</td>
             </tr>
             index++; // Tăng biến index sau mỗi vòng lặp
         }
+        <tr>
+            <th colspan="5"></th>
+            <th>Total</th>
+            <td>@total.ToString("C")</td>
+        </tr>
+        <tr>
+            <th colspan="6"></th>
+            <td>
+                <label for="Status">Trạng thái:</label>
+                <select class="form-control select-update-order">
+                    <option value="1">Đơn hàng mới</option>
+                    <option value="0">Đã xử lý</option>
+                </select>
+            </td>
+        </tr>
     </tbody>
 </table>
+@* @section Scripts{
+    <script>
+        $(document).ready(function() {
+            $('.select-update-order').change(function() {
+                var status = $(this).val();
+                var ordercode = $('.getId').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("UpdateOrder")",
+                    data: { ordercode: ordercode, status: status },
+                    success: function(result) {
+                        if (result.success) {
+                            Swal.fire("Thành công");
+                        } else {
+                            Swal.fire("Lỗi");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+} *@
