@@ -1,5 +1,7 @@
 using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Shopping_Online.Areas.Admin.Repository;
 using Shopping_Online.Data;
 using Shopping_Online.Models;
 
@@ -8,9 +10,11 @@ namespace Shopping_Online.Controllers
     public class CheckoutController : Controller
     {
         private readonly DataContext _dataContext;
-        public CheckoutController(DataContext context)
+        private readonly IEmailSender _emailSender;
+        public CheckoutController(DataContext context, IEmailSender emailSender)
         {
             _dataContext = context;
+            _emailSender = emailSender;
         }
         // [HttpPost]
         public async Task<IActionResult> Checkout()
@@ -43,6 +47,11 @@ namespace Shopping_Online.Controllers
                     await _dataContext.SaveChangesAsync();
                 }
                 HttpContext.Session.Remove("Cart");
+                // Send Email
+                var receiver = userEmail;
+                var subject = "Test | Shop_Onl | Đặt hàng thành công";
+                var message = "Đơn hàng của bạn đã được đặt thành công. \nCảm ơn quý khách. \nMã đơn hàng:" + orderCode + "\nTổng thanh toán: $" + cartItems.Sum(x => x.Price * x.Quantity) ;
+                await _emailSender.SendEmailAsync(receiver, subject, message);
                 TempData["success"] = "Đặt hàng thành công";
                 return RedirectToAction("Index", "Cart");
             }

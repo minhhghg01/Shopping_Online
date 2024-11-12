@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Shopping_Online.Areas.Admin.Repository;
 using Shopping_Online.Models;
 using Shopping_Online.Models.ViewModels;
 
@@ -9,10 +10,13 @@ namespace Shopping_Online.Controllers
     {
         private UserManager<AppUserModel> _userManager;
         private SignInManager<AppUserModel> _signInManager;
-        public AccountController(UserManager<AppUserModel> userManager, SignInManager<AppUserModel> signInManager)
+        private readonly IEmailSender _emailSender;
+
+        public AccountController(UserManager<AppUserModel> userManager, SignInManager<AppUserModel> signInManager, IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _emailSender = emailSender;
         }
         [HttpGet]
         public IActionResult Login(string returnUrl)
