@@ -247,7 +247,7 @@ namespace Shopping_Online.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands");
+                    b.ToTable("Brands", (string)null);
                 });
 
             modelBuilder.Entity("Shopping_Online.Models.CategoryModel", b =>
@@ -274,7 +274,7 @@ namespace Shopping_Online.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Shopping_Online.Models.OrderDetails", b =>
@@ -302,7 +302,7 @@ namespace Shopping_Online.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("OrderDetails");
+                    b.ToTable("OrderDetails", (string)null);
                 });
 
             modelBuilder.Entity("Shopping_Online.Models.OrderModel", b =>
@@ -327,7 +327,7 @@ namespace Shopping_Online.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("Shopping_Online.Models.ProductModel", b =>
@@ -367,7 +367,7 @@ namespace Shopping_Online.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

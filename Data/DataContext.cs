@@ -15,6 +15,7 @@ namespace Shopping_Online.Data
         public DbSet<AppUserModel> AppUsers { get; set; }
         public DbSet<OrderModel> Orders { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }      
+        // public DbSet<RatingModel> Ratings { get; set; }      
 
     }
 }

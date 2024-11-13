@@ -47,6 +47,22 @@
 						<div class="btn-group pull-right">
 						</div>
 					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								@if (User.Identity?.IsAuthenticated ?? false)
+								{
+									<li><a asp-area="" asp-controller="Account" asp-action="Logout"><i class="fa fa-lock"></i>Hello
+											@User.Identity.Name, Logout</a></li>
+								}
+								else
+								{
+									<li><a asp-controller="Account" asp-action="Login"><i class="fa fa-lock"></i>Login</a>
+									</li>
+								}
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div><!--/header-middle-->
