@@ -27,6 +27,7 @@
             subtotal = item.Quantity * item.Price;
             total += subtotal;
             <tr>
+                <input type="hidden" asp-for="@item.OrderCode" class="getId" />
                 <td>@index</td>
                 <th scope="row">@item.OrderCode</th>
                 <td>@item.UserName</td>
@@ -54,18 +55,18 @@
         </tr>
     </tbody>
 </table>
-@* @section Scripts{
+@section Scripts {
     <script>
-        $(document).ready(function() {
-            $('.select-update-order').change(function() {
+        $(document).ready(function () {
+            $('.select-update-order').change(function () {
                 var status = $(this).val();
                 var ordercode = $('.getId').val();
 
                 $.ajax({
                     type: "POST",
                     url: "@Url.Action("UpdateOrder")",
-                    data: { ordercode: ordercode, status: status },
-                    success: function(result) {
+                    data: { status: status, ordercode: ordercode },
+                    success: function (result) {
                         if (result.success) {
                             Swal.fire("Thành công");
                         } else {
@@ -76,4 +77,4 @@
             });
         });
     </script>
-} *@
+}

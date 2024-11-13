@@ -49,22 +49,23 @@ namespace Shopping_Online.Areas.Admin.Controllers
             return View(order);
         }
         [HttpPost]
-        public async Task<IActionResult> UpdateOrder(OrderModel orderModel)
+        public async Task<IActionResult> UpdateOrder(string ordercode, int status)
         {
-            var order = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderCode == orderModel.OrderCode);
+            var order = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderCode == ordercode);
             if (order == null)
             {
                 return NotFound();
             }
-            order.Status = orderModel.Status;
+
+            order.Status = status;
             try
             {
                 await _dataContext.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return Ok(new { success = true, message = "Cập nhật thành công." });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Error");
+                return StatusCode(500, "Lỗi gì đó");
             }
         }
     }
