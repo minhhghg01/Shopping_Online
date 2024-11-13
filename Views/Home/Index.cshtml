@@ -23,12 +23,12 @@
                                 <p>Danh mục: @item.Category.Name</p>
                                 <p>Thương hiệu: @item.Brand.Name</p>
                             </a>
-                            <a class="btn btn-default add-to-cart" asp-action="Add" asp-controller="Cart"
+                            @* <a class="btn btn-default add-to-cart" asp-action="Add" asp-controller="Cart"
                         asp-route-Id="@item.Id"><i class="fa fa-shopping-cart"></i>Add to
-                        cart</a>
-                            @* <button class="btn btn-default add-to-cart" data-product_id="@item.Id">
+                        cart</a> *@
+                            <button class="btn btn-default add-to-cart" data-product_id="@item.Id">
                                 <i class="fa fa-shopping-cart"></i>Add to cart
-                            </button> *@
+                            </button>
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@
         }
     </div><!--features_items-->
 </div>
-@* @section Scripts {
+@section Scripts {
     <script>
         $(document).ready(function () {
             $('.add-to-cart').click(function () {
@@ -51,17 +51,17 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "/Cart/Add",
+                    url: "@Url.Action("Add", "Cart")",
                     data: { Id: Id },
                     success: function (result) {
-                        if (result) {
-                            Swal.fire("Thành công");
+                        if (result.success) {
+                            Swal.fire("Thành công", result.message, "success");
                         } else {
-                            Swal.fire("Lỗi");
+                            Swal.fire("Lỗi", result.message);
                         }
                     }
                 });
             });
         });
     </script>
-} *@
+}

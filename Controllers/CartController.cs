@@ -43,8 +43,7 @@ namespace Shopping_Online.Controllers
                 cartItem.Quantity++;
             }
             HttpContext.Session.SetJson("Cart", cart);
-            TempData["success"] = $"{product.Name} added to cart";
-            return Redirect(Request.Headers["Referer"].ToString());
+            return Json(new { success = true, message = $"{product.Name} đã được thêm vào giỏ hàng." });
         }
 
         public async Task<IActionResult> Decrease(int Id)

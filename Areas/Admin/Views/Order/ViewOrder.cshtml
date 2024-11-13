@@ -68,7 +68,7 @@
                     data: { status: status, ordercode: ordercode },
                     success: function (result) {
                         if (result.success) {
-                            Swal.fire("Thành công");
+                            Swal.fire("Thành công", result.message);
                         } else {
                             Swal.fire("Lỗi");
                         }
