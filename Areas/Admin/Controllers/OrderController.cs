@@ -36,6 +36,8 @@ namespace Shopping_Online.Areas.Admin.Controllers
         {
             var DetailsOrder = await _dataContext.OrderDetails.Include(od => od.Product)
             .Where(od => od.OrderCode == orderCode).ToListAsync();
+            var Order = _dataContext.Orders.Where(o => o.OrderCode == orderCode).First();
+            ViewBag.Status = Order.Status;
             return View(DetailsOrder);
         }
         [HttpGet]

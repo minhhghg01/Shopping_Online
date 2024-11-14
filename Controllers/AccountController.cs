@@ -1,6 +1,9 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Areas.Admin.Repository;
+using Shopping_Online.Data;
 using Shopping_Online.Models;
 using Shopping_Online.Models.ViewModels;
 
@@ -11,13 +14,19 @@ namespace Shopping_Online.Controllers
         private UserManager<AppUserModel> _userManager;
         private SignInManager<AppUserModel> _signInManager;
         private readonly IEmailSender _emailSender;
+        private readonly DataContext _dataContext;
 
-        public AccountController(UserManager<AppUserModel> userManager, SignInManager<AppUserModel> signInManager, IEmailSender emailSender)
+        public AccountController(UserManager<AppUserModel> userManager,
+                                SignInManager<AppUserModel> signInManager,
+                                IEmailSender emailSender,
+                                DataContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
+            _dataContext = context;
         }
+
         [HttpGet]
         public IActionResult Login(string returnUrl)
         {
@@ -60,6 +69,43 @@ namespace Shopping_Online.Controllers
             }
             return View(user);
         }
+
+        public async Task<IActionResult> History()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userEmail = User.FindFirstValue(ClaimTypes.Email);
+            var Orders = await _dataContext.Orders
+                .Where(od => od.UserName == userEmail)
+                .OrderByDescending(od => od.Id).ToListAsync();
+            ViewBag.userEmail = userEmail;
+            return View(Orders);
+        }
+
+        public async Task<IActionResult> CancelOrder(string orderCode)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            try {
+            var order = await _dataContext.Orders
+                .Where(o => o.OrderCode == orderCode).FirstAsync();
+                order.Status = 3;
+                _dataContext.Update(order);
+                await _dataContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("error");
+            }
+            return RedirectToAction("History", "Account");
+        }
+
+        [HttpPost]
         public async Task<IActionResult> Logout(string returnUrl = "/")
         {
             await _signInManager.SignOutAsync();

@@ -53,7 +53,7 @@ namespace Shopping_Online.Controllers
                 var message = "Đơn hàng của bạn đã được đặt thành công. \nCảm ơn quý khách. \nMã đơn hàng:" + orderCode + "\nTổng thanh toán: $" + cartItems.Sum(x => x.Price * x.Quantity) ;
                 await _emailSender.SendEmailAsync(receiver, subject, message);
                 TempData["success"] = "Đặt hàng thành công";
-                return RedirectToAction("Index", "Cart");
+                return RedirectToAction("History", "Account");
             }
         }
 

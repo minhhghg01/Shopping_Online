@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jRAzK/pCb6dGRFYjfsbLiGIhS7qN5fQj6Pckr3uOXQs=",
+  "Hash": "XpsIl8YG5Q5fH+kCT4K/NDcuUaYSehbqXyLr756jZyg=",
   "Source": "Shopping_Online",
   "BasePath": "_content/Shopping_Online",
   "Mode": "Default",
@@ -1594,6 +1594,25 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png"
     },
     {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\19f2d987-d40b-4fea-b410-d270992e3995_anh1n_1280x720-800-resize.jpg",
+      "SourceId": "Shopping_Online",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "BasePath": "_content/Shopping_Online",
+      "RelativePath": "media/products/19f2d987-d40b-4fea-b410-d270992e3995_anh1n_1280x720-800-resize.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\19f2d987-d40b-4fea-b410-d270992e3995_anh1n_1280x720-800-resize.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\21360572-0741-4daf-ba8b-85397b17badc_chuot0.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
@@ -1801,6 +1820,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\media\\products\\ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\c346143b-6f5e-47e3-a3b3-5835cbd71b15_chip.jpg",
+      "SourceId": "Shopping_Online",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "BasePath": "_content/Shopping_Online",
+      "RelativePath": "media/products/c346143b-6f5e-47e3-a3b3-5835cbd71b15_chip.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\products\\c346143b-6f5e-47e3-a3b3-5835cbd71b15_chip.jpg"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\cb2b4768-a311-4b9b-9b87-e51b878c1443_mouse.jpg",
