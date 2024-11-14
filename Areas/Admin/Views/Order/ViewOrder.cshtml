@@ -6,7 +6,7 @@
 }
 
 <h3>list Order</h3>
-<table class="table">
+<table class="table" id="example">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -38,15 +38,23 @@
             </tr>
             index++; // Tăng biến index sau mỗi vòng lặp
         }
-        <tr>
-            <th colspan="5"></th>
+        <tr style="border-top: 2px solid black;">
             <th>Total</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>@total.ToString("C")</td>
         </tr>
         <tr>
-            <th colspan="6"></th>
+            <td><label for="Status">Trạng thái:</label></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>
-                <label for="Status">Trạng thái:</label>
                 <select class="form-control select-update-order">
                     <option value="1">Đơn hàng mới</option>
                     <option value="0">Đã xử lý</option>
