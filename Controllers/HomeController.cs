@@ -17,9 +17,40 @@ public class HomeController : Controller
         _dataContext = context;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(string sort_by = "", string startprice = "", string endprice = "")
     {
-        var products = _dataContext.Products.Include("Category").Include("Brand").ToList();
+        IQueryable<ProductModel> productsQuery = _dataContext.Products.Include("Category").Include("Brand");
+
+        // Đếm số lượng sản phẩm
+        var count = productsQuery.Count();
+        if (count > 0)
+        {
+            switch (sort_by)
+            {
+                case "price_increase":
+                    productsQuery = productsQuery.OrderBy(p => p.Price);
+                    break;
+                case "price_decrease":
+                    productsQuery = productsQuery.OrderByDescending(p => p.Price);
+                    break;
+                case "price_newest":
+                    productsQuery = productsQuery.OrderByDescending(p => p.Id);
+                    break;
+                case "price_oldest":
+                    productsQuery = productsQuery.OrderBy(p => p.Id);
+                    break;
+                default:
+                    if (decimal.TryParse(startprice, out decimal startPriceValue) && 
+                        decimal.TryParse(endprice, out decimal endPriceValue))
+                    {
+                        productsQuery = productsQuery.Where(p => p.Price >= startPriceValue && p.Price <= endPriceValue);
+                    }
+                    productsQuery = productsQuery.OrderByDescending(p => p.Id);
+                    break;
+            }
+        }
+
+        var products = productsQuery.ToList();
         return View(products);
     }
 

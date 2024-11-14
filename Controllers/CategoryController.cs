@@ -26,40 +26,28 @@ namespace Shopping_Online.Controllers
             var count = await productByCategory.CountAsync();
             if (count > 0)
             {
-                if (sort_by == "price_increase")
+                switch (sort_by)
                 {
-                    productByCategory = productByCategory.OrderBy(p => p.Price);
-                }
-                else if (sort_by == "price_decrease")
-                {
-                    productByCategory = productByCategory.OrderByDescending(p => p.Price);
-                }
-                else if (sort_by == "price_newest")
-                {
-                    productByCategory = productByCategory.OrderByDescending(p => p.Id);
-                }
-                else if (sort_by == "price_oldest")
-                {
-                    productByCategory = productByCategory.OrderBy(p => p.Id);
-                }
-                else if (startprice != "" && endprice != "")
-                {
-                    decimal startPriceValue;
-                    decimal endPriceValue;
-
-                    if (decimal.TryParse(startprice, out startPriceValue)
-                        && decimal.TryParse(endprice, out endPriceValue))
-                    {
-                        productByCategory = productByCategory.Where(p => p.Price >= startPriceValue && p.Price <= endPriceValue);
-                    }
-                    else
-                    {
+                    case "price_increase":
+                        productByCategory = productByCategory.OrderBy(p => p.Price);
+                        break;
+                    case "price_decrease":
+                        productByCategory = productByCategory.OrderByDescending(p => p.Price);
+                        break;
+                    case "price_newest":
                         productByCategory = productByCategory.OrderByDescending(p => p.Id);
-                    }
-                }
-                else
-                {
-                    productByCategory = productByCategory.OrderByDescending(p => p.Id);
+                        break;
+                    case "price_oldest":
+                        productByCategory = productByCategory.OrderBy(p => p.Id);
+                        break;
+                    default:
+                        if (decimal.TryParse(startprice, out decimal startPriceValue) && 
+                            decimal.TryParse(endprice, out decimal endPriceValue))
+                        {
+                            productByCategory = productByCategory.Where(p => p.Price >= startPriceValue && p.Price <= endPriceValue);
+                        }
+                        productByCategory = productByCategory.OrderByDescending(p => p.Id);
+                        break;
                 }
             }
 
