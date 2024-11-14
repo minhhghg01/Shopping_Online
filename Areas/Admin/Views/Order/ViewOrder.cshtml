@@ -55,13 +55,16 @@
             <td></td>
             <td></td>
             <td>
-                @if (@ViewBag.Status != 3)
+                @if (ViewBag.Status != 3)
                 {
                     <select class="form-control select-update-order">
-                        <option value="1" selected="@ViewBag.Status == 1">Đơn hàng mới</option>
-                        <option value="0" selected="@ViewBag.Status == 0">Đã xử lý</option>
+                        <option hidden>@(ViewBag.Status == 1 ? "Đơn hàng mới" : "Đã xử lý")</option>
+                        <option value="1">Đơn hàng mới</option>
+                        <option value="0">Đã xử lý</option>
                     </select>
-                } else {
+                }
+                else
+                {
                     <span>Đã hủy</span>
                 }
             </td>
