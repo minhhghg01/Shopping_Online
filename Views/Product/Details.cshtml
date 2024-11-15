@@ -1,3 +1,4 @@
+@model ProductDetailsViewModel
 @{
     ViewData["Title"] = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,7 +13,7 @@
         <div class="product-details"><!--product-details-->
             <div class="col-sm-5">
                 <div class="view-product">
-                    <img src="~/media/products/@Model.Image" alt="" />
+                    <img src="~/media/products/@Model.ProductDetails.Image" alt="" />
                 </div>
                 <div id="similar-product" class="carousel slide" data-ride="carousel">
 
@@ -38,9 +39,9 @@
             </div>
             <div class="col-sm-7">
                 <div class="product-information"><!--/product-information-->
-                    <h2>@Model.Name</h2>
+                    <h2>@Model.ProductDetails.Name</h2>
                     <span>
-                        <span>$@Model.Price</span>
+                        <span>$@Model.ProductDetails.Price</span>
                         <label>Quantity: 1</label>
                         <input type="text" value="1" />
                         <button type="button" class="btn btn-fefault cart">
@@ -50,8 +51,8 @@
                     </span>
                     <p><b>Availability:</b> In Stock</p>
                     <p><b>Condition:</b> New</p>
-                    <p><b>Brand:</b> @Model.Brand.Name</p>
-                    <p><b>Category:</b> @Model.Category.Name</p>
+                    <p><b>Brand:</b> @Model.ProductDetails.Brand.Name</p>
+                    <p><b>Category:</b> @Model.ProductDetails.Category.Name</p>
                     <a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
                 </div><!--/product-information-->
             </div>
@@ -60,15 +61,15 @@
         <div class="category-tab shop-details-tab"><!--category-tab-->
             <div class="col-sm-12">
                 <ul class="nav nav-tabs">
-                    <li><a href="#details" data-toggle="tab">Details</a></li>
+                    <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
                     <li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
                     <li><a href="#tag" data-toggle="tab">Tag</a></li>
-                    <li class="active"><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
+                    <li><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
                 </ul>
             </div>
             <div class="tab-content">
                 <div class="tab-pane fade active in" id="details">
-                    @Html.Raw(Model.Description)
+                    @Html.Raw(Model.ProductDetails.Description)
                 </div>
 
                 <div class="tab-pane fade" id="companyprofile">
@@ -194,14 +195,19 @@
                             voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         <p><b>Write Your Review</b></p>
 
-                        <form action="#">
+                        <form autocomplete="off" asp-action="CommentProduct" asp-controller="Product" method="post">
                             <span>
-                                <input type="text" placeholder="Your Name" />
-                                <input type="email" placeholder="Email Address" />
+                                <input asp-for="@Model.ProductDetails.Id" name="ProductId" type="hidden" />
+                                <input name="Star" type="hidden" value="4" />
+                                <input asp-for="@Model.Name" type="text" placeholder="Your Name" />
+                                <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                                <input asp-for="@Model.Email" type="email" placeholder="Email Address" />
+                                <span asp-validation-for="@Model.Email" class="text-danger"></span>
                             </span>
-                            <textarea name=""></textarea>
+                            <textarea asp-for="@Model.Comment"></textarea>
+                            <span asp-validation-for="@Model.Comment" class="text-danger"></span>
                             <b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
-                            <button type="button" class="btn btn-default pull-right">
+                            <button type="submit" class="btn btn-default pull-right">
                                 Submit
                             </button>
                         </form>

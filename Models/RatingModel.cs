@@ -14,7 +14,7 @@ namespace Shopping_Online.Models
         public string Name { get; set; }
         [Required(ErrorMessage ="Nhập Email")]
         public string Email { get; set; }
-        public int Star { get; set; }
+        public string Star { get; set; }
 
         [ForeignKey("ProductId")]
         public ProductModel Product { get; set; }

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Home | E-Shopper</title>
+	<title>Home | Onl-Shop</title>
 	<link href="~/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" rel="stylesheet">
@@ -117,18 +117,11 @@
 											class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
 										<li><a asp-action="Index" asp-controller="Category"> Category </a></li>
-										<li><a asp-action="Details" asp-controller="Product">Product Details</a></li>
-										<li><a asp-action="Checkout" asp-controller="Cart">Checkout</a></li>
+										<li><a asp-action="Index" asp-controller="Brand">Brand</a></li>
 										<li><a asp-action="Index" asp-controller="Cart">Cart</a></li>
-										<li><a>Login</a></li>
 									</ul>
 								</li>
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-									<ul role="menu" class="sub-menu">
-										<li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-									</ul>
-								</li>
+								
 								<li><a href="404.html">404</a></li>
 								<li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
 							</ul>
@@ -197,82 +190,76 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<h2><span>Onl</span>-shop</h2>
+							<p><b>Địa chỉ:</b> Yên Vĩnh - Kim Chung - Hoài Đức - Hà Nội - Việt Nam</p>
+							<p><b>Hotline:</b> +84 333 097 331</p>
 						</div>
 					</div>
 					<div class="col-sm-7">
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
-								<a href="#">
+								<a href="https://fptshop.com.vn/">
 									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
+										<img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/2019_12_30_637133160350737542_201407171129187887_1378267132_fptshop-ver1-0-logo-color-bg-black.jpg" alt="" />
 									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
+									
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>FPT Shop </p>
+								<h2>24 JUN 2024</h2>
 							</div>
 						</div>
 
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
-								<a href="#">
+								<a href="https://www.thegioididong.com/">
 									<div class="iframe-img">
-										<img src="images/home/iframe2.png" alt="" />
+										<img src="https://cdnv2.tgdd.vn/webmwg/2024/ContentMwg/images/default-tgdd.png" alt="" />
 									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
+									
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Thế Giới Di Động</p>
+								<h2>25 DEC 2023</h2>
 							</div>
 						</div>
 
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
-								<a href="#">
+								<a href="https://cellphones.com.vn/">
 									<div class="iframe-img">
-										<img src="images/home/iframe3.png" alt="" />
+										<img src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/logo_cps-1.png" alt="" />
 									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
+									
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>CellphoneS</p>
+								<h2>24 NOV 2022</h2>
 							</div>
 						</div>
 
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
-								<a href="#">
+								<a href="https://hoanghamobile.com/">
 									<div class="iframe-img">
-										<img src="images/home/iframe4.png" alt="" />
+										<img src="https://hoanghamobile.com/Uploads/2024/03/12/logo-hh.png" alt="" />
 									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
+									
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Hoàng Hà Mobile</p>
+								<h2>4 DEC 2020</h2>
 							</div>
 						</div>
 					</div>
 					<div class="col-sm-3">
+						<a href="https://www.google.com/maps/dir/Y%C3%AAn+V%C4%A9nh,+Kim+Chung,+Ho%C3%A0i+%C4%90%E1%BB%A9c,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/Y%C3%AAn+V%C4%A9nh,+Kim+Chung,+Ho%C3%A0i+%C4%90%E1%BB%A9c,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam">
 						<div class="address">
-							<img src="images/home/map.png" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+							<img src="https://cdn.tgdd.vn/Files/2020/11/10/1305861/googlemap_1280x720-600x400.jpg" alt="" />
 						</div>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="footer-widget">
+		@* <div class="footer-widget">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-2">
@@ -337,14 +324,14 @@
 
 				</div>
 			</div>
-		</div>
+		</div> *@
 
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank"
-								href="http://www.themeum.com">Themeum</a></span></p>
+					<p class="pull-left">Copyright © 2024 Onl-SHOP Inc. All rights reserved.</p>
+					<p class="pull-right">Author: <span><a target="_blank"
+								href="https://www.facebook.com/profile.php?id=100010558596009">Minh</a></span></p>
 				</div>
 			</div>
 		</div>
