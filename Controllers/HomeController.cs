@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Data;
@@ -10,11 +11,12 @@ public class HomeController : Controller
 {
     private readonly DataContext _dataContext;
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger, DataContext context)
+    private readonly UserManager<AppUserModel> _userManager;
+    public HomeController(ILogger<HomeController> logger, DataContext context, UserManager<AppUserModel> userManager)
     {
         _logger = logger;
         _dataContext = context;
+        _userManager = userManager;
     }
 
     public IActionResult Index(string sort_by = "", string startprice = "", string endprice = "")
@@ -40,7 +42,7 @@ public class HomeController : Controller
                     productsQuery = productsQuery.OrderBy(p => p.Id);
                     break;
                 default:
-                    if (decimal.TryParse(startprice, out decimal startPriceValue) && 
+                    if (decimal.TryParse(startprice, out decimal startPriceValue) &&
                         decimal.TryParse(endprice, out decimal endPriceValue))
                     {
                         productsQuery = productsQuery.Where(p => p.Price >= startPriceValue && p.Price <= endPriceValue);
@@ -54,6 +56,33 @@ public class HomeController : Controller
         return View(products);
     }
 
+    [HttpPost]
+    public async Task<IActionResult> AddWishlist(int Id, WishlistModel wishlist)
+    {
+        var user = await _userManager.GetUserAsync(User);
+
+        wishlist.ProductId = Id;
+        wishlist.UserId = user.Id;
+
+        Console.WriteLine($"Heloo ProductId: {wishlist.ProductId}, UserId: {wishlist.UserId}");
+
+        _dataContext.Add(wishlist);
+
+        // Kiểm tra trạng thái của entity trước khi lưu
+        Console.WriteLine($"Entity state: {_dataContext.Entry(wishlist).State}");
+
+        try
+        {
+            await _dataContext.SaveChangesAsync();
+            return Ok(new { success = true, message = "Thêm yêu thích thành công" });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ErrorMM: {ex.Message}");
+            Console.WriteLine($"Stack Trace: {ex.StackTrace}");
+            return StatusCode(500, "Thêm yêu thích thất bại");
+        }
+    }
     public IActionResult Privacy()
     {
         return View();
