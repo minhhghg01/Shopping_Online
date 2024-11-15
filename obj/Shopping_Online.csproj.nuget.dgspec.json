@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\Shopping_Online.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\Shopping_Online.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\Shopping_Online.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\Shopping_Online.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\Shopping_Online.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\Shopping_Online.csproj",
         "projectName": "Shopping_Online",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\Shopping_Online.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\Shopping_Online.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"

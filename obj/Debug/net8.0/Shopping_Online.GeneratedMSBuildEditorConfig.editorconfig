@@ -9,207 +9,207 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Shopping_Online
 build_property.RootNamespace = Shopping_Online
-build_property.ProjectDir = C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online\
+build_property.ProjectDir = C:\Users\Lenovo\Desktop\WorkSpace Code\clone\Shopping_Online\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Lenovo\Desktop\WorkSpace Code\Shopping_Online
+build_property.MSBuildProjectDirectory = C:\Users\Lenovo\Desktop\WorkSpace Code\clone\Shopping_Online
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Brand/Create.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Brand/Edit.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Brand/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Brand/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Category/Create.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Category/Edit.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Category/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Order/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Order/ViewOrder.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Order/ViewOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcVmlld09yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Product/Create.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Product/Edit.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Product/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Role/Create.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Role/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Role/Edit.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Role/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Role/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Role/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Shared/Error.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Shared/_NotificationPartial.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Shared/_NotificationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Shared/_Paging.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Shared/_Paging.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9QYWdpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Shared/_SidebarPartial.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Shared/_SidebarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TaWRlYmFyUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/User/Create.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/User/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/User/Edit.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/User/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Account/Create.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Account/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Account/History.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Account/History.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxIaXN0b3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Account/Login.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Brand/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Cart/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Category/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Checkout/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Checkout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Home/Contact.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Home/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Home/NotFound.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Home/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Home/Privacy.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Product/Details.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Product/Index.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Product/Search.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Product/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Shared/Components/Brands/Default.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Shared/Components/Brands/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQnJhbmRzXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Shared/Components/Categories/Default.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Shared/Components/Categories/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcmllc1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Shared/Error.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Shared/_FilterProductsPartial.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Shared/_FilterProductsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GaWx0ZXJQcm9kdWN0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Shared/_NotificationPartial.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Shared/_NotificationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Shared/_SidebarPartial.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Shared/_SidebarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/_ViewImports.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/_ViewStart.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-z4nkmjvmil
 
-[C:/Users/Lenovo/Desktop/WorkSpace Code/Shopping_Online/Views/Shared/_Layout.cshtml]
+[C:/Users/Lenovo/Desktop/WorkSpace Code/clone/Shopping_Online/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-fpt906s0hz

@@ -105,7 +105,7 @@ namespace Shopping_Online.Controllers
             return RedirectToAction("History", "Account");
         }
 
-        [HttpPost]
+        // [HttpPost]
         public async Task<IActionResult> Logout(string returnUrl = "/")
         {
             await _signInManager.SignOutAsync();

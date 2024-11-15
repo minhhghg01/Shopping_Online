@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XpsIl8YG5Q5fH+kCT4K/NDcuUaYSehbqXyLr756jZyg=",
+  "Hash": "wW9PaUjiAy+OLv71auvVQz1iv0A3q+KIe4vyaJ4Jhjg=",
   "Source": "Shopping_Online",
   "BasePath": "_content/Shopping_Online",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Shopping_Online\\wwwroot",
       "Source": "Shopping_Online",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Shopping_Online.styles.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Shopping_Online.styles.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "Shopping_Online.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Shopping_Online.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Shopping_Online.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Shopping_Online.bundle.scp.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Shopping_Online.bundle.scp.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "Shopping_Online.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Shopping_Online.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Shopping_Online.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\backend\\js\\site.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\backend\\js\\site.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "backend/js/site.js",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\backend\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\css\\animate.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\css\\animate.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "css/animate.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\animate.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "css/bootstrap.min.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\css\\font-awesome.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\css\\font-awesome.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "css/font-awesome.min.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\font-awesome.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\css\\main.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\css\\main.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "css/main.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\css\\prettyPhoto.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\css\\prettyPhoto.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "css/prettyPhoto.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\css\\prettyPhoto.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\css\\price-range.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\css\\price-range.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "css/price-range.css",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\css\\price-range.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\css\\responsive.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\css\\responsive.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "css/responsive.css",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\responsive.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\favicon.ico",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\images\\1.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\images\\1.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "images/1.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\images\\1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\images\\2.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\images\\2.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "images/2.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\images\\2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\images\\gallery1.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\images\\gallery1.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "images/gallery1.jpg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\images\\gallery1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\bootstrap.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/bootstrap.min.js",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\contact.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\contact.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/contact.js",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\js\\contact.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\gmaps.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\gmaps.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/gmaps.js",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\js\\gmaps.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\html5shiv.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\html5shiv.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/html5shiv.js",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\js\\html5shiv.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\jquery.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\jquery.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/jquery.js",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\jquery.prettyPhoto.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\jquery.prettyPhoto.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/jquery.prettyPhoto.js",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.prettyPhoto.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\jquery.scrollUp.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\jquery.scrollUp.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/jquery.scrollUp.min.js",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.scrollUp.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\main.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\main.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/main.js",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\js\\price-range.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\js\\price-range.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "js/price-range.js",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\js\\price-range.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\0b45f2a5-90b5-4538-8eb7-369f79a2bedc_Screenshot 2024-09-16 192022.png",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\0b45f2a5-90b5-4538-8eb7-369f79a2bedc_Screenshot 2024-09-16 192022.png",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/0b45f2a5-90b5-4538-8eb7-369f79a2bedc_Screenshot 2024-09-16 192022.png",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\0b45f2a5-90b5-4538-8eb7-369f79a2bedc_Screenshot 2024-09-16 192022.png"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\15430cd5-04b3-44ab-bf9c-1c86cb74514e_ipad air 11.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\15430cd5-04b3-44ab-bf9c-1c86cb74514e_ipad air 11.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/15430cd5-04b3-44ab-bf9c-1c86cb74514e_ipad air 11.jpg",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\15430cd5-04b3-44ab-bf9c-1c86cb74514e_ipad air 11.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\18d63eff-a19d-4a34-b279-a57544685cfc_Screenshot 2024-09-23 142419.png"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\19f2d987-d40b-4fea-b410-d270992e3995_anh1n_1280x720-800-resize.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\19f2d987-d40b-4fea-b410-d270992e3995_anh1n_1280x720-800-resize.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/19f2d987-d40b-4fea-b410-d270992e3995_anh1n_1280x720-800-resize.jpg",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\19f2d987-d40b-4fea-b410-d270992e3995_anh1n_1280x720-800-resize.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\21360572-0741-4daf-ba8b-85397b17badc_chuot0.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\21360572-0741-4daf-ba8b-85397b17badc_chuot0.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/21360572-0741-4daf-ba8b-85397b17badc_chuot0.jpg",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\21360572-0741-4daf-ba8b-85397b17badc_chuot0.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\23a72b0f-485d-4b8f-b165-115615f7ceb4_msi vector.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\23a72b0f-485d-4b8f-b165-115615f7ceb4_msi vector.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/23a72b0f-485d-4b8f-b165-115615f7ceb4_msi vector.jpg",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\23a72b0f-485d-4b8f-b165-115615f7ceb4_msi vector.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\2f9fe997-a57d-4e05-9e2b-1d10fa4bb6c0_25405-black-friday-gaming-03.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\2f9fe997-a57d-4e05-9e2b-1d10fa4bb6c0_25405-black-friday-gaming-03.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/2f9fe997-a57d-4e05-9e2b-1d10fa4bb6c0_25405-black-friday-gaming-03.jpg",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\2f9fe997-a57d-4e05-9e2b-1d10fa4bb6c0_25405-black-friday-gaming-03.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\33d67bf7-9e3f-44a3-9cb8-1cfb76f515f1_iPadOS18.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\33d67bf7-9e3f-44a3-9cb8-1cfb76f515f1_iPadOS18.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/33d67bf7-9e3f-44a3-9cb8-1cfb76f515f1_iPadOS18.jpg",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\33d67bf7-9e3f-44a3-9cb8-1cfb76f515f1_iPadOS18.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\459f944a-b1c8-4e6f-ac3b-872a40e67895_2.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\459f944a-b1c8-4e6f-ac3b-872a40e67895_2.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/459f944a-b1c8-4e6f-ac3b-872a40e67895_2.jpg",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\459f944a-b1c8-4e6f-ac3b-872a40e67895_2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\6072f7c2-c767-43bb-aeef-3fc9e0560fee_msi gs 16.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\6072f7c2-c767-43bb-aeef-3fc9e0560fee_msi gs 16.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/6072f7c2-c767-43bb-aeef-3fc9e0560fee_msi gs 16.jpg",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\6072f7c2-c767-43bb-aeef-3fc9e0560fee_msi gs 16.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\760a1322-f929-4c22-9150-3426fd44b5de_MacBook_Pro.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\760a1322-f929-4c22-9150-3426fd44b5de_MacBook_Pro.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/760a1322-f929-4c22-9150-3426fd44b5de_MacBook_Pro.jpg",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\760a1322-f929-4c22-9150-3426fd44b5de_MacBook_Pro.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\7bf161fc-ae4a-4b03-8b58-16621dc0de9b_1.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\7bf161fc-ae4a-4b03-8b58-16621dc0de9b_1.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/7bf161fc-ae4a-4b03-8b58-16621dc0de9b_1.jpg",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\7bf161fc-ae4a-4b03-8b58-16621dc0de9b_1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\7d6d1d2b-710c-434f-808e-efeea24e76da_macbook pro16inch 2021.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\7d6d1d2b-710c-434f-808e-efeea24e76da_macbook pro16inch 2021.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/7d6d1d2b-710c-434f-808e-efeea24e76da_macbook pro16inch 2021.jpg",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\7d6d1d2b-710c-434f-808e-efeea24e76da_macbook pro16inch 2021.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\9ede1a45-c6b5-4d2e-8544-cb6eb20a81c6_taiNghe.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\9ede1a45-c6b5-4d2e-8544-cb6eb20a81c6_taiNghe.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/9ede1a45-c6b5-4d2e-8544-cb6eb20a81c6_taiNghe.jpg",
       "AssetKind": "All",
@@ -1803,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\9ede1a45-c6b5-4d2e-8544-cb6eb20a81c6_taiNghe.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg",
       "AssetKind": "All",
@@ -1822,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\ac074b1b-74b5-46af-a9a6-d8d8b431fb00_mac pro 2025.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\c346143b-6f5e-47e3-a3b3-5835cbd71b15_chip.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\c346143b-6f5e-47e3-a3b3-5835cbd71b15_chip.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/c346143b-6f5e-47e3-a3b3-5835cbd71b15_chip.jpg",
       "AssetKind": "All",
@@ -1841,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\c346143b-6f5e-47e3-a3b3-5835cbd71b15_chip.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\cb2b4768-a311-4b9b-9b87-e51b878c1443_mouse.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\cb2b4768-a311-4b9b-9b87-e51b878c1443_mouse.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/cb2b4768-a311-4b9b-9b87-e51b878c1443_mouse.jpg",
       "AssetKind": "All",
@@ -1860,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\media\\products\\cb2b4768-a311-4b9b-9b87-e51b878c1443_mouse.jpg"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\media\\products\\d481c8be-da63-4a5b-a757-6ce163b833ee_26728-khung-pc-1.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\media\\products\\d481c8be-da63-4a5b-a757-6ce163b833ee_26728-khung-pc-1.jpg",
       "SourceId": "Shopping_Online",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\Shopping_Online\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\WorkSpace Code\\clone\\Shopping_Online\\wwwroot\\",
       "BasePath": "_content/Shopping_Online",
       "RelativePath": "media/products/d481c8be-da63-4a5b-a757-6ce163b833ee_26728-khung-pc-1.jpg",
       "AssetKind": "All",
