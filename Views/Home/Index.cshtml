@@ -45,7 +45,8 @@
                                         <i class="fa fa-plus-square add-btn-wishlist" data-product_id="@item.Id">
                                         </i>Add to wishlist
                                     </a> *@
-                                    <button class="btn btn-default add-btn-wishlist" data-product_id="@item.Id">Yêu thích</button>
+                                    <button class="btn btn-default add-btn-wishlist" data-product_id="@item.Id">Yêu
+                                        thích</button>
                                 </li>
                             </ul>
                         }
@@ -118,13 +119,13 @@
     <script>
         $(document).ready(function () {
             $('.add-btn-wishlist').click(function () {
-                var Id = $(this).data("product_id");
-                alert(Id);
+                var productId = $(this).data("product_id"); // đổi tên biến để rõ ràng hơn
+                alert(productId);
 
                 $.ajax({
                     type: "POST",
                     url: "@Url.Action("AddWishlist", "Home")",
-                    data: { Id: Id },
+                    data: { productId: productId }, // đổi tên parameter để match với controller
                     success: function (result) {
                         if (result.success) {
                             Swal.fire("Yêu thích Thành công", result.message, "success");

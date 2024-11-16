@@ -57,19 +57,19 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddWishlist(int Id, WishlistModel wishlist)
+    public async Task<IActionResult> AddWishlist(int productId)
     {
         var user = await _userManager.GetUserAsync(User);
 
-        wishlist.ProductId = Id;
-        wishlist.UserId = user.Id;
+        var wishlist = new WishlistModel
+        {
+            ProductId = productId,
+            UserId = user.Id
+        };
 
         Console.WriteLine($"Heloo ProductId: {wishlist.ProductId}, UserId: {wishlist.UserId}");
 
-        _dataContext.Add(wishlist);
-
-        // Kiểm tra trạng thái của entity trước khi lưu
-        Console.WriteLine($"Entity state: {_dataContext.Entry(wishlist).State}");
+        _dataContext.Wishlists.Add(wishlist);
 
         try
         {
@@ -78,7 +78,7 @@ public class HomeController : Controller
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"ErrorMM: {ex.Message}");
+            Console.WriteLine($"Error: {ex.Message}");
             Console.WriteLine($"Stack Trace: {ex.StackTrace}");
             return StatusCode(500, "Thêm yêu thích thất bại");
         }
