@@ -25,17 +25,31 @@
                                     <p>Danh mục: @item.Category.Name</p>
                                     <p>Thương hiệu: @item.Brand.Name</p>
                                 </a>
-                                <a class="btn btn-default add-to-cart" asp-action="Add" asp-controller="Cart"
-                                    asp-route-Id="@item.Id"><i class="fa fa-shopping-cart"></i>Add to
-                                    cart</a>
+                                @if (item.Quantity > 0)
+                                {
+                                    <button class="btn btn-default add-to-cart" 
+                                        data-product_id="@item.Id"><i class="fa fa-shopping-cart"></i>Add to
+                                        cart</button>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-default add-to-cart disable" style="background-color: #ccc;">
+                                        <i class="fa fa-shopping-cart"></i>Out of stock </button>
+                                }
                             </div>
                         </div>
                     </a>
-                    <div class="choose">
-                        <ul class="nav nav-pills nav-justified">
-                            <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                            <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                        </ul>
+                    <div class="choose text-center">
+                        @if (User.Identity?.IsAuthenticated ?? false)
+                        {
+                            <ul class="nav nav-pills nav-justified">
+                                <li>
+                                    <button class="btn btn-default add-btn-wishlist" data-product_id="@item.Id">
+                                        <i class="fa fa-heart"></i>
+                                        Favorite</button>
+                                </li>
+                            </ul>
+                        }
                     </div>
                 </div>
             </div>
@@ -69,6 +83,26 @@
                 }
                 return false;
             })
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.add-to-cart').click(function () {
+                var Id = $(this).data("product_id");
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("Add", "Cart")",
+                    data: { Id: Id },
+                    success: function (result) {
+                        if (result.success) {
+                            Swal.fire("Thành công", result.message, "success");
+                        } else {
+                            Swal.fire("Lỗi", result.message);
+                        }
+                    }
+                });
+            });
         });
     </script>
     <script type="text/javascript">
