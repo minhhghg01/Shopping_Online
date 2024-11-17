@@ -56,6 +56,22 @@ public class HomeController : Controller
         return View(products);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> Wishlist()
+    {
+        var wishlist = await (from w in _dataContext.Wishlists
+                               join p in _dataContext.Products on w.ProductId equals p.Id
+                               join u in _dataContext.Users on w.UserId equals u.Id
+                               select new 
+                               {
+                                   User = u,
+                                   Product = p,
+                                   Wishlist = w
+                               }).ToListAsync();
+
+        return View(wishlist);
+    }
+
     [HttpPost]
     public async Task<IActionResult> AddWishlist(int productId)
     {
@@ -82,6 +98,20 @@ public class HomeController : Controller
             Console.WriteLine($"Stack Trace: {ex.StackTrace}");
             return StatusCode(500, "Thêm yêu thích thất bại");
         }
+    }
+
+    public async Task<IActionResult> DeleteWishlist(int Id)
+    {
+        WishlistModel wishlist = await _dataContext.Wishlists.FindAsync(Id);
+
+        if (wishlist != null)
+        {
+            _dataContext.Wishlists.Remove(wishlist);
+            await _dataContext.SaveChangesAsync();
+            TempData["success"] = "Xóa yêu thích thành công";
+        }
+
+        return RedirectToAction("Wishlist");
     }
     public IActionResult Privacy()
     {
