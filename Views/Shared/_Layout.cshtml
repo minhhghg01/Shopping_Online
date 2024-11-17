@@ -80,9 +80,15 @@
 								{
 									<li><a asp-action="Checkout" asp-controller="Cart"><i class="fa fa-crosshairs"></i>
 											Checkout</a></li>
-									<li><a asp-action="History" asp-controller="Account"><i class="fa fa-user"></i> Account</a></li>
-									<li><a asp-action="Wishlist" asp-controller="Home"><i class="fa fa-heart"></i> Wishlist</a></li>
-									<li><a asp-action="Wishlist" asp-controller="Home"><i class="fa fa-star"></i> Admin</a></li>
+									<li><a asp-action="History" asp-controller="Account"><i class="fa fa-user"></i>
+											Account</a></li>
+									<li><a asp-action="Wishlist" asp-controller="Home"><i class="fa fa-heart"></i>
+											Wishlist</a></li>
+									@if (User.IsInRole("Admin"))
+									{
+										<li><a asp-area="Admin" asp-action="Index" asp-controller="Product"><i
+													class="fa fa-star"></i> Admin</a></li>
+									}
 									<li><a asp-controller="Account" asp-action="Logout"><i class="fa fa-lock"></i>Hello
 											@User.Identity.Name, Logout</a></li>
 								}
@@ -122,7 +128,7 @@
 										<li><a asp-action="Index" asp-controller="Cart">Cart</a></li>
 									</ul>
 								</li>
-								
+
 								<li><a href="404.html">404</a></li>
 								<li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
 							</ul>
@@ -154,7 +160,7 @@
 
 						<div class="carousel-inner">
 							<div class="item active">
-									<img src="https://hqcomputer.com/assets/uploads/banner-03.jpg" width="90%" />
+								<img src="https://hqcomputer.com/assets/uploads/banner-03.jpg" width="90%" />
 							</div>
 							<div class="item">
 								<img src="https://hqcomputer.com/assets/uploads/banner-04.jpg" width="90%" />
@@ -201,9 +207,10 @@
 							<div class="video-gallery text-center">
 								<a href="https://fptshop.com.vn/">
 									<div class="iframe-img">
-										<img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/2019_12_30_637133160350737542_201407171129187887_1378267132_fptshop-ver1-0-logo-color-bg-black.jpg" alt="" />
+										<img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/2019_12_30_637133160350737542_201407171129187887_1378267132_fptshop-ver1-0-logo-color-bg-black.jpg"
+											alt="" />
 									</div>
-									
+
 								</a>
 								<p>FPT Shop </p>
 								<h2>24 JUN 2024</h2>
@@ -214,9 +221,10 @@
 							<div class="video-gallery text-center">
 								<a href="https://www.thegioididong.com/">
 									<div class="iframe-img">
-										<img src="https://cdnv2.tgdd.vn/webmwg/2024/ContentMwg/images/default-tgdd.png" alt="" />
+										<img src="https://cdnv2.tgdd.vn/webmwg/2024/ContentMwg/images/default-tgdd.png"
+											alt="" />
 									</div>
-									
+
 								</a>
 								<p>Thế Giới Di Động</p>
 								<h2>25 DEC 2023</h2>
@@ -227,9 +235,10 @@
 							<div class="video-gallery text-center">
 								<a href="https://cellphones.com.vn/">
 									<div class="iframe-img">
-										<img src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/logo_cps-1.png" alt="" />
+										<img src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/logo_cps-1.png"
+											alt="" />
 									</div>
-									
+
 								</a>
 								<p>CellphoneS</p>
 								<h2>24 NOV 2022</h2>
@@ -242,7 +251,7 @@
 									<div class="iframe-img">
 										<img src="https://hoanghamobile.com/Uploads/2024/03/12/logo-hh.png" alt="" />
 									</div>
-									
+
 								</a>
 								<p>Hoàng Hà Mobile</p>
 								<h2>4 DEC 2020</h2>
@@ -250,10 +259,12 @@
 						</div>
 					</div>
 					<div class="col-sm-3">
-						<a href="https://www.google.com/maps/dir/Y%C3%AAn+V%C4%A9nh,+Kim+Chung,+Ho%C3%A0i+%C4%90%E1%BB%A9c,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/Y%C3%AAn+V%C4%A9nh,+Kim+Chung,+Ho%C3%A0i+%C4%90%E1%BB%A9c,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam">
-						<div class="address">
-							<img src="https://cdn.tgdd.vn/Files/2020/11/10/1305861/googlemap_1280x720-600x400.jpg" alt="" />
-						</div>
+						<a
+							href="https://www.google.com/maps/dir/Y%C3%AAn+V%C4%A9nh,+Kim+Chung,+Ho%C3%A0i+%C4%90%E1%BB%A9c,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/Y%C3%AAn+V%C4%A9nh,+Kim+Chung,+Ho%C3%A0i+%C4%90%E1%BB%A9c,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam">
+							<div class="address">
+								<img src="https://cdn.tgdd.vn/Files/2020/11/10/1305861/googlemap_1280x720-600x400.jpg"
+									alt="" />
+							</div>
 						</a>
 					</div>
 				</div>
@@ -341,7 +352,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
 	<script src="~/js/jquery.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 	<script src="~/js/bootstrap.min.js"></script>
 	<script src="~/js/jquery.scrollUp.min.js"></script>
 	<script src="~/js/price-range.js"></script>

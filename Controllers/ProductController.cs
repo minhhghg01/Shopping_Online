@@ -28,17 +28,23 @@ namespace Shopping_Online.Controllers
         public async Task<IActionResult> Details(int Id)
         {
             if (Id == null) return RedirectToAction("Index");
-            var productById = _dataContext.Products.Include(p => p.Ratings)
-                .Where(p => p.Id == Id).FirstOrDefault();
+
+            var productById = _dataContext.Products
+                                .Include(p => p.Ratings)
+                                .Where(p => p.Id == Id)
+                                .FirstOrDefault();
+
             var relatedProducts = await _dataContext.Products
-                .Where(p => p.CategoryId == productById.CategoryId && p.Id != productById.Id)
-                .Take(4).ToListAsync();
+                                .Where(p => p.CategoryId == productById.CategoryId && p.Id != productById.Id)
+                                .Take(4).ToListAsync();
+
             ViewBag.RelatedProducts = relatedProducts;
+            
             var ViewModel = new ProductDetailsViewModel
             {
                 ProductDetails = productById,
             };
-            return View(ViewModel); // Trả về view với sản phẩm
+            return View(ViewModel);
         }
 
         [HttpPost]
@@ -55,13 +61,15 @@ namespace Shopping_Online.Controllers
                     Comment = rating.Comment,
                     Star = rating.Star,
                 };
+                    
                 _dataContext.Ratings.Add(ratingEnitity);
                 await _dataContext.SaveChangesAsync();
                 TempData["success"] = "Cmt thành công";
                 return Redirect(Request.Headers["Referer"]);
             }
-            else {
-                return RedirectToAction("Details", new {id = rating.ProductId});
+            else
+            {
+                return RedirectToAction("Details", new { id = rating.ProductId });
             }
         }
     }
