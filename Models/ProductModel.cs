@@ -20,6 +20,9 @@ namespace Shopping_Online.Models
         [Required, Range(1, int.MaxValue, ErrorMessage = "Chọn một Danh mục")]
         public int CategoryId { get; set; }
 
+        public int Quantity { get; set; }
+        public int Sold { get; set; }
+
         public BrandModel Brand { get; set; }
         public CategoryModel Category { get; set; }
         public string Image { get; set; }

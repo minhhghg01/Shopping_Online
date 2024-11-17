@@ -19,11 +19,11 @@ namespace Shopping_Online.Areas.Admin.Controllers
             _dataContext = context;
             _webHostEnvironment = webHostEnvironment;
         }
-       [HttpGet]
+        [HttpGet]
         public async Task<IActionResult> Index(int pg = 1)
         {
-            const int pageSize = 10; 
-            if (pg < 1) 
+            const int pageSize = 10;
+            if (pg < 1)
             {
                 pg = 1;
             }
@@ -32,9 +32,9 @@ namespace Shopping_Online.Areas.Admin.Controllers
                 .Include(p => p.Brand)
                 .OrderByDescending(p => p.Id)
                 .ToListAsync();
-            int recsCount = products.Count(); 
+            int recsCount = products.Count();
             var pager = new Paginate(recsCount, pg, pageSize);
-            int recSkip = (pg - 1) * pageSize; 
+            int recSkip = (pg - 1) * pageSize;
             var data = products.Skip(recSkip).Take(pager.PageSize).ToList();
             ViewBag.Pager = pager;
             return View(data);
@@ -105,12 +105,6 @@ namespace Shopping_Online.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 product.Slug = product.Name.ToLower().Replace(" ", "-");
-                var slug = await _dataContext.Products.FirstOrDefaultAsync(p => p.Slug == product.Slug);
-                if (slug != null)
-                {
-                    ModelState.AddModelError("", "Sản phẩm đã tồn tại");
-                    return View(product);
-                }
 
                 if (product.ImageUpload != null)
                 {
@@ -118,7 +112,7 @@ namespace Shopping_Online.Areas.Admin.Controllers
                     string uploadsDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/products");
                     string imageName = Guid.NewGuid().ToString() + "_" + product.ImageUpload.FileName;
                     string filePath = Path.Combine(uploadsDir, imageName);
-  
+
                     // delete old img
                     string oldfileImage = Path.Combine(uploadsDir, existed_product.Image);
                     if (System.IO.File.Exists(oldfileImage))
@@ -129,7 +123,7 @@ namespace Shopping_Online.Areas.Admin.Controllers
                     FileStream fs = new FileStream(filePath, FileMode.Create);
                     await product.ImageUpload.CopyToAsync(fs);
                     fs.Close();
-                    existed_product.Image = imageName;  
+                    existed_product.Image = imageName;
                 }
 
                 //update product
@@ -167,6 +161,35 @@ namespace Shopping_Online.Areas.Admin.Controllers
             await _dataContext.SaveChangesAsync();
             TempData["success"] = "Xóa sản phẩm thành công";
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> AddQuantity(int Id)
+        {
+            var productbyquantity = await _dataContext.ProductQuantities.Where(pq => pq.ProductId == Id).ToListAsync();
+            ViewBag.Id = Id;
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> StoreProductQuantity(ProductQuantity productQuantity)
+        {
+            var product = _dataContext.Products.Find(productQuantity.ProductId);
+
+            if (product == null) {
+                return NotFound();
+            }
+            product.Quantity += productQuantity.Quantity;      
+
+            productQuantity.Quantity = productQuantity.Quantity;
+            productQuantity.ProductId = productQuantity.ProductId;
+            productQuantity.DateCreated = DateTime.Now;
+
+            _dataContext.Add(productQuantity);
+            await _dataContext.SaveChangesAsync();
+            TempData["success"] = "Thêm số lượng sản phẩm thành công";
+            return RedirectToAction("Index", "Product", new { Id = productQuantity.ProductId});
         }
     }
 }

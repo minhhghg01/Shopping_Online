@@ -42,12 +42,6 @@ namespace Shopping_Online.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 brand.Slug = brand.Name.ToLower().Replace(" ", "-");
-                var slug = await _dataContext.Brands.FirstOrDefaultAsync(p => p.Slug == brand.Slug);
-                if (slug != null)
-                {
-                    ModelState.AddModelError("", "Thương hiệu đã tồn tại");
-                    return View(brand);
-                }
 
                 _dataContext.Add(brand);
                 await _dataContext.SaveChangesAsync();
