@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Areas.Admin.Repository;
 using Shopping_Online.Data;
 using Shopping_Online.Models;
@@ -43,6 +44,11 @@ namespace Shopping_Online.Controllers
                     orderDetail.ProductId = item.ProductId;
                     orderDetail.Price = item.Price;
                     orderDetail.Quantity = item.Quantity;
+
+                    var product = await _dataContext.Products.Where(p => p.Id == item.ProductId).FirstAsync();
+                    product.Quantity -= item.Quantity;
+                    product.Sold += item.Quantity;
+
                     _dataContext.Add(orderDetail);
                     await _dataContext.SaveChangesAsync();
                 }

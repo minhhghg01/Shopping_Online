@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Data;
 using Shopping_Online.Models;
 using Shopping_Online.Models.ViewModels;
@@ -74,16 +75,20 @@ namespace Shopping_Online.Controllers
 
         public async Task<IActionResult> Increase(int Id)
         {
+            ProductModel product = await _dataContext.Products.Where(p => p.Id == Id).FirstOrDefaultAsync();
             List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
             CartItemModel cartItem = cart.Where(c => c.ProductId == Id).FirstOrDefault();
 
-            if (cartItem.Quantity >= 1)
+            if (cartItem.Quantity >= 1 && product.Quantity > cartItem.Quantity)
             {
                 ++cartItem.Quantity;
+                TempData["success"] = "+1 item";
             }
             else
             {
-                cart.RemoveAll(p => p.ProductId == Id);
+                cartItem.Quantity = cartItem.Quantity;
+                TempData["success"] = "Sản phẩm đã hết hàng";
+                // cart.RemoveAll(p => p.ProductId == Id);
             }
 
             if (cart.Count == 0)
@@ -94,8 +99,7 @@ namespace Shopping_Online.Controllers
             {
                 HttpContext.Session.SetJson("Cart", cart);
             }
-        TempData["success"] = "+1 item";
-
+        // TempData["success"] = "+1 item";
             return RedirectToAction("Index");
         }
 

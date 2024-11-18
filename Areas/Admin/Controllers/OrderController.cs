@@ -18,7 +18,9 @@ namespace Shopping_Online.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int pg = 1)
         {
-            List<OrderModel> order = await _dataContext.Orders.ToListAsync();
+            List<OrderModel> order = await _dataContext.Orders
+                                    // .OrderByDescending(o => o.CreateDate)
+                                    .ToListAsync();
             const int pageSize = 10;
             if (pg < 1)
             {

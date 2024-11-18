@@ -59,9 +59,13 @@ public class HomeController : Controller
     [HttpGet]
     public async Task<IActionResult> Wishlist()
     {
+        var currentUser = await _userManager.GetUserAsync(User);
+        var currentUserId = currentUser?.Id;
+        
         var wishlist = await (from w in _dataContext.Wishlists
                                join p in _dataContext.Products on w.ProductId equals p.Id
                                join u in _dataContext.Users on w.UserId equals u.Id
+                               where w.UserId == currentUserId
                                select new 
                                {
                                    User = u,
