@@ -49,7 +49,7 @@ namespace Shopping_Online.Areas.Admin.Controllers
         public IActionResult GetChartDataBySelect(DateTime startDate, DateTime endDate)
         {
             var data = _dataContext.StatisticalModels
-                .Where(s => s.DateCreated >= startDate && s.DateCreated <= endDate)
+                .Where(s => s.DateCreated >= startDate && s.DateCreated < endDate)
                 .Select(s => new
                 {
                     date = s.DateCreated.ToString("yyyy-MM-dd"),

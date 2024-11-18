@@ -15,6 +15,8 @@ namespace Shopping_Online.Models
         public string Description { get; set; }
         [Required(ErrorMessage = "Nhập giá Sản phẩm")]
         public int Price { get; set; }
+        [Required(ErrorMessage = "Nhập giá vốn Sản phẩm")]
+        public int CapitalPrice { get; set; }
         [Required, Range(1, int.MaxValue, ErrorMessage = "Chọn một Thương hiệu")]
         public int BrandId { get; set; }
         [Required, Range(1, int.MaxValue, ErrorMessage = "Chọn một Danh mục")]

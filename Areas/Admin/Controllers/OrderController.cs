@@ -62,6 +62,57 @@ namespace Shopping_Online.Areas.Admin.Controllers
             }
 
             order.Status = status;
+            _dataContext.Update(order);
+
+            if (status == 0)
+            {
+                var DetailsOrder = await _dataContext.OrderDetails
+                                    .Include(od => od.Product)
+                                    .Where(od => od.OrderCode == ordercode)
+                                    .Select(od => new 
+                                    {
+                                        od.Quantity,
+                                        od.Product.Price,
+                                        od.Product.CapitalPrice
+                                    }).ToListAsync();
+                
+                var statisticalModel = await _dataContext.StatisticalModels
+                                        .FirstOrDefaultAsync(s => s.DateCreated.Date == order.CreateDate.Date);
+                
+                if (statisticalModel != null)
+                {
+                    foreach (var orderDetail in DetailsOrder)
+                    {
+                        statisticalModel.Quantity += 1;
+                        statisticalModel.Sold += orderDetail.Quantity;
+                        statisticalModel.Revenue += orderDetail.Price * orderDetail.Quantity;
+                        statisticalModel.Profit += orderDetail.Price - orderDetail.CapitalPrice;
+                    }
+                    _dataContext.Update(statisticalModel);
+                }
+                else {
+                    int new_quantity = 0;
+                    int new_sold = 0;
+                    int new_profit = 0;
+                    foreach (var orderDetail in DetailsOrder)
+                    {
+                        new_quantity += 1;
+                        new_sold += orderDetail.Quantity;
+                        new_profit += orderDetail.Price - orderDetail.CapitalPrice;
+
+                        statisticalModel = new StatisticalModel
+                        {
+                            DateCreated = order.CreateDate,
+                            Quantity = new_quantity,
+                            Sold = new_sold,
+                            Revenue = orderDetail.Price * orderDetail.Quantity,
+                            Profit = new_profit
+                        };
+                    }
+                    _dataContext.Add(statisticalModel);
+                }
+            }
+
             try
             {
                 await _dataContext.SaveChangesAsync();
