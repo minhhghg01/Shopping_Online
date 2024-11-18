@@ -19,5 +19,6 @@ namespace Shopping_Online.Data
         public DbSet<ContactModel> Contacts { get; set; }
         public DbSet<WishlistModel> Wishlists { get; set; }
         public DbSet<ProductQuantity> ProductQuantities { get; set; }
+        public DbSet<StatisticalModel> StatisticalModels { get; set; }
     }
 }

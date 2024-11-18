@@ -25,5 +25,22 @@ namespace Shopping_Online.Areas.Admin.Controllers
             ViewBag.countUser = count_user;
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> GetChartData()
+        {
+            var data = _dataContext.StatisticalModels
+                .Select(s => new
+                {
+                    date = s.DateCreated.ToString("yyyy-MM-dd"), // Sử dụng định dạng đúng
+                    sold = s.Sold,
+                    quantity = s.Quantity,
+                    revenue = s.Revenue,
+                    profit = s.Profit
+                })
+                .ToList();
+
+            return Json(data);
+        }
     }
 }
