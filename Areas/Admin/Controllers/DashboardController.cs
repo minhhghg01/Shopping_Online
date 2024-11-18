@@ -27,12 +27,32 @@ namespace Shopping_Online.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Route("GetChartData")]
         public async Task<IActionResult> GetChartData()
         {
             var data = _dataContext.StatisticalModels
                 .Select(s => new
                 {
-                    date = s.DateCreated.ToString("yyyy-MM-dd"), // Sử dụng định dạng đúng
+                    date = s.DateCreated.ToString("yyyy-MM-dd"),
+                    sold = s.Sold,
+                    quantity = s.Quantity,
+                    revenue = s.Revenue,
+                    profit = s.Profit
+                })
+                .ToList();
+
+            return Json(data);
+        }
+
+        [HttpPost]
+        [Route("GetChartDataBySelect")]
+        public IActionResult GetChartDataBySelect(DateTime startDate, DateTime endDate)
+        {
+            var data = _dataContext.StatisticalModels
+                .Where(s => s.DateCreated >= startDate && s.DateCreated <= endDate)
+                .Select(s => new
+                {
+                    date = s.DateCreated.ToString("yyyy-MM-dd"),
                     sold = s.Sold,
                     quantity = s.Quantity,
                     revenue = s.Revenue,

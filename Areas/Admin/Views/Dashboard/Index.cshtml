@@ -20,6 +20,18 @@
 </div>
 <div class="container">
     <div class="row">
+        <div class="col-md-3">
+            <h4>Filter By:</h4>
+            <select class="filter-select">
+                <option value="30">---Filter Data---</option>
+                <option value="7">7 Days ago</option>
+                <option value="30">1 Month ago</option>
+                <option value="90">3 Month ago</option>
+                <option value="365">1 Year ago</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
         <p>
         <h4>Biểu đồ Thống kê</h4>
         </p>
@@ -30,41 +42,77 @@
 @section Scripts {
     <script>
         $(document).ready(function () {
-            console.log("Heloo: @Url.Action("GetChartData", "Dashboard")");
+            var ChartMorris = new Morris.Line({
+                element: 'myfirstchart',
+                data: [],
+                xkey: 'date',
+                xLabelFormat: function (x) {
+                    return new Date(x).toLocaleDateString();
+                },
+                ykeys: ['sold', 'quantity', 'revenue', 'profit'],
+                labels: ["Số lượng bán ra", "Đơn hàng", "Doanh thu", "Lợi nhuận"]
+            });
+
+            // console.log("Heloo: @Url.Action("GetChartData", "Dashboard")");
             $.ajax({
                 url: '@Url.Action("GetChartData", "Dashboard")',
                 type: "POST",
                 dataType: "json",
                 success: function (data) {
-                    console.log("Dữ liệu nhận được từ server: ", data); // Kiểm tra dữ liệu nhận được
-                    var chartData = data.map(function (item) {
-                        return {
-                            date: item.date,
-                            sold: item.sold,
-                            quantity: item.quantity,
-                            revenue: item.revenue,
-                            profit: item.profit
-                        };
-                    });
-
-                    console.log("Dữ liệu chuẩn bị cho Morris chart: ", chartData); // Kiểm tra dữ liệu được chuyển vào Morris
-
-                    new Morris.Line({
-                        element: 'myfirstchart',
-                        data: chartData,
-                        xkey: 'date',
-                        xLabelFormat: function (x) {
-                            return new Date(x).toLocaleDateString();
-                        },
-                        ykeys: ['sold', 'quantity', 'revenue', 'profit'],
-                        labels: ["Số lượng bán ra", "Đơn hàng", "Doanh thu", "Lợi nhuận"]
-                    });
+                    // console.log("Dữ liệu nhận được từ server: ", data); // Kiểm tra dữ liệu nhận được
+                    if (data) {
+                        ChartMorris.setData(data.map(function (item) {
+                            return {
+                                date: item.date,
+                                sold: item.sold,
+                                quantity: item.quantity,
+                                revenue: item.revenue,
+                                profit: item.profit
+                            };
+                        }));
+                        } else {
+                            console.warn("No data");
+                            ChartMorris.setData([]);
+                        }
                 },
                 error: function (error) {
                     console.error("Lỗi khi lấy dữ liệu:", error);
                 }
             });
 
+            $('.filter-select').on('change', function () {
+                var days = $(this).val();
+                var endDate = new Date();
+                var startDate = new Date(endDate.getTime() - days * 24 * 60 * 60 * 1000 );
+                // alert(startDate);
+
+                $.ajax({
+                    url: "@Url.Action("GetChartDataBySelect", "Dashboard")",
+                    type: 'POST',
+                    data: {
+                        startDate: startDate.toISOString().split('T')[0],
+                        endDate: endDate.toISOString().split('T')[0]
+                    },
+                    success: function (data) {
+                        if (data) {
+                            ChartMorris.setData(data.map(function (item) {
+                                return {
+                                date: item.date,
+                                sold: item.sold,
+                                quantity: item.quantity,
+                                revenue: item.revenue,
+                                profit: item.profit
+                            };
+                            }));
+                        } else {
+                            ChartMorris.setData([]);
+                        }
+                    },
+                    error: function (error) {
+                        console.error("error");
+                    }
+                });
+            });
         }); 
     </script>
 }
