@@ -62,5 +62,33 @@ namespace Shopping_Online.Areas.Admin.Controllers
 
             return Json(data);
         }
+
+        [HttpPost]
+        [Route("FilterData")]
+        public IActionResult FilterData(DateTime? fromDate, DateTime? toDate)
+        {
+            var query = _dataContext.StatisticalModels.AsQueryable();
+            if (fromDate.HasValue)
+            {
+                query = query.Where(s => s.DateCreated >= fromDate);
+            }
+
+            if (toDate.HasValue)
+            {
+                toDate = toDate.Value.AddDays(1);
+                query = query.Where(s => s.DateCreated < toDate);
+            }
+
+            var data = query.Select(s => new
+            {
+                date = s.DateCreated.ToString("yyyy-MM-dd"),
+                sold = s.Sold,
+                quantity = s.Quantity,
+                revenue = s.Revenue,
+                profit = s.Profit
+            }).ToList();
+
+            return Json(data);
+        }
     }
 }

@@ -1,4 +1,4 @@
-@model IEnumerable<BrandModel>
+@model StatisticalModel
 @{
     ViewData["title"] = "Dashboard";
 }
@@ -29,6 +29,14 @@
                 <option value="90">3 Month ago</option>
                 <option value="365">1 Year ago</option>
             </select>
+        </div>
+        <div class="col-md-3">
+            <h4>Option: </h4>
+            <label>From</label>
+            <input type="date" class="form-control" id="date_from" asp-for="@Model.DateCreated" />
+            <label>To</label>
+            <input type="date" class="form-control" id="date_to" asp-for="@Model.DateCreated" />
+            <button id="filterButton" class="btn btn-primary">Filter</button>
         </div>
     </div>
     <div class="row">
@@ -93,6 +101,35 @@
                         startDate: startDate.toISOString().split('T')[0],
                         endDate: endDate.toISOString().split('T')[0]
                     },
+                    success: function (data) {
+                        if (data) {
+                            ChartMorris.setData(data.map(function (item) {
+                                return {
+                                date: item.date,
+                                sold: item.sold,
+                                quantity: item.quantity,
+                                revenue: item.revenue,
+                                profit: item.profit
+                            };
+                            }));
+                        } else {
+                            ChartMorris.setData([]);
+                        }
+                    },
+                    error: function (error) {
+                        console.error("error");
+                    }
+                });
+            });
+
+            $("#filterButton").click(function () {
+                var fromDate = $("#date_from").val();
+                var toDate = $("#date_to").val();
+
+                $.ajax({
+                    url: "@Url.Action("FilterData", "Dashboard")",
+                    data: {fromDate: fromDate, toDate: toDate},
+                    type: "POST",
                     success: function (data) {
                         if (data) {
                             ChartMorris.setData(data.map(function (item) {
