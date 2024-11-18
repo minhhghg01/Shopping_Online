@@ -4,29 +4,29 @@
     var total_quantites = 0;
     var key = 1;
 }
-<h4>Create Quantity</h4>
+<h4>Thêm số lượng sản phẩm</h4>
 <div class="col-md-9">
     <form asp-action="StoreProductQuantity" asp-controller="Product" enctype="multipart/form-data">
         <input type="hidden" name="ProductId" value="@ViewBag.Id" />
         <div asp-asp-validation-summary="ModelOnly" class="text-danger"></div>
 
         <div class="form-group">
-            <label>Quantity</label>
+            <label>Số lượng</label>
             <input min="1" value="1" max="500" asp-for="Quantity" class="form-control" />
             <span asp-validation-for="Quantity" class="text-danger" />
         </div>
 
         <div class="form-group">
-            <button class="btn btn-primary">Create</button>
+            <button class="btn btn-primary">Thêm</button>
         </div>
     </form>
-    <h3>Existing Product Quantities:</h3>
+    <h3>Lịch sử Thêm sản phẩm:</h3>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Key</th>
-                <th>Quantity added</th>
-                <th>Date</th>
+                <th>STT</th>
+                <th>Số lượng</th>
+                <th>Ngày</th>
             </tr>
         </thead>
         <tbody>
@@ -41,11 +41,11 @@
                 key++;
             }
             <tr>
-                <td><h4>Total Quantities: @total_quantites</h4></td>
+                <td><h4>Tổng số lượng: @total_quantites</h4></td>
             </tr>
         </tbody>
     </table>
-    <a asp-controller="Product" asp-action="Index"> Back to List Products</a>
+    <a asp-controller="Product" asp-action="Index"> Quay lại</a>
 </div>
 @section Scripts {
     @{

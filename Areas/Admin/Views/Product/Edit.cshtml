@@ -2,56 +2,56 @@
 @{
     ViewData["title"] = "Edit Product";
 }
-<h4>Edit product</h4>
+<h4>Chỉnh sửa Sản phẩm</h4>
 <div class="col-md-9">
     <form asp-action="Edit" enctype="multipart/form-data">
         <div asp-asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <label>Name</label>
+            <label>Tên</label>
             <input asp-for="Name" class="form-control" />
             <span asp-validation-for="Name" class="text-danger" />
         </div>
         <div class="form-group">
-            <label>Price</label>
+            <label>Giá bán</label>
             <input asp-for="Price" class="form-control" />
             <span asp-validation-for="Price" class="text-danger" />
         </div>
         <div class="form-group">
-            <label>Capital Price</label>
+            <label>Giá mua</label>
             <input asp-for="CapitalPrice" class="form-control" />
             <span asp-validation-for="CapitalPrice" class="text-danger" />
         </div>
         <div class="form-group">
-            <label>Description</label>
+            <label>Mô tả</label>
             <textarea asp-for="Description" class="form-control"></textarea>
             <span asp-validation-for="Description" class="text-danger" />
         </div>
         <div class="form-group">
-            <label>Category</label>
+            <label>Dòng Sản phẩm</label>
             <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
-                <option>---Choose a Category</option>
+                <option>---Chọn một Dòng Sản phẩm</option>
             </select>
             <span asp-validation-for="CategoryId" class="text-danger" />
         </div>
         <div class="form-group">
-            <label>Brand</label>
+            <label>Thương hiệu</label>
             <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brands">
-                <option>---Choose a Brand</option>
+                <option>---Chọn một Thương hiệu</option>
             </select>
             <span asp-validation-for="BrandId" class="text-danger" />
         </div>
         <div class="form-group">
-            <label>Image</label>
+            <label>Ảnh</label>
             <input asp-for="ImageUpload" class="form-control" />
             <span asp-validation-for="ImageUpload" class="text-danger" />
             <img src="~/media/products/@Model.Image" width="120" />
             <img id="imgpreview" class="pt-2" />
         </div>
         <div class="form-group">
-            <button class="btn btn-primary">Update</button>
+            <button class="btn btn-primary">Cập nhật</button>
         </div>
     </form>
-    <a asp-action="Index"> Back to List Product</a>
+    <a asp-action="Index"> Quay lại</a>
 </div>
 @section Scripts {
     @{

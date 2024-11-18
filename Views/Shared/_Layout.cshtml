@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Home | Onl-Shop</title>
+	<title>Trang chủ | Onl-Shop</title>
 	<link href="~/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" rel="stylesheet">
@@ -75,22 +75,22 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a asp-action="Index" asp-controller="Cart"><i class="fa fa-shopping-cart"></i>
-										Cart</a></li>
+										Giỏ hàng</a></li>
 								@if (User.Identity?.IsAuthenticated ?? false)
 								{
-									<li><a asp-action="Checkout" asp-controller="Cart"><i class="fa fa-crosshairs"></i>
-											Checkout</a></li>
+									@* <li><a asp-action="Checkout" asp-controller="Cart"><i class="fa fa-crosshairs"></i>
+											Checkout</a></li> *@
 									<li><a asp-action="History" asp-controller="Account"><i class="fa fa-user"></i>
-											Account</a></li>
+											Lịch sử</a></li>
 									<li><a asp-action="Wishlist" asp-controller="Home"><i class="fa fa-heart"></i>
-											Wishlist</a></li>
+											Yêu thích</a></li>
 									@if (User.IsInRole("Admin"))
 									{
-										<li><a asp-area="Admin" asp-action="Index" asp-controller="Product"><i
+										<li><a asp-area="Admin" asp-action="Index" asp-controller="Dashboard"><i
 													class="fa fa-star"></i> Admin</a></li>
 									}
-									<li><a asp-controller="Account" asp-action="Logout"><i class="fa fa-lock"></i>Hello
-											@User.Identity.Name, Logout</a></li>
+									<li><a asp-controller="Account" asp-action="Logout"><i class="fa fa-lock"></i>Xin chào
+											@User.Identity.Name, Đăng xuất</a></li>
 								}
 								else
 								{

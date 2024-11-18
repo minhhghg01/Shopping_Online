@@ -22,22 +22,23 @@ namespace Shopping_Online.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int pg = 1)
         {
-            const int pageSize = 10;
-            if (pg < 1)
-            {
-                pg = 1;
-            }
+            // const int pageSize = 10;
+            // if (pg < 1)
+            // {
+            //     pg = 1;
+            // }
             List<ProductModel> products = await _dataContext.Products
                 .Include(p => p.Category)
                 .Include(p => p.Brand)
                 .OrderByDescending(p => p.Id)
                 .ToListAsync();
             int recsCount = products.Count();
-            var pager = new Paginate(recsCount, pg, pageSize);
-            int recSkip = (pg - 1) * pageSize;
-            var data = products.Skip(recSkip).Take(pager.PageSize).ToList();
-            ViewBag.Pager = pager;
-            return View(data);
+            // var pager = new Paginate(recsCount, pg, pageSize);
+            // int recSkip = (pg - 1) * pageSize;
+            // var data = products.Skip(recSkip).Take(pager.PageSize).ToList();
+            // ViewBag.Pager = pager;
+            // return View(data);
+            return View(products);
         }
         public IActionResult Create()
         {

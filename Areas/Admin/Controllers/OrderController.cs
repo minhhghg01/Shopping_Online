@@ -21,17 +21,18 @@ namespace Shopping_Online.Areas.Admin.Controllers
             List<OrderModel> order = await _dataContext.Orders
                                     // .OrderByDescending(o => o.CreateDate)
                                     .ToListAsync();
-            const int pageSize = 10;
-            if (pg < 1)
-            {
-                pg = 1;
-            }
-            int recsCount = order.Count();
-            var pager = new Paginate(recsCount, pg, pageSize);
-            int recSkip = (pg - 1) * pageSize;
-            var data = order.Skip(recSkip).Take(pager.PageSize).ToList();
-            ViewBag.Pager = pager;
-            return View(data);
+            // const int pageSize = 10;
+            // if (pg < 1)
+            // {
+            //     pg = 1;
+            // }
+            // int recsCount = order.Count();
+            // var pager = new Paginate(recsCount, pg, pageSize);
+            // int recSkip = (pg - 1) * pageSize;
+            // var data = order.Skip(recSkip).Take(pager.PageSize).ToList();
+            // ViewBag.Pager = pager;
+            // return View(data);
+            return View(order);
         }
         [HttpGet]
         public async Task<IActionResult> ViewOrder(string orderCode)

@@ -73,12 +73,12 @@ namespace Shopping_Online.Areas.Admin.Controllers
                 try
                 {
                     await _roleManager.UpdateAsync(role);
-                    TempData["success"] = "Cập nhật vai trò thành công";
+                    TempData["success"] = "Cập nhật Chức vụ thành công";
                     return RedirectToAction("Index");
                 }
                 catch (Exception ex)
                 {
-                    ModelState.AddModelError("", "Có lỗi xảy ra khi cập nhật vai trò");
+                    ModelState.AddModelError("", "Có lỗi xảy ra khi cập nhật Chức vụ");
                 }
             }
             return View(model ?? new IdentityRole { Id = id });
@@ -98,11 +98,11 @@ namespace Shopping_Online.Areas.Admin.Controllers
             try
             {
                 await _roleManager.DeleteAsync(role);
-                TempData["success"] = "Xóa vai trò thành công";
+                TempData["success"] = "Xóa Chức vụ thành công";
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", "Có lỗi xảy ra khi xóa vai trò");
+                ModelState.AddModelError("", "Có lỗi xảy ra khi xóa Chức vụ");
             }
             return RedirectToAction("Index");
         }

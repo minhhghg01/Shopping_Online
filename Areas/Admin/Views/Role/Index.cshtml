@@ -11,15 +11,15 @@
     } *@
 }
 
-<h3>list Role</h3>
-<a asp-action="Create" asp-controller="Role"> Create Role </a>
+<h3>Danh sách Chức vụ</h3>
+<a asp-action="Create" asp-controller="Role"> Thêm Chức vụ </a>
 <table class="table">
     <thead>
         <tr>
             <th scope="col">Id</th>
             @* <th scope="col">Role Name</th> *@
-            <th scope="col">Role</th>
-            <th scope="col">Action</th>
+            <th scope="col">Chức vụ</th>
+            <th scope="col">Hành động</th>
         </tr>
     </thead>
     <tbody>
@@ -31,9 +31,9 @@
                 
                 <td>
                     <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="Role" asp-route-id="@item.Id">
-                        Edit </a>
+                        Sửa </a>
                     <a asp-action="Delete" class="btn btn-danger btn-sm confirmDeletion" asp-controller="Role" asp-route-id="@item.Id">
-                        Delete </a>
+                        Xóa </a>
                 </td>
             </tr>
         }

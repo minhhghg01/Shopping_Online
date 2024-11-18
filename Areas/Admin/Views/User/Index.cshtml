@@ -1,24 +1,24 @@
 @{
     ViewData["title"] = "User Listed";
-    Paginate pager = new Paginate();
+    @* Paginate pager = new Paginate();
     int pageNo = 0;
     if(ViewBag.Pager != null) {
         pager = ViewBag.Pager;
         pageNo = pager.CurrentPage;
-    }
+    } *@
 }
 
-<h3>list User</h3>
-<a asp-action="Create" asp-controller="User"> Create User </a>
+<h3>Danh sách Người dùng</h3>
+<a asp-action="Create" asp-controller="User"> Tạo Người dùng </a>
 <table class="table " id="example">
     <thead>
         <tr>
-            <th scope="col">UserName</th>
+            <th scope="col">Tên người dùng</th>
             <th scope="col">Email</th>
-            <th scope="col">PasswordHash</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Role</th>
-            <th scope="col">Action</th>
+            <th scope="col">Mật khẩu băm</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Chức vụ</th>
+            <th scope="col">Hành động</th>
         </tr>
     </thead>
     <tbody>
@@ -34,20 +34,22 @@
                     }
                     else
                     {
-                        <span>Không có dữ liệu</span> 
+                        <span>Không có dữ liệu</span>
                     }
                 </td>
                 <td>@usersWithRoles.User.PhoneNumber</td>
                 <td>@usersWithRoles.RoleName</td>
-                
+
                 <td>
-                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="User" asp-route-id="@usersWithRoles.User.Id">
-                        Edit </a>
-                    <a asp-action="Delete" class="btn btn-danger btn-sm confirmDeletion" asp-controller="User" asp-route-id="@usersWithRoles.User.Id">
-                        Delete </a>
+                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="User"
+                        asp-route-id="@usersWithRoles.User.Id">
+                        Sửa </a>
+                    <a asp-action="Delete" class="btn btn-danger btn-sm confirmDeletion" asp-controller="User"
+                        asp-route-id="@usersWithRoles.User.Id">
+                        Xóa </a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<partial name="_paging" model="@pager" />
+@* <partial name="_paging" model="@pager" /> *@

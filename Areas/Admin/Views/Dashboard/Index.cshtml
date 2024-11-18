@@ -3,45 +3,65 @@
     ViewData["title"] = "Dashboard";
 }
 
-<h3>Dashboard</h3>
-<div class="row">
-    <div class="col-md-3">
-        <p>Thống kê Sản phẩm</p> @ViewBag.countProduct
+<h3 style="color: #4CAF50;">Thống kê</h3>
+<div class="row" style="display: flex; gap: 20px; justify-content: center; margin-bottom: 20px;">
+    <div class="col-md-3"
+        style="text-align: center; background: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; flex: 1 1 calc(25% - 20px); transition: transform 0.3s ease;">
+        <p style="font-size: 16px; font-weight: bold; margin-bottom: 10px; color: #333; text-transform: uppercase;">
+            Thống kê Sản phẩm</p>
+        <span style="font-size: 24px; color: #FF6347; font-weight: bold;">@ViewBag.countProduct</span>
     </div>
-    <div class="col-md-3">
-        <p>Thống kê Đơn hàng</p> @ViewBag.countOrder
+    <div class="col-md-3"
+        style="text-align: center; background: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; flex: 1 1 calc(25% - 20px); transition: transform 0.3s ease;">
+        <p style="font-size: 16px; font-weight: bold; margin-bottom: 10px; color: #333; text-transform: uppercase;">
+            Thống kê Đơn hàng</p>
+        <span style="font-size: 24px; color: #FFA500; font-weight: bold;">@ViewBag.countOrder</span>
     </div>
-    <div class="col-md-3">
-        <p>Thống kê Danh mục</p> @ViewBag.countCategory
+    <div class="col-md-3"
+        style="text-align: center; background: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; flex: 1 1 calc(25% - 20px); transition: transform 0.3s ease;">
+        <p style="font-size: 16px; font-weight: bold; margin-bottom: 10px; color: #333; text-transform: uppercase;">
+            Thống kê Danh mục</p>
+        <span style="font-size: 24px; color: #20B2AA; font-weight: bold;">@ViewBag.countCategory</span>
     </div>
-    <div class="col-md-3">
-        <p>Thống kê User</p> @ViewBag.countUser
+    <div class="col-md-3"
+        style="text-align: center; background: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; flex: 1 1 calc(25% - 20px); transition: transform 0.3s ease;">
+        <p style="font-size: 16px; font-weight: bold; margin-bottom: 10px; color: #333; text-transform: uppercase;">
+            Thống kê Người dùng</p>
+        <span style="font-size: 24px; color: #4682B4; font-weight: bold;">@ViewBag.countUser</span>
     </div>
 </div>
+
 <div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <h4>Filter By:</h4>
-            <select class="filter-select">
-                <option value="30">---Filter Data---</option>
-                <option value="7">7 Days ago</option>
-                <option value="30">1 Month ago</option>
-                <option value="90">3 Month ago</option>
-                <option value="365">1 Year ago</option>
+    <div class="row" style="display: flex; gap: 20px; justify-content: center;">
+        <div class="col-md-3"
+            style="text-align: left; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+            <h4 style="color: #4CAF50; margin-bottom: 10px;">Lọc theo:</h4>
+            <select class="filter-select"
+                style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd; background-color: #f0f8ff; color: #333; font-size: 14px; transition: all 0.3s ease;">
+                <option value="30">---Lọc dữ liệu---</option>
+                <option value="7">7 Ngày gần đây</option>
+                <option value="30">1 Tháng gần đây</option>
+                <option value="90">3 Tháng gần đây</option>
+                <option value="365">1 Năm gần đây</option>
             </select>
         </div>
-        <div class="col-md-3">
-            <h4>Option: </h4>
-            <label>From</label>
-            <input type="date" class="form-control" id="date_from" asp-for="@Model.DateCreated" />
-            <label>To</label>
-            <input type="date" class="form-control" id="date_to" asp-for="@Model.DateCreated" />
-            <button id="filterButton" class="btn btn-primary">Filter</button>
+        <div class="col-md-3"
+            style="text-align: left; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+            <h4 style="color: #4CAF50; margin-bottom: 10px;">Chọn:</h4>
+            <label style="font-size: 14px; color: #555;">Từ ngày</label>
+            <input type="date" class="form-control" id="date_from" asp-for="@Model.DateCreated"
+                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 10px;" />
+            <label style="font-size: 14px; color: #555;">Đến ngày</label>
+            <input type="date" class="form-control" id="date_to" asp-for="@Model.DateCreated"
+                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 10px;" />
+            <button id="filterButton" class="btn btn-primary"
+                style="width: 100%; padding: 10px; border-radius: 5px; background-color: #007bff; color: white;">Lọc</button>
         </div>
     </div>
+
     <div class="row">
         <p>
-        <h4>Biểu đồ Thống kê</h4>
+        <h4 style="color: #4CAF50;">Biểu đồ Thống kê</h4>
         </p>
         <div id="myfirstchart" style="height: 250px;"></div>
     </div>
@@ -78,10 +98,10 @@
                                 profit: item.profit
                             };
                         }));
-                        } else {
-                            console.warn("No data");
-                            ChartMorris.setData([]);
-                        }
+                    } else {
+                        console.warn("No data");
+                        ChartMorris.setData([]);
+                    }
                 },
                 error: function (error) {
                     console.error("Lỗi khi lấy dữ liệu:", error);
@@ -91,7 +111,7 @@
             $('.filter-select').on('change', function () {
                 var days = $(this).val();
                 var endDate = new Date();
-                var startDate = new Date(endDate.getTime() - days * 24 * 60 * 60 * 1000 );
+                var startDate = new Date(endDate.getTime() - days * 24 * 60 * 60 * 1000);
                 // alert(startDate);
 
                 $.ajax({
@@ -105,12 +125,12 @@
                         if (data) {
                             ChartMorris.setData(data.map(function (item) {
                                 return {
-                                date: item.date,
-                                sold: item.sold,
-                                quantity: item.quantity,
-                                revenue: item.revenue,
-                                profit: item.profit
-                            };
+                                    date: item.date,
+                                    sold: item.sold,
+                                    quantity: item.quantity,
+                                    revenue: item.revenue,
+                                    profit: item.profit
+                                };
                             }));
                         } else {
                             ChartMorris.setData([]);
@@ -128,18 +148,18 @@
 
                 $.ajax({
                     url: "@Url.Action("FilterData", "Dashboard")",
-                    data: {fromDate: fromDate, toDate: toDate},
+                    data: { fromDate: fromDate, toDate: toDate },
                     type: "POST",
                     success: function (data) {
                         if (data) {
                             ChartMorris.setData(data.map(function (item) {
                                 return {
-                                date: item.date,
-                                sold: item.sold,
-                                quantity: item.quantity,
-                                revenue: item.revenue,
-                                profit: item.profit
-                            };
+                                    date: item.date,
+                                    sold: item.sold,
+                                    quantity: item.quantity,
+                                    revenue: item.revenue,
+                                    profit: item.profit
+                                };
                             }));
                         } else {
                             ChartMorris.setData([]);

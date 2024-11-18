@@ -9,16 +9,16 @@
     // }
 }
 
-<h3>Order History by: @ViewBag.UserEmail</h3>
+<h3>Lịch sử của: @ViewBag.UserEmail</h3>
 <table class="table " id="example">
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Order Code</th>
-            <th scope="col">UserName</th>
-            <th scope="col">Order Date</th>
-            <th scope="col">Order Status</th>
-            <th scope="col">Action</th>
+            <th scope="col">Mã đơn hàng</th>
+            <th scope="col">Người mua</th>
+            <th scope="col">Ngày đặt</th>
+            <th scope="col">Trạng thái</th>
+            <th scope="col">Hành động</th>
         </tr>
     </thead>
     <tbody>
@@ -47,11 +47,11 @@
                     }
                 </td>
                 <td>
-                    @if (item.Status != 3)
+                    @if (item.Status != 3 && item.Status != 0)
                     {
                         <a asp-action="CancelOrder" class="btn btn-danger btn-sm" asp-controller="Account"
                             asp-route-orderCode="@item.OrderCode">
-                            Cancel Order</a>
+                            Hủy đơn</a>
                     }
                 </td>
             </tr>
