@@ -7,4 +7,4 @@ Web online shopping
 # Chạy:
   - dotnet watch run
 # Lưu ý:
-  - Bạn phải tạo tài khoản Role Admin từ trong CSDL
+  - Bạn phải tạo tài khoản Role 'Admin' từ trong CSDL trước khi khởi chạy
