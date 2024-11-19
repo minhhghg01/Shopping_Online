@@ -64,7 +64,7 @@ namespace Shopping_Online.Controllers
                     
                 _dataContext.Ratings.Add(ratingEnitity);
                 await _dataContext.SaveChangesAsync();
-                TempData["success"] = "Cmt thành công";
+                TempData["success"] = "Đánh giá thành công";
                 return Redirect(Request.Headers["Referer"]);
             }
             else

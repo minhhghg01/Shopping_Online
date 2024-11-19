@@ -42,26 +42,31 @@
                     <h2>@Model.ProductDetails.Name</h2>
                     <span>
                         <span>$@Model.ProductDetails.Price</span>
-                        <label>Quantity: </label>
+                        <label>Số lượng: </label>
                         <input type="text" value="1" />
                         @if (Model.ProductDetails.Quantity > 0)
                         {
-                            <button type="button" class="btn btn-fefault cart">
+                            <button type="button" class="btn btn-fefault cart" data-product_id="@Model.ProductDetails.Id">
                                 <i class="fa fa-shopping-cart"></i>
-                                Add to cart
+                                Thêm vào Giỏ hàng
                             </button>
                         }
                         else
                         {
                             <button class="btn btn-fefault cart disable" style="background-color: #ccc;">
-                                <i class="fa fa-shopping-cart"></i>Out of stock
+                                <i class="fa fa-shopping-cart"></i>Hết hàng
                             </button>
                         }
                     </span>
-                    <p><b>Availability:</b> In Stock</p>
-                    <p><b>Condition:</b> New</p>
-                    <p><b>Brand:</b> @Model.ProductDetails.Brand.Name</p>
-                    <p><b>Category:</b> @Model.ProductDetails.Category.Name</p>
+                    <p><b>Tình trạng:</b> @((Model.ProductDetails.Quantity > 0) ? "Còn hàng" : "Hết hàng")</p>
+                    <p><b>Mặt hàng:</b> Mới</p>
+                    <p><b>Thương hiệu:</b> @Model.ProductDetails.Brand.Name</p>
+                    <p><b>Dòng sản phẩm:</b> @Model.ProductDetails.Category.Name</p>
+                    <button class="btn btn-default add-btn-wishlist" data-product_id="@Model.ProductDetails.Id"
+                        style="background-color: #ff6666 ; color: white; padding: 6px 12px; border-radius: 5px;">
+                        <i class="fa fa-heart" style="margin-right: 5px;"></i>
+                        Yêu thích
+                    </button>
                     <a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
                 </div><!--/product-information-->
             </div>
@@ -70,8 +75,8 @@
         <div class="category-tab shop-details-tab"><!--category-tab-->
             <div class="col-sm-12">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
-                    <li><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
+                    <li class="active"><a href="#details" data-toggle="tab">Thông tin</a></li>
+                    <li><a href="#reviews" data-toggle="tab">Đánh giá</a></li>
                 </ul>
             </div>
             <div class="tab-content">
@@ -81,7 +86,7 @@
 
                 <div class="tab-pane fade" id="reviews">
                     <div class="col-sm-12">
-                        <ul>
+                        @* <ul>
                             <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
                             <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
                             <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
@@ -89,8 +94,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <p><b>Write Your Review</b></p>
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> *@
+                        <p><b>Viết Đánh giá của bạn</b></p>
 
                         <form autocomplete="off" asp-action="CommentProduct" asp-controller="Product" method="post">
                             <span>
@@ -99,13 +104,13 @@
 
                                 <div class="row">
                                     <div class="col-md-6"> <!-- Tăng từ col-md-5 lên col-md-6 để trường dài hơn -->
-                                        <input asp-for="@Model.Name" type="text" placeholder="Your Name"
+                                        <input asp-for="@Model.Name" type="text" placeholder="Tên của bạn"
                                             class="form-control" />
                                         <span asp-validation-for="@Model.Name" class="text-danger"></span>
                                     </div>
 
                                     <div class="col-md-6 ms-2"> <!-- Tăng từ col-md-5 lên col-md-6 để trường dài hơn -->
-                                        <input asp-for="@Model.Email" type="email" placeholder="Email Address"
+                                        <input asp-for="@Model.Email" type="email" placeholder="Email"
                                             class="form-control" />
                                         <span asp-validation-for="@Model.Email" class="text-danger"></span>
                                     </div>
@@ -126,7 +131,7 @@
         </div><!--/category-tab-->
 
         <div class="recommended_items"><!--recommended_items-->
-            <h2 class="title text-center">recommended items</h2>
+            <h2 class="title text-center">Có thể bạn cũng thích</h2>
             <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="item active">
@@ -142,19 +147,19 @@
                                                     width="240" height="200" />
                                                 <h2>$@relatedProduct.Price</h2>
                                                 <p>@relatedProduct.Name</p>
-                                                <p>Danh mục: @relatedProduct.Category.Name</p>
+                                                <p>Dòng sản phẩm: @relatedProduct.Category.Name</p>
                                                 <p>Thương hiệu: @relatedProduct.Brand.Name</p>
                                             </a>
-                                            @if (relatedProduct.Quantity > 0)
-                            {
-                                            <a class="btn btn-default add-to-cart" asp-action="Add" asp-controller="Cart"
-                                                asp-route-Id="@relatedProduct.Id"><i class="fa fa-shopping-cart"></i>Add to
-                                                cart</a>
+                                            <h4>@((relatedProduct.Quantity > 0) ? "Còn hàng" : "Hết hàng")</h4>
+                                            @* @if (relatedProduct.Quantity > 0)
+                                            {
+                                            <a class="btn btn-default cart" asp-action="Add" asp-controller="Cart"
+                                                asp-route-Id="@relatedProduct.Id"><i class="fa fa-shopping-cart"></i>Thêm vào Giỏ hàng</a>
                                                 }
                                                 else {
-                                                    <a class="btn btn-default add-to-cart disable" style="background-color: #ccc;">
-                                                        <i class="fa fa-shopping-cart"></i>Out of stock</a>
-                                                }
+                                                    <a class="btn btn-default cart disable" style="background-color: #ccc;">
+                                                        <i class="fa fa-shopping-cart"></i>Hết hàng</a>
+                                                } *@
                                         </div>
                                     </div>
                                 </div>
@@ -162,13 +167,57 @@
                         }
                     </div>
                 </div>
-                <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                @* <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
                     <i class="fa fa-angle-right"></i>
-                </a>
+                </a> *@
             </div>
         </div><!--/recommended_items-->
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.cart').click(function () {
+                var Id = $(this).data("product_id");
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("Add", "Cart")",
+                    data: { Id: Id },
+                    success: function (result) {
+                        if (result.success) {
+                            Swal.fire("Thành công", result.message, "success");
+                        } else {
+                            Swal.fire("Lỗi", result.message);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.add-btn-wishlist').click(function () {
+                var productId = $(this).data("product_id"); // đổi tên biến để rõ ràng hơn
+                // alert(productId);
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("AddWishlist", "Home")",
+                    data: { productId: productId }, // đổi tên parameter để match với controller
+                    success: function (result) {
+                        if (result.success) {
+                            Swal.fire("Yêu thích Thành công", result.message, "success");
+                        } else {
+                            Swal.fire("Lỗi", result.message);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}

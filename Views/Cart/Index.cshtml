@@ -4,22 +4,22 @@
 <h4>Giỏ hàng</h4>
 <section id="cart_items">
     <div class="container">
-        <div class="breadcrumbs">
+        @* <div class="breadcrumbs">
             <ol class="breadcrumb">
                 <li><a href="#">Home</a></li>
                 <li class="active">Shopping Cart</li>
             </ol>
-        </div>
+        </div> *@
         <div class="table-responsive cart_info">
             <table class="table table-condensed">
                 <thead>
                     <tr class="cart_menu">
-                        <td class="image">Item</td>
-                        <td class="description"></td>
-                        <td class="price">Price</td>
-                        <td class="quantity">Quantity</td>
-                        <td class="total">Total</td>
-                        <td></td>
+                        <td class="image">Sản phẩm</td>
+                        <td class="name"></td>
+                        <td class="price">Giá</td>
+                        <td class="quantity">Số lượng</td>
+                        <td class="total">Tổng</td>
+                        <td>Xóa</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,26 +44,26 @@
                                         autocomplete="off" size="2">
                                     <a class="btn btn-success btn-sm" asp-controller="Cart" asp-action="Decrease"
                                         asp-route-id="@item.ProductId"> - </a>
-                                    <a class="btn btn-danger btn-sm" asp-controller="Cart" asp-action="Remove"
-                                        asp-route-id="@item.ProductId"> Remove </a>
+                                    
                                 </td>
                                 <td class="cart_total">
                                     <p class="cart_total_price">
                                         $@Model.CartItems.Where(x => x.ProductId == @item.ProductId).Sum(x =>
                                                 x.Quantity * x.Price).ToString()</p>
                                 </td>
-                                <td class="cart_delete">
-                                    <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                <td class="cart_quantity">
+                                    <a class="btn btn-danger btn-sm" asp-controller="Cart" asp-action="Remove"
+                                        asp-route-id="@item.ProductId"> Xóa </a>
                                 </td>
                             </tr>
                         }
                         <tr rowspan="6">
-                            <td colspan="5"> Grand Total: <p class="cart_total_price">$@Model.GrandTotal.ToString()</p>
+                            <td colspan="5"> Tổng cộng: <p class="cart_total_price">$@Model.GrandTotal.ToString()</p>
                             </td>
-                            <td><a class="btn btn-danger btn-sm" asp-controller="Cart" asp-action="Clear"> Clear </a>   
+                            <td><a class="btn btn-danger btn-sm" asp-controller="Cart" asp-action="Clear"> Xóa hết </a>   
                                 @if (User.Identity?.IsAuthenticated ?? false)
                                 {
-                                <a class="btn btn-success btn-sm" asp-controller="Checkout" asp-action="Checkout"> Checkout
+                                <a class="btn btn-success btn-sm" asp-controller="Checkout" asp-action="Checkout"> Thanh toán
                                     </a>
                                 }</td>
 
@@ -73,7 +73,7 @@
                     {
                         <tr>
                             <td colspan="5">
-                                <h4>Your Cart is Empty.</h4>
+                                <h4>Hãy thêm gì đó vào Giỏ hàng nhé!</h4>
                             </td>
                         </tr>
                     }
