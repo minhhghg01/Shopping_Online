@@ -61,17 +61,17 @@ public class HomeController : Controller
     {
         var currentUser = await _userManager.GetUserAsync(User);
         var currentUserId = currentUser?.Id;
-        
+
         var wishlist = await (from w in _dataContext.Wishlists
-                               join p in _dataContext.Products on w.ProductId equals p.Id
-                               join u in _dataContext.Users on w.UserId equals u.Id
-                               where w.UserId == currentUserId
-                               select new 
-                               {
-                                   User = u,
-                                   Product = p,
-                                   Wishlist = w
-                               }).ToListAsync();
+                              join p in _dataContext.Products on w.ProductId equals p.Id
+                              join u in _dataContext.Users on w.UserId equals u.Id
+                              where w.UserId == currentUserId
+                              select new
+                              {
+                                  User = u,
+                                  Product = p,
+                                  Wishlist = w
+                              }).ToListAsync();
 
         return View(wishlist);
     }
@@ -80,6 +80,16 @@ public class HomeController : Controller
     public async Task<IActionResult> AddWishlist(int productId)
     {
         var user = await _userManager.GetUserAsync(User);
+
+        // Kiểm tra xem sản phẩm đã có trong wishlist chưa
+        var existingWishlistItem = await _dataContext.Wishlists
+            .FirstOrDefaultAsync(w => w.ProductId == productId && w.UserId == user.Id);
+
+        // Nếu sản phẩm đã có trong wishlist, trả về thông báo
+        if (existingWishlistItem != null)
+        {
+            return Ok(new { success = false, message = "Sản phẩm đã có trong danh sách yêu thích của bạn." });
+        }
 
         var wishlist = new WishlistModel
         {

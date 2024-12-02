@@ -118,4 +118,25 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $('.add-btn-wishlist').click(function () {
+                var productId = $(this).data("product_id"); // đổi tên biến để rõ ràng hơn
+                // alert(productId);
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("AddWishlist", "Home")",
+                    data: { productId: productId }, // đổi tên parameter để match với controller
+                    success: function (result) {
+                        if (result.success) {
+                            Swal.fire("Yêu thích Thành công", result.message, "success");
+                        } else {
+                            Swal.fire("Lỗi", result.message);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 }
