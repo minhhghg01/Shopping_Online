@@ -43,7 +43,7 @@ namespace Shopping_Online.Controllers
             {
                 ViewBag.Email = checkuser.Email;
                 ViewBag.Token = token;
-            } 
+            }
             else
             {
                 TempData["error"] = "Không thấy người dùng";
@@ -51,6 +51,34 @@ namespace Shopping_Online.Controllers
             }
             return View();
         }
+        [HttpPost]
+        public async Task<IActionResult> UpdateNewPass(AppUserModel user, string token)
+        {
+            var checkuser = await _userManager.Users
+                            .Where(u => u.Email == user.Email)
+                            .Where(u => u.Token == user.Token)
+                            .FirstOrDefaultAsync();
+
+            if (checkuser != null)
+            {
+                string newtoken = Guid.NewGuid().ToString();
+                var passwordHasher = new PasswordHasher<AppUserModel>();
+                var hashedPassword = passwordHasher.HashPassword(checkuser, user.PasswordHash);
+
+                checkuser.PasswordHash = hashedPassword;
+                checkuser.Token = newtoken;
+
+                await _userManager.UpdateAsync(checkuser);
+                TempData["success"] = "Đổi mật khẩu thành công";
+                return RedirectToAction("Login", "Account");
+            }
+            else
+            {
+                TempData["error"] = "Không thấy người dùng";
+                return RedirectToAction("ForgetPass", "Account");
+            }
+        }
+
         [HttpPost]
         public async Task<IActionResult> SendMailForgetPass(AppUserModel user)
         {

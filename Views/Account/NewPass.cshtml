@@ -9,7 +9,8 @@
 				<div class="login-form"><!--login form-->
 					<h2>Tạo mật khẩu mới</h2>
 					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-					<form asp-action="SendMailForgetPass" asp-controller="Account">
+					<form asp-action="UpdateNewPass" asp-controller="Account">
+                        <input type="hidden" name="token" value="@ViewBag.Token" />
 						<div class="form-group">
 							<label>Email</label>
 							<input asp-for="Email" readonly value="@ViewBag.Email" class="form-control" />
