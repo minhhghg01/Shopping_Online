@@ -5,21 +5,28 @@
     <div class="row">
         <div class="col-md-2">
             <h5>Sắp xếp theo</h5>
-            <select class="form-control" id="sort_by">
-                <option>---</option>
-                <option value="@currentUrl?sort_by=price_increase">Giá tăng dần</option>
-                <option value="@currentUrl?sort_by=price_decrease">Giá giảm dần</option>
-                <option value="@currentUrl?sort_by=price_newest">Mới nhất</option>
-                <option value="@currentUrl?sort_by=price_oldest">Cũ nhất</option>
+            <select class="form-control" id="sort_by" onchange="location.href=this.value;">
+                <option value="@currentUrl?sort_by=price_newest" selected="@(ViewBag.SortBy == "price_newest")">Mới nhất
+                </option>
+                <option value="@currentUrl?sort_by=price_oldest" selected="@(ViewBag.SortBy == "price_oldest")">Cũ nhất
+                </option>
+                <option value="@currentUrl?sort_by=price_increase" selected="@(ViewBag.SortBy == "price_increase")">Giá
+                    tăng dần</option>
+                <option value="@currentUrl?sort_by=price_decrease" selected="@(ViewBag.SortBy == "price_decrease")">Giá
+                    giảm dần</option>
+                
             </select>
+
         </div>
         <div class="col-md-5">
             <h5>Lọc</h5>
             <form asp-action="Index" asp-controller="Category" style="margin-bottom: 10px;">
                 <p style="display: flex; align-items: center;">
                     <label for="amount" style="margin-right: 10px;">Giá:</label>
-                    <input type="text" id="amount" readonly="" style="border:0; color:#f6931f; font-weight:bold; margin-right: 10px; flex: 1;">
-                    <button type="submit" name="locgia" data-current_url="@currentUrl" class="btn btn-success btn-locgia">Lọc giá</button>
+                    <input type="text" id="amount" readonly=""
+                        style="border:0; color:#f6931f; font-weight:bold; margin-right: 10px; flex: 1;">
+                    <button type="submit" name="locgia" data-current_url="@currentUrl"
+                        class="btn btn-success btn-locgia">Lọc giá</button>
                 </p>
                 <div id="slider-range"></div>
             </form>

@@ -18,7 +18,7 @@
         {
             <div class="col-sm-4">
                 <div class="product-image-wrapper">
-                    <a>
+                    <a asp-action="Details" asp-controller="Product" asp-route-Id="@item.Id">
                         <div class="single-products">
                             <div class="productinfo text-center">
                                 <img src="~/media/products/@item.Image" alt="@item.Name" width="240" height="200" />
@@ -36,8 +36,7 @@
                                     <button class="btn btn-default add-to-cart disable" style="background-color: #ccc;">
                                         <i class="fa fa-shopping-cart"></i>Hết hàng </button>
                                 }
-                            </div>
-                            
+                            </div>      
                         </div>
                     </a>
                     <div class="choose text-center">

@@ -1,12 +1,6 @@
 @model IEnumerable<OrderModel>
 @{
     ViewData["title"] = "Order Listed";
-    @* Paginate pager = new Paginate();
-    int pageNo = 0;
-    if(ViewBag.Pager != null) {
-        pager = ViewBag.Pager;
-        pageNo = pager.CurrentPage;
-    } *@
 }
 
 <h3>Danh sách Đơn hàng</h3>
@@ -22,9 +16,6 @@
         </tr>
     </thead>
     <tbody>
-        @* @{
-            int index = (pageNo - 1) * 10 + 1; 
-        } *@
         @foreach (var item in Model)
         {
             <tr>
@@ -55,7 +46,6 @@
                         Xóa </a>
                 </td>
             </tr>
-         //   index++; // Tăng biến index sau mỗi vòng lặp
         }
     </tbody>
 </table>

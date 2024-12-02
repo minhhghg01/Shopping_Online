@@ -51,7 +51,7 @@ public class HomeController : Controller
                     break;
             }
         }
-
+        ViewBag.SortBy = sort_by;
         var products = productsQuery.ToList();
         return View(products);
     }

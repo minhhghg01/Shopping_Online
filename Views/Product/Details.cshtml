@@ -15,27 +15,6 @@
                 <div class="view-product">
                     <img src="~/media/products/@Model.ProductDetails.Image" alt="" />
                 </div>
-                <div id="similar-product" class="carousel slide" data-ride="carousel">
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item">
-                            <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-                            <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-                            <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-                        </div>
-
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left item-control" href="#similar-product" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a class="right item-control" href="#similar-product" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
-
             </div>
             <div class="col-sm-7">
                 <div class="product-information"><!--/product-information-->
@@ -86,15 +65,6 @@
 
                 <div class="tab-pane fade" id="reviews">
                     <div class="col-sm-12">
-                        @* <ul>
-                            <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
-                            <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-                            <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> *@
                         <p><b>Viết Đánh giá của bạn</b></p>
 
                         <form autocomplete="off" asp-action="CommentProduct" asp-controller="Product" method="post">
@@ -151,15 +121,6 @@
                                                 <p>Thương hiệu: @relatedProduct.Brand.Name</p>
                                             </a>
                                             <h4>@((relatedProduct.Quantity > 0) ? "Còn hàng" : "Hết hàng")</h4>
-                                            @* @if (relatedProduct.Quantity > 0)
-                                            {
-                                            <a class="btn btn-default cart" asp-action="Add" asp-controller="Cart"
-                                                asp-route-Id="@relatedProduct.Id"><i class="fa fa-shopping-cart"></i>Thêm vào Giỏ hàng</a>
-                                                }
-                                                else {
-                                                    <a class="btn btn-default cart disable" style="background-color: #ccc;">
-                                                        <i class="fa fa-shopping-cart"></i>Hết hàng</a>
-                                                } *@
                                         </div>
                                     </div>
                                 </div>
@@ -167,12 +128,6 @@
                         }
                     </div>
                 </div>
-                @* <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-                    <i class="fa fa-angle-right"></i>
-                </a> *@
             </div>
         </div><!--/recommended_items-->
     </div>

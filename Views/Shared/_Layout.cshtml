@@ -108,29 +108,17 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-9">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse"
-								data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a asp-controller="Home" asp-action="Index" class="active">Trang chủ</a></li>
 								<li class="dropdown"><a asp-controller="Product">Cửa hàng<i
 											class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
-										<li><a asp-action="Index" asp-controller="Category"> Dòng sản phẩm </a></li>
-										<li><a asp-action="Index" asp-controller="Brand">Thương hiệu</a></li>
 										<li><a asp-action="Index" asp-controller="Cart">Giỏ hàng</a></li>
+										<li><a href="404.html">404</a></li>
+										<li><a asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
 									</ul>
 								</li>
-
-								<li><a href="404.html">404</a></li>
-								<li><a asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
 							</ul>
 						</div>
 					</div>
