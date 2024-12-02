@@ -32,6 +32,55 @@ namespace Shopping_Online.Controllers
         {
             return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
+        public async Task<IActionResult> NewPass(AppUserModel user, string token)
+        {
+            var checkuser = await _userManager.Users
+                            .Where(u => u.Email == user.Email)
+                            .Where(u => u.Token == user.Token)
+                            .FirstOrDefaultAsync();
+
+            if (checkuser != null)
+            {
+                ViewBag.Email = checkuser.Email;
+                ViewBag.Token = token;
+            } 
+            else
+            {
+                TempData["error"] = "Không thấy người dùng";
+                return RedirectToAction("ForgetPass", "Account");
+            }
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> SendMailForgetPass(AppUserModel user)
+        {
+            var checkMail = await _userManager.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+            if (checkMail == null)
+            {
+                TempData["error"] = "Không thấy Email";
+                return RedirectToAction("ForgetPass", "Account");
+            }
+            else
+            {
+                string token = Guid.NewGuid().ToString();
+                checkMail.Token = token;
+                _dataContext.Update(checkMail);
+                await _dataContext.SaveChangesAsync();
+                var receiver = checkMail.Email;
+                var subject = "Thay đổi mật khẩu của người dùng " + checkMail.Email;
+                var message = "Vui lòng nhấn vào link sau để thay đổi mật khẩu: " +
+                "<a href='" + $"{Request.Scheme}://{Request.Host}/Account/NewPass?email=" + checkMail.Email + "&token=" + token + "'>";
+
+                await _emailSender.SendEmailAsync(receiver, subject, message);
+            }
+
+            TempData["success"] = "Vui lòng kiểm tra Email để thay đổi mật khẩu";
+            return RedirectToAction("ForgetPass", "Account");
+        }
+        public async Task<IActionResult> ForgetPass(string returnUrl)
+        {
+            return View();
+        }
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginVM)
         {
@@ -91,9 +140,10 @@ namespace Shopping_Online.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
-            try {
-            var order = await _dataContext.Orders
-                .Where(o => o.OrderCode == orderCode).FirstAsync();
+            try
+            {
+                var order = await _dataContext.Orders
+                    .Where(o => o.OrderCode == orderCode).FirstAsync();
                 order.Status = 3;
                 _dataContext.Update(order);
                 await _dataContext.SaveChangesAsync();

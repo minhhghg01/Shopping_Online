@@ -24,9 +24,6 @@
                                 <p>Danh mục: @item.Category.Name</p>
                                 <p>Thương hiệu: @item.Brand.Name</p>
                             </a>
-                            @* <a class="btn btn-default add-to-cart" asp-action="Add" asp-controller="Cart"
-                        asp-route-Id="@item.Id"><i class="fa fa-shopping-cart"></i>Add to
-                        cart</a> *@
                             @if (item.Quantity > 0)
                             {
                                 <button class="btn btn-default add-to-cart" data-product_id="@item.Id">
@@ -54,7 +51,6 @@
                                     </button>
                                 </li>
                             </ul>
-
                         }
                     </div>
                 </div>
