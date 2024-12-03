@@ -22,7 +22,7 @@
 
             <div class="form-group">
                 <label>Số điện thoại</label>
-                <input asp-for="PhoneNumber" class="form-control" />
+                <input asp-for="PhoneNumber" value="@Model.PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger" />
             </div>
 
@@ -33,7 +33,7 @@
 
             <div class="form-group">
                 <label>Mật khẩu mới</label>
-                <input type="text" name="PasswordHash" required class="form-control" />
+                <input type="text" name="PasswordHash" class="form-control" />
                 <span asp-validation-for="PasswordHash" class="text-danger" />
             </div>
             <button class="btn btn-default">Cập nhật</button>

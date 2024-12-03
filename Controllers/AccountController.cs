@@ -52,23 +52,29 @@ namespace Shopping_Online.Controllers
         public async Task<IActionResult> UpdateInfoAccount(AppUserModel user)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            // var userEmail = User.FindFirstValue(ClaimTypes.Email);
 
             var userById = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (userById == null)
             {
                 return NotFound();
             }
-            else
+
+            if (!string.IsNullOrEmpty(user.PhoneNumber) && user.PhoneNumber != userById.PhoneNumber)
+            {
+                userById.PhoneNumber = user.PhoneNumber;
+            }
+
+            if (!string.IsNullOrEmpty(user.PasswordHash))
             {
                 var passwordHasher = new PasswordHasher<AppUserModel>();
                 var hashedPassword = passwordHasher.HashPassword(userById, user.PasswordHash);
-
                 userById.PasswordHash = hashedPassword;
-                _dataContext.Update(userById);
-                await _dataContext.SaveChangesAsync();
-                TempData["success"] = "Cập nhật thông tin thành công";
             }
+
+            _dataContext.Update(userById);
+            await _dataContext.SaveChangesAsync();
+            TempData["success"] = "Cập nhật thông tin thành công";
+            
             return RedirectToAction("UpdateAccount", "Account");
         }
         public async Task<IActionResult> NewPass(AppUserModel user, string token)
