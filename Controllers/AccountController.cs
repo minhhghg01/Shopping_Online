@@ -32,6 +32,45 @@ namespace Shopping_Online.Controllers
         {
             return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
+        public async Task<IActionResult> UpdateAccount()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userEmail = User.FindFirstValue(ClaimTypes.Email);
+
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View(user);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateInfoAccount(AppUserModel user)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            // var userEmail = User.FindFirstValue(ClaimTypes.Email);
+
+            var userById = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (userById == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var passwordHasher = new PasswordHasher<AppUserModel>();
+                var hashedPassword = passwordHasher.HashPassword(userById, user.PasswordHash);
+
+                userById.PasswordHash = hashedPassword;
+                _dataContext.Update(userById);
+                await _dataContext.SaveChangesAsync();
+                TempData["success"] = "Cập nhật thông tin thành công";
+            }
+            return RedirectToAction("UpdateAccount", "Account");
+        }
         public async Task<IActionResult> NewPass(AppUserModel user, string token)
         {
             var checkuser = await _userManager.Users
@@ -119,7 +158,7 @@ namespace Shopping_Online.Controllers
                 {
                     return Redirect(loginVM.ReturnUrl ?? "/");
                 }
-                ModelState.AddModelError("", "Invalid UserName & Password");
+                ModelState.AddModelError("", "Sai tài khoản hoặc mật khẩu");
             }
             return View(loginVM);
         }
@@ -155,6 +194,7 @@ namespace Shopping_Online.Controllers
             }
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var userEmail = User.FindFirstValue(ClaimTypes.Email);
+
             var Orders = await _dataContext.Orders
                 .Where(od => od.UserName == userEmail)
                 .OrderByDescending(od => od.Id).ToListAsync();
