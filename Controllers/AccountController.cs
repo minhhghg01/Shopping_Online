@@ -34,6 +34,8 @@ namespace Shopping_Online.Controllers
         }
         public async Task<IActionResult> UpdateAccount()
         {
+            ViewData["HideSlider"] = true;
+            ViewData["HideSearchBox"] = true;
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Login", "Account");

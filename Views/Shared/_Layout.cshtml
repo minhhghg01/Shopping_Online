@@ -128,53 +128,59 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3">
-						<form asp-controller="Product" asp-action="Search" method="post">
-							<div class="search_box pull-right">
-								<input type="text" placeholder="TÌm kiếm" name="searchTerm" />
-								<button class="btn btn-warning" type="submit">Tìm kiếm</button>
-							</div>
-						</form>
-					</div>
+					@if (!(ViewData["HideSearchBox"] as bool? ?? false))
+					{
+						<div class="col-sm-3">
+							<form asp-controller="Product" asp-action="Search" method="post">
+								<div class="search_box pull-right">
+									<input type="text" placeholder="Tìm kiếm" name="searchTerm" />
+									<button class="btn btn-warning" type="submit">Tìm kiếm</button>
+								</div>
+							</form>
+						</div>
+					}
 				</div>
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 
-	<section id="slider"><!--slider-->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
+	@if (!(ViewData["HideSlider"] as bool? ?? false))
+	{
+		<section id="slider"> 
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+								<li data-target="#slider-carousel" data-slide-to="1"></li>
+								<li data-target="#slider-carousel" data-slide-to="2"></li>
+							</ol>
 
-						<div class="carousel-inner">
-							<div class="item active">
-								<img src="https://hqcomputer.com/assets/uploads/banner-03.jpg" width="90%" />
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="https://hqcomputer.com/assets/uploads/banner-03.jpg" width="90%" />
+								</div>
+								<div class="item">
+									<img src="https://hqcomputer.com/assets/uploads/banner-04.jpg" width="90%" />
+								</div>
+								<div class="item">
+									<img src="https://hqcomputer.com/assets/uploads/banner-2.jpg" width="90%" />
+								</div>
 							</div>
-							<div class="item">
-								<img src="https://hqcomputer.com/assets/uploads/banner-04.jpg" width="90%" />
-							</div>
-							<div class="item">
-								<img src="https://hqcomputer.com/assets/uploads/banner-2.jpg" width="90%" />
-							</div>
+
+							<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							</a>
 						</div>
-
-						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section><!--/slider-->
+		</section>		
+	}
 
 	<section>
 		<div class="container">
