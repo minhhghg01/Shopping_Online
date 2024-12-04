@@ -49,7 +49,7 @@ namespace Shopping_Online.Controllers
             return View(user);
         }
         [HttpPost]
-        public async Task<IActionResult> UpdateInfoAccount(AppUserModel user)
+        public async Task<IActionResult> UpdateInfoAccount(AppUserModel user, string currentPassword)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
@@ -66,7 +66,23 @@ namespace Shopping_Online.Controllers
 
             if (!string.IsNullOrEmpty(user.PasswordHash))
             {
+                if (string.IsNullOrEmpty(currentPassword))
+                {
+                    TempData["error"] = "Bạn cần nhập mật khẩu cũ để thay đổi mật khẩu.";
+                    ModelState.AddModelError("", "Bạn cần nhập mật khẩu cũ để thay đổi mật khẩu.");
+                    return View("UpdateAccount", user);
+                }
+
                 var passwordHasher = new PasswordHasher<AppUserModel>();
+                var verifyResult = passwordHasher.VerifyHashedPassword(userById, userById.PasswordHash, currentPassword);
+
+                if (verifyResult == PasswordVerificationResult.Failed)
+                {
+                    ModelState.AddModelError("", "Mật khẩu cũ không chính xác.");
+                    TempData["error"] = "Mật khẩu cũ không chính xác.";
+                    return View("UpdateAccount", user);
+                }
+
                 var hashedPassword = passwordHasher.HashPassword(userById, user.PasswordHash);
                 userById.PasswordHash = hashedPassword;
             }
@@ -74,7 +90,7 @@ namespace Shopping_Online.Controllers
             _dataContext.Update(userById);
             await _dataContext.SaveChangesAsync();
             TempData["success"] = "Cập nhật thông tin thành công";
-            
+
             return RedirectToAction("UpdateAccount", "Account");
         }
         public async Task<IActionResult> NewPass(AppUserModel user, string token)
