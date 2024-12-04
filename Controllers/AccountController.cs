@@ -49,7 +49,7 @@ namespace Shopping_Online.Controllers
             return View(user);
         }
         [HttpPost]
-        public async Task<IActionResult> UpdateInfoAccount(AppUserModel user, string currentPassword)
+        public async Task<IActionResult> UpdateInfoAccount(AppUserModel user)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
@@ -59,37 +59,56 @@ namespace Shopping_Online.Controllers
                 return NotFound();
             }
 
+            // Cập nhật số điện thoại nếu thay đổi
             if (!string.IsNullOrEmpty(user.PhoneNumber) && user.PhoneNumber != userById.PhoneNumber)
             {
                 userById.PhoneNumber = user.PhoneNumber;
             }
 
-            if (!string.IsNullOrEmpty(user.PasswordHash))
-            {
-                if (string.IsNullOrEmpty(currentPassword))
-                {
-                    TempData["error"] = "Bạn cần nhập mật khẩu cũ để thay đổi mật khẩu.";
-                    ModelState.AddModelError("", "Bạn cần nhập mật khẩu cũ để thay đổi mật khẩu.");
-                    return View("UpdateAccount", user);
-                }
-
-                var passwordHasher = new PasswordHasher<AppUserModel>();
-                var verifyResult = passwordHasher.VerifyHashedPassword(userById, userById.PasswordHash, currentPassword);
-
-                if (verifyResult == PasswordVerificationResult.Failed)
-                {
-                    ModelState.AddModelError("", "Mật khẩu cũ không chính xác.");
-                    TempData["error"] = "Mật khẩu cũ không chính xác.";
-                    return View("UpdateAccount", user);
-                }
-
-                var hashedPassword = passwordHasher.HashPassword(userById, user.PasswordHash);
-                userById.PasswordHash = hashedPassword;
-            }
-
             _dataContext.Update(userById);
             await _dataContext.SaveChangesAsync();
             TempData["success"] = "Cập nhật thông tin thành công";
+
+            return RedirectToAction("UpdateAccount", "Account");
+        }
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(string currentPassword, string newPassword)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var userById = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (userById == null)
+            {
+                return NotFound();
+            }
+
+            // Kiểm tra nếu không nhập mật khẩu cũ
+            if (string.IsNullOrEmpty(currentPassword))
+            {
+                TempData["error"] = "Bạn cần nhập mật khẩu cũ để thay đổi mật khẩu.";
+                return RedirectToAction("UpdateAccount", "Account");
+            }
+
+            // Kiểm tra mật khẩu cũ
+            var passwordHasher = new PasswordHasher<AppUserModel>();
+            var verifyResult = passwordHasher.VerifyHashedPassword(userById, userById.PasswordHash, currentPassword);
+
+            if (verifyResult == PasswordVerificationResult.Failed)
+            {
+                TempData["error"] = "Mật khẩu cũ không chính xác.";
+                return RedirectToAction("UpdateAccount", "Account");
+            }
+
+            // Cập nhật mật khẩu mới
+            if (!string.IsNullOrEmpty(newPassword))
+            {
+                userById.PasswordHash = passwordHasher.HashPassword(userById, newPassword);
+
+                _dataContext.Update(userById);
+                await _dataContext.SaveChangesAsync();
+
+                TempData["success"] = "Thay đổi mật khẩu thành công.";
+            }
 
             return RedirectToAction("UpdateAccount", "Account");
         }
