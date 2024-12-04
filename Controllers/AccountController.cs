@@ -30,6 +30,8 @@ namespace Shopping_Online.Controllers
         [HttpGet]
         public IActionResult Login(string returnUrl)
         {
+            ViewData["HideSlider"] = true;
+            ViewData["HideSearchBox"] = true;
             return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
         public async Task<IActionResult> UpdateAccount()
@@ -189,6 +191,8 @@ namespace Shopping_Online.Controllers
         }
         public async Task<IActionResult> ForgetPass(string returnUrl)
         {
+            ViewData["HideSlider"] = true;
+            ViewData["HideSearchBox"] = true;
             return View();
         }
         [HttpPost]
@@ -207,6 +211,8 @@ namespace Shopping_Online.Controllers
         }
         public IActionResult Create()
         {
+            ViewData["HideSlider"] = true;
+            ViewData["HideSearchBox"] = true;
             return View();
         }
         [HttpPost]
