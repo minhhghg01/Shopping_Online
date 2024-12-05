@@ -9,7 +9,7 @@
 </style>
 <div class="col-sm-9 padding-right">
     <partial name="_FilterProductsPartial" />
-    <div class="features_items"><!--features_items-->
+    <div class="features_items">
         <h2 class="title text-center">Sản phẩm</h2>
         @foreach (var item in Model)
         {
@@ -56,7 +56,7 @@
                 </div>
             </div>
         }
-    </div><!--features_items-->
+    </div>
 </div>
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -121,13 +121,13 @@
     <script>
         $(document).ready(function () {
             $('.add-btn-wishlist').click(function () {
-                var productId = $(this).data("product_id"); // đổi tên biến để rõ ràng hơn
+                var productId = $(this).data("product_id"); 
                 // alert(productId);
 
                 $.ajax({
                     type: "POST",
                     url: "@Url.Action("AddWishlist", "Home")",
-                    data: { productId: productId }, // đổi tên parameter để match với controller
+                    data: { productId: productId }, 
                     success: function (result) {
                         if (result.success) {
                             Swal.fire("Yêu thích Thành công", result.message, "success");

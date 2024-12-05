@@ -69,7 +69,7 @@ namespace Shopping_Online.Controllers
             {
                 HttpContext.Session.SetJson("Cart", cart);
             }
-        TempData["success"] = "-1 Vật phẩm thành công";
+            TempData["success"] = "-1 Vật phẩm thành công";
             return RedirectToAction("Index");
         }
 
@@ -99,7 +99,7 @@ namespace Shopping_Online.Controllers
             {
                 HttpContext.Session.SetJson("Cart", cart);
             }
-        // TempData["success"] = "+1 item";
+            // TempData["success"] = "+1 item";
             return RedirectToAction("Index");
         }
 
@@ -117,7 +117,7 @@ namespace Shopping_Online.Controllers
             {
                 HttpContext.Session.SetJson("Cart", cart);
             }
-        TempData["success"] = "Xóa Vật phẩm thành công";
+            TempData["success"] = "Xóa Vật phẩm thành công";
 
             return RedirectToAction("Index");
         }
@@ -125,7 +125,7 @@ namespace Shopping_Online.Controllers
         public async Task<IActionResult> Clear()
         {
             HttpContext.Session.Remove("Cart");
-        TempData["success"] = "Xóa tất cả Vật phẩm thành công";
+            TempData["success"] = "Xóa tất cả Vật phẩm thành công";
             return RedirectToAction("Index");
         }
     }
