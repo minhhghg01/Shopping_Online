@@ -21,16 +21,16 @@
 
 			<div class="floating-label-group">
 				<input asp-for="Password" class="form-control" type="password" placeholder=" " />
-				<label asp-for="Password" class="floating-label">Mật khẩu</label>
+				<label for="Password" class="floating-label">Mật khẩu</label>
 				<span asp-validation-for="Password" class="text-danger" />
-				<small class="text-muted">
-					Mật khẩu phải có ít nhất 6 ký tự, bao gồm cả chữ số và chữ cái thường, không chứa ký tự đặc biệt.
-				</small>
 			</div>
 
 			<div class="floating-label-group">
 				<input name="ConfirmPassword" class="form-control" type="password" placeholder=" " />
-				<label for="ConfirmPassword" class="floating-label">Xác nhận mật khẩu</label>
+				<label for="ConfirmPassword" class="floating-label">Nhập lại mật khẩu</label>
+				<small class="text-muted">
+					Mật khẩu phải có ít nhất 6 ký tự, bao gồm cả chữ số và chữ cái thường, không chứa ký tự đặc biệt.
+				</small>
 			</div>
 
 			<button type="submit" class="btn">Tạo tài khoản</button>
@@ -152,4 +152,12 @@
 		color: #28a745;
 		padding: 0 6px;
 	}
+	
+	.forget-card p {
+        font-size: 15px; /* Cỡ chữ dễ đọc */
+        color: #6c757d;  /* Màu chữ xám nhạt */
+        margin-bottom: 20px; /* Khoảng cách dưới */
+        line-height: 1.6; /* Khoảng cách dòng dễ đọc */
+    }
+
 </style>

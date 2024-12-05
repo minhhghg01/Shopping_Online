@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Areas.Admin.Repository;
 using Shopping_Online.Data;
@@ -27,17 +28,20 @@ namespace Shopping_Online.Controllers
             _dataContext = context;
         }
 
+        public override void OnActionExecuting(ActionExecutingContext context)
+    {
+        ViewData["HideSlider"] = true;
+        ViewData["HideSearchBox"] = true;
+        base.OnActionExecuting(context);
+    }
+
         [HttpGet]
         public IActionResult Login(string returnUrl)
         {
-            ViewData["HideSlider"] = true;
-            ViewData["HideSearchBox"] = true;
             return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
         public async Task<IActionResult> UpdateAccount()
         {
-            ViewData["HideSlider"] = true;
-            ViewData["HideSearchBox"] = true;
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Login", "Account");
@@ -118,8 +122,6 @@ namespace Shopping_Online.Controllers
         }
         public async Task<IActionResult> NewPass(AppUserModel user, string token)
         {
-            ViewData["HideSlider"] = true;
-            ViewData["HideSearchBox"] = true;
             var checkuser = await _userManager.Users
                             .Where(u => u.Email == user.Email)
                             .Where(u => u.Token == user.Token)
@@ -193,8 +195,6 @@ namespace Shopping_Online.Controllers
         }
         public async Task<IActionResult> ForgetPass(string returnUrl)
         {
-            ViewData["HideSlider"] = true;
-            ViewData["HideSearchBox"] = true;
             return View();
         }
         [HttpPost]
@@ -213,8 +213,6 @@ namespace Shopping_Online.Controllers
         }
         public IActionResult Create()
         {
-            ViewData["HideSlider"] = true;
-            ViewData["HideSearchBox"] = true;
             return View();
         }
         [HttpPost]
@@ -225,7 +223,6 @@ namespace Shopping_Online.Controllers
                 if (user.Password != confirmPassword)
                 {
                     TempData["error"] = "Mật khẩu và mật khẩu xác nhận không khớp.";
-                    ModelState.AddModelError("ConfirmPassword", "Mật khẩu và mật khẩu xác nhận không khớp.");
                     return View(user);
                 }
 
@@ -241,6 +238,7 @@ namespace Shopping_Online.Controllers
                     return Redirect("/account/login");
                 }
             }
+            TempData["error"] = "Đăng ký không thành công. Vui lòng kiểm tra lại thông tin.";
             return View(user);
         }
 

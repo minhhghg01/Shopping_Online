@@ -19,6 +19,9 @@
 				<label for="PasswordHash">Mật khẩu mới</label>
 				<input asp-for="PasswordHash" class="form-control" type="password" />
 				<span asp-validation-for="PasswordHash" class="text-danger" />
+				<small class="text-muted">
+					Mật khẩu phải có ít nhất 6 ký tự, bao gồm cả chữ số và chữ cái thường, không chứa ký tự đặc biệt.
+				</small>
 			</div>
 
 			<button type="submit" class="btn">Tạo mật khẩu</button>
