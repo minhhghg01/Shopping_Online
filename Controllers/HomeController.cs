@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Shopping_Online.Areas.Admin.Repository;
 using Shopping_Online.Data;
 using Shopping_Online.Models;
 
@@ -12,11 +13,13 @@ public class HomeController : Controller
     private readonly DataContext _dataContext;
     private readonly ILogger<HomeController> _logger;
     private readonly UserManager<AppUserModel> _userManager;
-    public HomeController(ILogger<HomeController> logger, DataContext context, UserManager<AppUserModel> userManager)
+    private readonly IEmailSender _emailSender;
+    public HomeController(ILogger<HomeController> logger, DataContext context, UserManager<AppUserModel> userManager, IEmailSender emailSender)
     {
         _logger = logger;
         _dataContext = context;
         _userManager = userManager;
+        _emailSender = emailSender;
     }
 
     public IActionResult Index(string sort_by = "", string startprice = "", string endprice = "")
@@ -131,10 +134,43 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    [HttpGet]
     public IActionResult Contact()
     {
         return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> SendContact(string email, string phoneNumber, string subject, string message)
+    {
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(subject) || string.IsNullOrWhiteSpace(message))
+        {
+            TempData["error"] = "Vui lòng điền đầy đủ thông tin.";
+            return RedirectToAction("Contact");
+        }
+
+        try
+        {
+            // Địa chỉ email của shop
+            var shopEmail = "nguyenminhhghg01@gmail.com";
+
+            // Nội dung email
+            var emailSubject = $"Shop-Onl | Liên hệ từ khách hàng: {subject}";
+            var emailMessage = $"Email người gửi: {email}\n" +
+                               $"Số điện thoại: {phoneNumber}\n" +
+                               $"Nội dung:\n{message}";
+
+            // Gửi email
+            await _emailSender.SendEmailAsync(shopEmail, emailSubject, emailMessage);
+
+            TempData["success"] = "Gửi liên hệ thành công. Chúng tôi sẽ phản hồi sớm nhất!";
+            return RedirectToAction("Contact");
+        }
+        catch
+        {
+            TempData["error"] = "Có lỗi xảy ra trong quá trình gửi liên hệ. Vui lòng thử lại.";
+            return RedirectToAction("Contact");
+        }
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
