@@ -2,51 +2,86 @@
 @{
 	ViewData["Title"] = "Đăng nhập";
 }
-<section id="login-section" style="display: flex; gap: 20px; justify-content: space-between;"><!--form-->
-	<div class="login-card">
-		<h2>Đăng nhập</h2>
-		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		<form asp-action="Login" asp-controller="Account">
-			<div class="floating-label-group">
-				<input asp-for="UserName" class="form-control" placeholder=" " />
-				<label for="UserName" class="floating-label">Tên Đăng nhập</label>
+<section id="login-section">
+	<div class="login-wrapper">
+		<div class="login-card">
+			<h2>Đăng nhập</h2>
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<form asp-action="Login" asp-controller="Account">
+				<div class="floating-label-group">
+					<input asp-for="UserName" class="form-control" placeholder=" " />
+					<label for="UserName" class="floating-label">Tên Đăng nhập</label>
+				</div>
+				<div class="floating-label-group">
+					<input asp-for="Password" class="form-control" placeholder=" " type="password" />
+					<label for="Password" class="floating-label">Mật khẩu</label>
+					<span asp-validation-for="Password" class="text-danger" />
+				</div>
+				<button type="submit" class="btn">Đăng nhập</button>
+				<div class="d-flex justify-content-between mt-3">
+					<a asp-action="ForgetPass" asp-controller="Account" class="text-primary">Quên mật khẩu?</a>
+				</div>
+			</form>
+			<hr class="my-4" />
+			<div class="text-center">
+				<p class="mb-0">Chưa có tài khoản? <a href="@Url.Action("Create", "Account")" class="text-primary">Tạo
+						tài khoản mới</a></p>
 			</div>
-
-			<div class="floating-label-group">
-				<input asp-for="Password" class="form-control" placeholder=" " type="password" />
-				<label for="Password" class="floating-label">Mật khẩu</label>
-				<span asp-validation-for="Password" class="text-danger" />
-			</div>
-
-			<button type="submit" class="btn">Đăng nhập</button>
-
-			<div class="d-flex justify-content-between mt-3">
-				<a asp-action="ForgetPass" asp-controller="Account" class="text-primary">Quên mật khẩu?</a>
-			</div>
-		</form>
-		<hr class="my-4" />
-		<div class="text-center">
-			<p class="mb-0">Chưa có tài khoản? <a href="@Url.Action("Create", "Account")" class="text-primary">Tạo tài
-					khoản mới</a></p>
 		</div>
-	</div><!--/login form-->
-</section><!--/form-->
+
+		<div class="login-bg">
+			<img src="~/images/bg.jpeg" alt="Background" />
+		</div>
+	</div>
+</section>
 @section Scripts {
 	@{
 		await Html.RenderPartialAsync("_ValidationScriptsPartial");
 	}
 }
 <style>
+	#login-section {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		margin-bottom: 50px;
+	}
+
+	.login-wrapper {
+		display: flex;
+		width: 80%;
+		max-width: 1200px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: #fff;
+	}
+
 	.login-card {
 		flex: 1;
-		margin: 0 auto;
-		margin-bottom: 50px;
-		max-width: 400px;
-		padding: 20px;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		background-color: #f9f9f9;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 500px;
+		background-color: #fff;
+	}
+
+	.login-bg {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #e9ecef;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.login-bg img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
 	}
 
 	.login-card h2 {

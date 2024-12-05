@@ -2,27 +2,29 @@
 @{
 	ViewData["Title"] = "Quên mật khẩu";
 }
-<section id="forget-section" style="display: flex; gap: 20px; justify-content: space-between;"><!--form-->
-	<div class="forget-card">
-		<h2>Quên mật khẩu</h2>
-		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		<form asp-action="SendMailForgetPass" asp-controller="Account">
-			<div class="floating-label-group">
-				<input asp-for="Email" class="form-control" placeholder=" " />
-				<label for="Email" class="floating-label">Email</label>
-				<span asp-validation-for="Email" class="text-danger" />
-				<small class="text-muted">
-					Vui lòng nhập email để lấy lại mật khẩu của bạn.
-				</small>
-			</div>
+<section id="forget-section" class="background-container">
+	<div class="form-container">
+		<div class="forget-card">
+			<h2>Quên mật khẩu</h2>
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<form asp-action="SendMailForgetPass" asp-controller="Account">
+				<div class="floating-label-group">
+					<input asp-for="Email" class="form-control" placeholder=" " />
+					<label for="Email" class="floating-label">Email</label>
+					<span asp-validation-for="Email" class="text-danger" />
+					<small class="text-muted">
+						Vui lòng nhập email để lấy lại mật khẩu của bạn.
+					</small>
+				</div>
 
-			<button type="submit" class="btn">Gửi</button>
+				<button type="submit" class="btn">Gửi</button>
 
-			<hr class="my-4" />
-			<div class="text-center">
-				<p class="mb-0"><a href="@Url.Action("Login", "Account")" class="text-primary">Quay lại</a></p>
-			</div>
-		</form>
+				<hr class="my-4" />
+				<div class="text-center">
+					<p class="mb-0"><a href="@Url.Action("Login", "Account")" class="text-primary">Quay lại</a></p>
+				</div>
+			</form>
+		</div>
 	</div>
 </section>
 
@@ -33,16 +35,34 @@
 }
 
 <style>
-	.forget-card {
-		flex: 1;
-		margin: 0 auto;
+	.background-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		margin-bottom: 50px;
-		max-width: 400px;
-		padding: 20px;
+	}
+
+	.form-container {
+		position: relative;
+		background-image: url('@Url.Content("~/images/bg.jpeg")');
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		max-width: 500px;
+		padding: 60px;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.forget-card {
+		background-color: rgba(255, 255, 255, 0.9);
+		/* Nền form trong suốt */
 		border: 1px solid #ccc;
-		border-radius: 5px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		background-color: #f9f9f9;
+		border-radius: 10px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		padding: 20px;
+		position: relative;
+		z-index: 1;
 	}
 
 	.forget-card h2 {
@@ -136,10 +156,13 @@
 	}
 
 	.forget-card p {
-        font-size: 15px; /* Cỡ chữ dễ đọc */
-        color: #6c757d;  /* Màu chữ xám nhạt */
-        margin-bottom: 20px; /* Khoảng cách dưới */
-        line-height: 1.6; /* Khoảng cách dòng dễ đọc */
-    }
-
+		font-size: 15px;
+		/* Cỡ chữ dễ đọc */
+		color: #6c757d;
+		/* Màu chữ xám nhạt */
+		margin-bottom: 20px;
+		/* Khoảng cách dưới */
+		line-height: 1.6;
+		/* Khoảng cách dòng dễ đọc */
+	}
 </style>
