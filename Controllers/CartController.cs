@@ -15,6 +15,8 @@ namespace Shopping_Online.Controllers
         }
         public IActionResult Index()
         {
+            ViewData["HideSearchBox"] = true;
+
             List<CartItemModel> cartItems = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
             CartItemViewModel cartVM = new()
             {

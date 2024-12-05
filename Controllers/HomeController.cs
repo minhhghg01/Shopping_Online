@@ -135,14 +135,26 @@ public class HomeController : Controller
         return View();
     }
     [HttpGet]
-    public IActionResult Contact()
+    public async Task<IActionResult> Contact()
     {
-        return View();
+        ViewData["HideSearchBox"] = true;
+
+        var user = await _userManager.GetUserAsync(User); 
+        var model = new AppUserModel
+        {
+            Email = user?.Email,
+            PhoneNumber = user?.PhoneNumber
+        };
+
+        return View(model);
     }
 
     [HttpPost]
-    public async Task<IActionResult> SendContact(string email, string phoneNumber, string subject, string message)
+    public async Task<IActionResult> SendContact(string phoneNumber, string subject, string message)
     {
+        var currentUser = await _userManager.GetUserAsync(User);
+        var email = currentUser?.Email;
+
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(subject) || string.IsNullOrWhiteSpace(message))
         {
             TempData["error"] = "Vui lòng điền đầy đủ thông tin.";
