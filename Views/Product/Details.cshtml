@@ -94,6 +94,16 @@
                                 Submit
                             </button>
                         </form>
+
+                        <h3>Bình luận của khách hàng</h3>
+                        @foreach (var rating in Model.Ratings)
+                        {
+                            <div class="review-item">
+                                <p><b>@rating.Name</b> - <i>@rating.Email</i></p>
+                                <p>@rating.Comment</p>
+                                <p><i>Đánh giá: @rating.Star sao</i></p>
+                            </div>
+                        }
                     </div>
                 </div>
 

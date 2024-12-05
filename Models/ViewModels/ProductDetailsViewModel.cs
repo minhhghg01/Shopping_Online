@@ -11,5 +11,6 @@ namespace Shopping_Online.Models.ViewModels
         public string Name { get; set; }
         [Required(ErrorMessage ="Nhập email")]
         public string Email { get; set; }
+        public List<RatingModel> Ratings { get; set; }
     }
 }
