@@ -1,12 +1,6 @@
 @model IEnumerable<OrderModel>
 @{
     ViewData["title"] = "Order History by:" + @ViewBag.UserEmail;
-    // Paginate pager = new Paginate();
-    // int pageNo = 0;
-    // if(ViewBag.Pager != null) {
-    // pager = ViewBag.Pager;
-    // pageNo = pager.CurrentPage;
-    // }
 }
 
 <h3>Lịch sử của: @ViewBag.UserEmail</h3>
@@ -23,7 +17,7 @@
     </thead>
     <tbody>
         @{
-            int index = 1; // Khai báo biến trong khối mã Razor
+            int index = 1; 
         }
         @foreach (var item in Model)
         {
@@ -55,8 +49,7 @@
                     }
                 </td>
             </tr>
-            index++; // Tăng biến index sau mỗi vòng lặp
+            index++; 
         }
     </tbody>
 </table>
-@* <partial name="_paging" model="@pager" /> *@

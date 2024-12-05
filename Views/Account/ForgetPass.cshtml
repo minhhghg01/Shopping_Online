@@ -6,12 +6,14 @@
 	<div class="forget-card">
 		<h2>Quên mật khẩu</h2>
 		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		<p> ***Vui lòng nhập email để lấy lại mật khẩu của bạn. </p>
 		<form asp-action="SendMailForgetPass" asp-controller="Account">
 			<div class="floating-label-group">
 				<input asp-for="Email" class="form-control" placeholder=" " />
 				<label for="Email" class="floating-label">Email</label>
 				<span asp-validation-for="Email" class="text-danger" />
+				<small class="text-muted">
+					Vui lòng nhập email để lấy lại mật khẩu của bạn.
+				</small>
 			</div>
 
 			<button type="submit" class="btn">Gửi</button>

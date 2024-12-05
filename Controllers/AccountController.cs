@@ -118,6 +118,8 @@ namespace Shopping_Online.Controllers
         }
         public async Task<IActionResult> NewPass(AppUserModel user, string token)
         {
+            ViewData["HideSlider"] = true;
+            ViewData["HideSearchBox"] = true;
             var checkuser = await _userManager.Users
                             .Where(u => u.Email == user.Email)
                             .Where(u => u.Token == user.Token)
@@ -216,10 +218,17 @@ namespace Shopping_Online.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(UserModel user)
+        public async Task<IActionResult> Create(UserModel user, string confirmPassword)
         {
             if (ModelState.IsValid)
             {
+                if (user.Password != confirmPassword)
+                {
+                    TempData["error"] = "Mật khẩu và mật khẩu xác nhận không khớp.";
+                    ModelState.AddModelError("ConfirmPassword", "Mật khẩu và mật khẩu xác nhận không khớp.");
+                    return View(user);
+                }
+
                 AppUserModel newUser = new AppUserModel()
                 {
                     UserName = user.UserName,
