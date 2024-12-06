@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var starFilter = Context.Request.Query["starFilter"];
 }
 
 <div class="row">
@@ -54,16 +55,16 @@
         <div class="category-tab shop-details-tab"><!--category-tab-->
             <div class="col-sm-12">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#details" data-toggle="tab">Thông tin</a></li>
-                    <li><a href="#reviews" data-toggle="tab">Đánh giá</a></li>
+                    <li class="active"><a href="#reviews" data-toggle="tab">Đánh giá</a></li>
+                    <li><a href="#details" data-toggle="tab">Thông tin</a></li>
                 </ul>
             </div>
             <div class="tab-content">
-                <div class="tab-pane fade active in" id="details" style="text-align: left; padding-left: 20px;">
+                <div class="tab-pane fade" id="details" style="text-align: left; padding-left: 20px;">
                     @Html.Raw(Model.ProductDetails.Description)
                 </div>
 
-                <div class="tab-pane fade" id="reviews">
+                <div class="tab-pane fade active in" id="reviews">
                     <div class="col-sm-12">
                         <h3>Viết Đánh giá của bạn</h3>
 
@@ -116,11 +117,26 @@
                                     viết đánh giá.</b></p>
                         }
 
-
                         <hr class="my-4" />
-                        <h3>Bình luận của khách hàng</h3>
+                        <h3 style="display: inline-block; margin-right: 20px;">Bình luận của khách hàng</h3>
+                        
+    <form method="get" style="display: inline-block;">
+    <div class="filter-container">
+        <select name="starFilter" class="star-filter">
+            <option value="">Lọc theo sao</option>
+            <option value="5">5 sao</option>
+            <option value="4">4 sao</option>
+            <option value="3">3 sao</option>
+            <option value="2">2 sao</option>
+            <option value="1">1 sao</option>
+        </select>
+        <button type="submit" class="btn-filter">Lọc</button>
+    </div>
+</form>
+
+
                         <div class="reviews-container">
-                            @foreach (var rating in Model.Ratings)
+                            @foreach (var rating in Model.Ratings.Where(r => r.Star == starFilter || string.IsNullOrEmpty(starFilter)))
                             {
                                 <div class="review-item">
                                     <div class="review-header">
@@ -318,4 +334,56 @@
 .stars input:checked ~ label {
     color: #ffc107; 
 }
+
+/* filter */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Cải thiện kiểu dáng cho select */
+.star-filter {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    width: 150px;
+    transition: all 0.3s ease;
+}
+
+.star-filter:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Kiểu cho button lọc */
+.btn-filter {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover {
+    background-color: #0056b3;
+}
+
+.btn-filter:focus {
+    outline: none;
+}
+
+/* Thêm hiệu ứng cho hover của select */
+.star-filter:hover {
+    border-color: #007bff;
+}
+
 </style>

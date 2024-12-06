@@ -46,6 +46,7 @@ namespace Shopping_Online.Controllers
 
             var ratings = await _dataContext.Ratings
                  .Where(r => r.ProductId == Id)
+                 .OrderByDescending(r => r.Id) 
                  .ToListAsync();
 
             ViewBag.RelatedProducts = relatedProducts;
