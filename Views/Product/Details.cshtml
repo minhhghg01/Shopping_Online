@@ -67,43 +67,85 @@
                     <div class="col-sm-12">
                         <p><b>Viết Đánh giá của bạn</b></p>
 
-                        <form autocomplete="off" asp-action="CommentProduct" asp-controller="Product" method="post">
-                            <span>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <p>Xin chào, <strong>@User.Identity.Name</strong>!</p>
+                            <form autocomplete="off" asp-action="CommentProduct" asp-controller="Product" method="post">
                                 <input asp-for="@Model.ProductDetails.Id" name="ProductId" type="hidden" />
-                                <input name="Star" type="hidden" value="4" />
 
                                 <div class="row">
-                                    <div class="col-md-6"> <!-- Tăng từ col-md-5 lên col-md-6 để trường dài hơn -->
+                                    <div class="col-md-6">
                                         <input asp-for="@Model.Name" type="text" placeholder="Tên của bạn"
                                             class="form-control" />
                                         <span asp-validation-for="@Model.Name" class="text-danger"></span>
                                     </div>
-
-                                    <div class="col-md-6 ms-2"> <!-- Tăng từ col-md-5 lên col-md-6 để trường dài hơn -->
+                                    <div class="col-md-6">
                                         <input asp-for="@Model.Email" type="email" placeholder="Email"
                                             class="form-control" />
                                         <span asp-validation-for="@Model.Email" class="text-danger"></span>
                                     </div>
                                 </div>
-                            </span>
 
-                            <textarea asp-for="@Model.Comment"></textarea>
-                            <span asp-validation-for="@Model.Comment" class="text-danger"></span>
-                            @* <b>Rating: </b> <img src="images/product-details/rating.png" alt="" /> *@
-                            <button type="submit" class="btn btn-default pull-right">
-                                Submit
-                            </button>
-                        </form>
+                                <textarea asp-for="@Model.Comment" class="form-control mt-3" rows="5"
+                                    placeholder="Nhập đánh giá của bạn..."></textarea>
+                                <span asp-validation-for="@Model.Comment" class="text-danger"></span>
 
-                        <h3>Bình luận của khách hàng</h3>
-                        @foreach (var rating in Model.Ratings)
-                        {
-                            <div class="review-item">
-                                <p><b>@rating.Name</b> - <i>@rating.Email</i></p>
-                                <p>@rating.Comment</p>
-                                <p><i>Đánh giá: @rating.Star sao</i></p>
-                            </div>
+                                <div class="rating-section">
+                                    <b>Đánh giá:</b>
+                                    <div class="stars">
+                                        <input type="radio" id="star5" name="Star" value="5" />
+                                        <label for="star5" class="fa fa-star"></label>
+
+                                        <input type="radio" id="star4" name="Star" value="4" />
+                                        <label for="star4" class="fa fa-star"></label>
+
+                                        <input type="radio" id="star3" name="Star" value="3" />
+                                        <label for="star3" class="fa fa-star"></label>
+
+                                        <input type="radio" id="star2" name="Star" value="2" />
+                                        <label for="star2" class="fa fa-star"></label>
+
+                                        <input type="radio" id="star1" name="Star" value="1" />
+                                        <label for="star1" class="fa fa-star"></label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-3">Gửi đánh giá</button>
+                            </form>
                         }
+                        else
+                        {
+                            <p class="text-danger"><b>Hãy <a asp-action="Login" asp-controller="Account">đăng nhập</a> để
+                                    viết đánh giá.</b></p>
+                        }
+
+
+                        <hr class="my-4" />
+                        <h3>Bình luận của khách hàng</h3>
+                        <div class="reviews-container">
+                            @foreach (var rating in Model.Ratings)
+                            {
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <span class="review-name">@rating.Name</span>
+                                        <span class="review-email">(@rating.Email)</span>
+                                    </div>
+                                    <div class="review-stars">
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            if (i <= int.Parse(rating.Star))
+                                            {
+                                                <i class="fa fa-star star-filled"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fa fa-star star-empty"></i>
+                                            }
+                                        }
+                                    </div>
+                                    <p class="review-comment">@rating.Comment</p>
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
 
@@ -186,3 +228,95 @@
         });
     </script>
 }
+
+<style>
+    .reviews-container {
+        margin-top: 20px;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    .review-item {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .review-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .review-name {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #333;
+        margin-right: 10px;
+    }
+
+    .review-email {
+        font-size: 0.9em;
+        color: #999;
+    }
+
+    .review-stars {
+        margin-bottom: 8px;
+    }
+
+    .review-stars .fa-star {
+        font-size: 1em;
+        margin-right: 2px;
+    }
+
+    .star-filled {
+        color: #ffc107;
+        /* Màu vàng */
+    }
+
+    .star-empty {
+        color: #ddd;
+        /* Màu xám */
+    }
+
+    .review-comment {
+        font-size: 1em;
+        line-height: 1.5;
+        color: #555;
+        margin-top: 5px;
+    }
+
+    @* rating stars *@
+    .rating-section {
+        margin-top: 10px;
+    }
+
+    .stars {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: center;
+    gap: 5px;
+}
+
+.stars input {
+    display: none; 
+}
+
+.stars label {
+    font-size: 24px;
+    color: #ddd; 
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffc107; 
+}
+
+.stars input:checked ~ label {
+    color: #ffc107; 
+}
+</style>

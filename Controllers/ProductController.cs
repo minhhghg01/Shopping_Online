@@ -57,7 +57,7 @@ namespace Shopping_Online.Controllers
         public async Task<IActionResult> CommentProduct(RatingModel rating)
         {
             if (ModelState.IsValid)
-            {
+            {   
                 var ratingEnitity = new RatingModel
                 {
                     ProductId = rating.ProductId,
