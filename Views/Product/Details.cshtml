@@ -123,12 +123,13 @@
     <form method="get" style="display: inline-block;">
     <div class="filter-container">
         <select name="starFilter" class="star-filter">
-            <option value="">Lọc theo sao</option>
-            <option value="5">5 sao</option>
-            <option value="4">4 sao</option>
-            <option value="3">3 sao</option>
-            <option value="2">2 sao</option>
-            <option value="1">1 sao</option>
+            <option value="" selected="@string.IsNullOrEmpty(starFilter)">Lọc theo sao</option>
+<option value="5" selected="@(starFilter == "5")">5 sao</option>
+<option value="4" selected="@(starFilter == "4")">4 sao</option>
+<option value="3" selected="@(starFilter == "3")">3 sao</option>
+<option value="2" selected="@(starFilter == "2")">2 sao</option>
+<option value="1" selected="@(starFilter == "1")">1 sao</option>
+
         </select>
         <button type="submit" class="btn-filter">Lọc</button>
     </div>
