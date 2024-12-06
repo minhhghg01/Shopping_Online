@@ -65,26 +65,24 @@
 
                 <div class="tab-pane fade" id="reviews">
                     <div class="col-sm-12">
-                        <p><b>Viết Đánh giá của bạn</b></p>
+                        <h3>Viết Đánh giá của bạn</h3>
 
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <p>Xin chào, <strong>@User.Identity.Name</strong>!</p>
                             <form autocomplete="off" asp-action="CommentProduct" asp-controller="Product" method="post">
                                 <input asp-for="@Model.ProductDetails.Id" name="ProductId" type="hidden" />
 
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <input asp-for="@Model.Name" type="text" placeholder="Tên của bạn"
-                                            class="form-control" />
-                                        <span asp-validation-for="@Model.Name" class="text-danger"></span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input asp-for="@Model.Email" type="email" placeholder="Email"
-                                            class="form-control" />
-                                        <span asp-validation-for="@Model.Email" class="text-danger"></span>
-                                    </div>
-                                </div>
+    <div class="col-md-6">
+        <input asp-for="@Model.Name" type="text" class="form-control" value="@User.Identity.Name" readonly />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+    <input asp-for="@Model.Email" type="email" class="form-control" value="@ViewBag.UserEmail" readonly />
+    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+</div>
+
+</div>
 
                                 <textarea asp-for="@Model.Comment" class="form-control mt-3" rows="5"
                                     placeholder="Nhập đánh giá của bạn..."></textarea>
@@ -314,6 +312,7 @@
 .stars label:hover,
 .stars label:hover ~ label {
     color: #ffc107; 
+    transform: scale(1.2);
 }
 
 .stars input:checked ~ label {
