@@ -3,7 +3,7 @@
     ViewData["Title"] = ViewBag.Keyword;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="col-sm-3">
+<div class="col-sm-3" style="padding: 20px; position: sticky; top: 20px;">
     @Html.Partial("_SidebarPartial")
 </div>
 <style>
@@ -17,7 +17,7 @@
         @foreach (var item in Model)
         {
             <div class="col-sm-4">
-                <div class="product-image-wrapper">
+                <div class="product-image-wrapper card_product">
                     <a asp-action="Details" asp-controller="Product" asp-route-Id="@item.Id">
                         <div class="single-products">
                             <div class="productinfo text-center">
@@ -44,9 +44,11 @@
                         {
                             <ul class="nav nav-pills nav-justified">
                                 <li>
-                                    <button class="btn btn-default add-btn-wishlist" data-product_id="@item.Id">
-                                        <i class="fa fa-heart"></i>
-                                        Yêu thích</button>
+                                    <button class="btn btn-default add-btn-wishlist" data-product_id="@item.Id"
+                                        style="background-color: #ff6666 ; color: white; padding: 6px 12px; border-radius: 5px;">
+                                        <i class="fa fa-heart" style="margin-right: 5px;"></i>
+                                        Yêu thích
+                                    </button>
                                 </li>
                             </ul>
                         }

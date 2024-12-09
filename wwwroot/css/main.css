@@ -1085,6 +1085,45 @@ h2.title {
 *******Shop CSS******
 **************************/
 
+.card_product {
+  border-radius: 8px; /* Bo góc */
+  border: 1px solid #ddd; /* Đường viền nhẹ */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  background-color: #fff; /* Màu nền trắng */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
+}
+
+.card_product:hover {
+  transform: translateY(-5px); /* Nổi lên khi hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Tăng đổ bóng khi hover */
+}
+
+.card_product img {
+  border-radius: 8px; /* Bo góc cho ảnh */
+}
+
+.card_product p {
+  font-size: 14px; /* Kích thước chữ mô tả */
+  color: #666; /* Màu chữ mô tả */
+}
+
+.card_product button {
+  padding: 10px 20px; /* Khoảng cách nút */
+  border: none; /* Bỏ đường viền nút */
+  background-color: #007bff; /* Màu nền xanh */
+  color: #fff; /* Màu chữ nút */
+  border-radius: 4px; /* Bo góc nút */
+  cursor: pointer; /* Trỏ chuột dạng click */
+  font-size: 14px; /* Kích thước chữ nút */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
+}
+
+.card_product button:hover {
+  background-color: #0056b3; /* Màu nền khi hover */
+  scale: 1.02;
+  border-radius: 4px; /* Bo góc nút */
+}
+
 
 #advertisement {
   padding-bottom: 45px;

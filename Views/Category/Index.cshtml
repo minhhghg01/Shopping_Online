@@ -1,5 +1,5 @@
 @model IEnumerable<ProductModel>
-<div class="col-sm-3">
+<div class="col-sm-3" style="padding: 20px; position: sticky; top: 20px;">
     <partial name="_SidebarPartial" />
 </div>
 <style>
@@ -16,7 +16,7 @@
         @foreach (var item in Model)
         {
             <div class="col-sm-4">
-                <div class="product-image-wrapper">
+                <div class="product-image-wrapper card_product">
                     <a>
                         <div class="single-products">
                             <div class="productinfo text-center">

@@ -6,7 +6,7 @@
 }
 
 <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3" style="padding: 20px; position: sticky; top: 20px;">
         @Html.Partial("_SidebarPartial")
     </div>
 
@@ -43,7 +43,7 @@
                     <p><b>Thương hiệu:</b> @Model.ProductDetails.Brand.Name</p>
                     <p><b>Dòng sản phẩm:</b> @Model.ProductDetails.Category.Name</p>
                     <button class="btn btn-default add-btn-wishlist" data-product_id="@Model.ProductDetails.Id"
-                        style="background-color: #ff6666 ; color: white; padding: 6px 12px; border-radius: 5px;">
+                        style="background-color: #ff6666 ; color: white; padding: 6px 12px; ">
                         <i class="fa fa-heart" style="margin-right: 5px;"></i>
                         Yêu thích
                     </button>
@@ -131,7 +131,7 @@
 <option value="1" selected="@(starFilter == "1")">1 sao</option>
 
         </select>
-        <button type="submit" class="btn-filter">Lọc</button>
+        <button type="submit" class="btn btn-filter">Lọc</button>
     </div>
 </form>
 
@@ -175,7 +175,7 @@
                         @foreach (var relatedProduct in @ViewBag.RelatedProducts as IEnumerable<ProductModel>)
                         {
                             <div class="col-sm-4">
-                                <div class="product-image-wrapper">
+                                <div class="product-image-wrapper card_product">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <a asp-action="Details" asp-controller="Product"
@@ -385,6 +385,15 @@
 /* Thêm hiệu ứng cho hover của select */
 .star-filter:hover {
     border-color: #007bff;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.btn:hover {
+    scale: 1.02;
+    border-radius: 5px;
 }
 
 </style>
