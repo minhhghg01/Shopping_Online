@@ -34,15 +34,15 @@
                         else
                         {
                             <button class="btn btn-fefault cart disable" style="background-color: #ccc;">
-                                <i class="fa fa-shopping-cart"></i>Hết hàng
+                                <i class="fa fa-shopping-cart"></i> Hết hàng
                             </button>
                         }
                     </span>
                     <p><b>Tình trạng:</b> @((Model.ProductDetails.Quantity > 0) ? "Còn hàng" : "Hết hàng")</p>
                     <p><b>Mặt hàng:</b> Mới</p>
                     <p><b>Thương hiệu:</b> @Model.ProductDetails.Brand.Name</p>
-                    <p><b>Dòng sản phẩm:</b> @Model.ProductDetails.Category.Name</p>
-                    <button class="btn btn-default add-btn-wishlist" data-product_id="@Model.ProductDetails.Id"
+                    <p><b>Danh mục:</b> @Model.ProductDetails.Category.Name</p>
+                    <button class="btn btn-default add-btn-wishlist1" data-product_id="@Model.ProductDetails.Id"
                         style="background-color: #ff6666 ; color: white; padding: 6px 12px; ">
                         <i class="fa fa-heart" style="margin-right: 5px;"></i>
                         Yêu thích
@@ -74,16 +74,18 @@
                                 <input asp-for="@Model.ProductDetails.Id" name="ProductId" type="hidden" />
 
                                 <div class="row">
-    <div class="col-md-6">
-        <input asp-for="@Model.Name" type="text" class="form-control" value="@User.Identity.Name" readonly />
-        <span asp-validation-for="@Model.Name" class="text-danger"></span>
-    </div>
-    <div class="col-md-6">
-    <input asp-for="@Model.Email" type="email" class="form-control" value="@ViewBag.UserEmail" readonly />
-    <span asp-validation-for="@Model.Email" class="text-danger"></span>
-</div>
+                                    <div class="col-md-6">
+                                        <input asp-for="@Model.Name" type="text" class="form-control"
+                                            value="@User.Identity.Name" readonly />
+                                        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input asp-for="@Model.Email" type="email" class="form-control"
+                                            value="@ViewBag.UserEmail" readonly />
+                                        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                                    </div>
 
-</div>
+                                </div>
 
                                 <textarea asp-for="@Model.Comment" class="form-control mt-3" rows="5"
                                     placeholder="Nhập đánh giá của bạn..."></textarea>
@@ -119,25 +121,26 @@
 
                         <hr class="my-4" />
                         <h3 style="display: inline-block; margin-right: 20px;">Bình luận của khách hàng</h3>
-                        
-    <form method="get" style="display: inline-block;">
-    <div class="filter-container">
-        <select name="starFilter" class="star-filter">
-            <option value="" selected="@string.IsNullOrEmpty(starFilter)">Lọc theo sao</option>
-<option value="5" selected="@(starFilter == "5")">5 sao</option>
-<option value="4" selected="@(starFilter == "4")">4 sao</option>
-<option value="3" selected="@(starFilter == "3")">3 sao</option>
-<option value="2" selected="@(starFilter == "2")">2 sao</option>
-<option value="1" selected="@(starFilter == "1")">1 sao</option>
 
-        </select>
-        <button type="submit" class="btn btn-filter">Lọc</button>
-    </div>
-</form>
+                        <form method="get" style="display: inline-block;">
+                            <div class="filter-container">
+                                <select name="starFilter" class="star-filter">
+                                    <option value="" selected="@string.IsNullOrEmpty(starFilter)">Lọc theo sao</option>
+                                    <option value="5" selected="@(starFilter == "5")">5 sao</option>
+                                    <option value="4" selected="@(starFilter == "4")">4 sao</option>
+                                    <option value="3" selected="@(starFilter == "3")">3 sao</option>
+                                    <option value="2" selected="@(starFilter == "2")">2 sao</option>
+                                    <option value="1" selected="@(starFilter == "1")">1 sao</option>
+
+                                </select>
+                                <button type="submit" class="btn btn-filter">Lọc</button>
+                            </div>
+                        </form>
 
 
                         <div class="reviews-container">
-                            @foreach (var rating in Model.Ratings.Where(r => r.Star == starFilter || string.IsNullOrEmpty(starFilter)))
+                            @foreach (var rating in Model.Ratings.Where(r => r.Star == starFilter ||
+                            string.IsNullOrEmpty(starFilter)))
                             {
                                 <div class="review-item">
                                     <div class="review-header">
@@ -184,7 +187,7 @@
                                                     width="240" height="200" />
                                                 <h2>$@relatedProduct.Price</h2>
                                                 <p>@relatedProduct.Name</p>
-                                                <p>Dòng sản phẩm: @relatedProduct.Category.Name</p>
+                                                <p>Danh mục: @relatedProduct.Category.Name</p>
                                                 <p>Thương hiệu: @relatedProduct.Brand.Name</p>
                                             </a>
                                             <h4>@((relatedProduct.Quantity > 0) ? "Còn hàng" : "Hết hàng")</h4>
@@ -223,7 +226,7 @@
     </script>
     <script>
         $(document).ready(function () {
-            $('.add-btn-wishlist').click(function () {
+            $('.add-btn-wishlist1').click(function () {
                 var productId = $(this).data("product_id"); // đổi tên biến để rõ ràng hơn
                 // alert(productId);
 
@@ -303,97 +306,95 @@
         margin-top: 5px;
     }
 
-    @* rating stars *@
     .rating-section {
         margin-top: 10px;
     }
 
     .stars {
-    display: flex;
-    flex-direction: row-reverse; 
-    justify-content: center;
-    gap: 5px;
-}
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 5px;
+    }
 
-.stars input {
-    display: none; 
-}
+    .stars input {
+        display: none;
+    }
 
-.stars label {
-    font-size: 24px;
-    color: #ddd; 
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-}
+    .stars label {
+        font-size: 24px;
+        color: #ddd;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+    }
 
-.stars label:hover,
-.stars label:hover ~ label {
-    color: #ffc107; 
-    transform: scale(1.2);
-}
+    .stars label:hover,
+    .stars label:hover~label {
+        color: #ffc107;
+        transform: scale(1.2);
+    }
 
-.stars input:checked ~ label {
-    color: #ffc107; 
-}
+    .stars input:checked~label {
+        color: #ffc107;
+    }
 
-/* filter */
-.filter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-}
+    /* filter */
+    .filter-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0;
+    }
 
-/* Cải thiện kiểu dáng cho select */
-.star-filter {
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    width: 150px;
-    transition: all 0.3s ease;
-}
+    /* Cải thiện kiểu dáng cho select */
+    .star-filter {
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        background-color: #f9f9f9;
+        width: 150px;
+        transition: all 0.3s ease;
+    }
 
-.star-filter:focus {
-    border-color: #007bff;
-    background-color: #fff;
-    outline: none;
-}
+    .star-filter:focus {
+        border-color: #007bff;
+        background-color: #fff;
+        outline: none;
+    }
 
-/* Kiểu cho button lọc */
-.btn-filter {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+    /* Kiểu cho button lọc */
+    .btn-filter {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 
-.btn-filter:hover {
-    background-color: #0056b3;
-}
+    .btn-filter:hover {
+        background-color: #0056b3;
+    }
 
-.btn-filter:focus {
-    outline: none;
-}
+    .btn-filter:focus {
+        outline: none;
+    }
 
-/* Thêm hiệu ứng cho hover của select */
-.star-filter:hover {
-    border-color: #007bff;
-}
+    /* Thêm hiệu ứng cho hover của select */
+    .star-filter:hover {
+        border-color: #007bff;
+    }
 
-.btn {
-    border-radius: 5px;
-}
+    .btn {
+        border-radius: 5px;
+    }
 
-.btn:hover {
-    scale: 1.02;
-    border-radius: 5px;
-}
-
+    .btn:hover {
+        scale: 1.02;
+        border-radius: 5px;
+    }
 </style>

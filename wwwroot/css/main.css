@@ -849,6 +849,7 @@ h2.title {
 	border:1px solid #F7F7F5;
 	overflow: hidden;
 	margin-bottom:30px;
+  height: 420px;
 }
 
 .single-products {
@@ -939,36 +940,86 @@ h2.title {
   color: #fff;
 }
 
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Khoảng cách giữa các nút */
+  margin-top: 10px;
+}
 
+.add-to-cart,
+.add-btn-wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Hiệu ứng mượt */
+}
 
 .add-to-cart {
-  background:#F5F5ED;
-  border: 0 none;
-  border-radius: 0;
-  color: #696763;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  margin-bottom: 25px;
+  background-color: #fd7e14; /* Màu xanh lá cây cho "Thêm vào giỏ hàng" */
+}
+
+/* Thêm màu nền đặc trưng cho nút Wishlist */
+.add-btn-wishlist {
+  background-color: #e63946; /* Màu đỏ cho "Yêu thích" */
+}
+
+.add-to-cart i,
+.add-btn-wishlist i {
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.add-to-cart span,
+.add-btn-wishlist span {
+    position: absolute;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.4s ease-in-out;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.add-to-cart:hover,
+.add-btn-wishlist:hover {
+    border-radius: 25px;
+    width: 160px; /* Mở rộng chiều ngang khi hover */
+    justify-content: center;
+    padding-left: 10px; /* Giảm khoảng cách giữa icon và cạnh nút */
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
-  border: 0 none;
-  border-radius: 0;
-  color: #FFFFFF;
+  background-color: #e76f03; /* Màu xanh lá đậm cho "Thêm vào giỏ hàng" khi hover */
+}
+
+.add-btn-wishlist:hover {
+  background-color: #e63946; /* Màu đỏ đậm cho "Yêu thích" khi hover */
+}
+
+.add-to-cart:hover i,
+.add-btn-wishlist:hover i {
+    margin-right: 5px;
+}
+
+.add-to-cart:hover span,
+.add-btn-wishlist:hover span {
+    opacity: 1;
+    position: relative; /* Hiển thị text gần với icon */
 }
 
 .add-to{
   margin-bottom: 10px;
-}
-
-.add-to-cart i{
-	margin-right:5px;
-}
-
-.add-to-cart:hover {
-  background: #FE980F;
-  color: #FFFFFF;
 }
 
 .choose {
@@ -1100,30 +1151,13 @@ h2.title {
 
 .card_product img {
   border-radius: 8px; /* Bo góc cho ảnh */
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
 }
 
 .card_product p {
   font-size: 14px; /* Kích thước chữ mô tả */
   color: #666; /* Màu chữ mô tả */
 }
-
-.card_product button {
-  padding: 10px 20px; /* Khoảng cách nút */
-  border: none; /* Bỏ đường viền nút */
-  background-color: #007bff; /* Màu nền xanh */
-  color: #fff; /* Màu chữ nút */
-  border-radius: 4px; /* Bo góc nút */
-  cursor: pointer; /* Trỏ chuột dạng click */
-  font-size: 14px; /* Kích thước chữ nút */
-  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
-}
-
-.card_product button:hover {
-  background-color: #0056b3; /* Màu nền khi hover */
-  scale: 1.02;
-  border-radius: 4px; /* Bo góc nút */
-}
-
 
 #advertisement {
   padding-bottom: 45px;
@@ -2558,5 +2592,3 @@ h2.title {
 .contact-info .social-networks ul li a:hover{
   color: #FE980F;
 }
-
-

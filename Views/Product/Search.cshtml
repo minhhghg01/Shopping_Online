@@ -6,11 +6,7 @@
 <div class="col-sm-3" style="padding: 20px; position: sticky; top: 20px;">
     @Html.Partial("_SidebarPartial")
 </div>
-<style>
-    .product-image-wrapper {
-        height: 450px;
-    }
-</style>
+
 <div class="col-sm-9 padding-right">
     <div class="features_items"><!--features_items-->
         <h2 class="title text-center">@ViewBag.Keyword</h2>
@@ -26,33 +22,33 @@
                                 <p>@item.Name</p>
                                 <p>Danh mục: @item.Category.Name</p>
                                 <p>Thương hiệu: @item.Brand.Name</p>
-                                @if (item.Quantity > 0)
-                                {
-                                    <button class="btn btn-default add-to-cart" 
-                                        data-product_id="@item.Id"><i class="fa fa-shopping-cart"></i>Thêm vào Giỏ hàng</button>
-                                }
-                                else
-                                {
-                                    <button class="btn btn-default add-to-cart disable" style="background-color: #ccc;">
-                                        <i class="fa fa-shopping-cart"></i>Hết hàng </button>
-                                }
+                                <div class="button-group">
+        @if (item.Quantity > 0)
+        {
+            <button class="add-to-cart" data-product_id="@item.Id">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Thêm vào Giỏ hàng</span>
+            </button>
+        }
+        else
+        {
+            <button class="add-to-cart disable" style="background-color: #ccc;">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Hết hàng</span>
+            </button>
+        }
+
+        @if (User.Identity?.IsAuthenticated ?? false)
+        {
+            <button class="add-btn-wishlist" data-product_id="@item.Id">
+                <i class="fa fa-heart"></i>
+                <span>Yêu thích</span>
+            </button>
+        }
+    </div>
                             </div>      
                         </div>
                     </a>
-                    <div class="choose text-center">
-                        @if (User.Identity?.IsAuthenticated ?? false)
-                        {
-                            <ul class="nav nav-pills nav-justified">
-                                <li>
-                                    <button class="btn btn-default add-btn-wishlist" data-product_id="@item.Id"
-                                        style="background-color: #ff6666 ; color: white; padding: 6px 12px; border-radius: 5px;">
-                                        <i class="fa fa-heart" style="margin-right: 5px;"></i>
-                                        Yêu thích
-                                    </button>
-                                </li>
-                            </ul>
-                        }
-                    </div>
                 </div>
             </div>
         }
