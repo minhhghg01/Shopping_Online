@@ -23,10 +23,10 @@
                         {
                             <tr>
                                 <td class="cart_product">
-                                    <a href=""><img src="~/media/products/@item.Image" width="80" height="60"></a>
+                                    <a asp-action="Details" asp-controller="Product" asp-route-Id="@item.ProductId"><img src="~/media/products/@item.Image" width="80" height="60"></a>
                                 </td>
                                 <td class="cart_description">
-                                    <h4><a href="">@item.ProductName</a></h4>
+                                    <h4><a asp-action="Details" asp-controller="Product" asp-route-Id="@item.ProductId">@item.ProductName</a></h4>
                                 </td>
                                 <td class="cart_price">
                                     <p>$@item.Price</p>
