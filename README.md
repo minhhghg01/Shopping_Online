@@ -21,3 +21,7 @@
 ## Account Admin:
   - Username: `minhA01` Password: `abc123`
 
+## Dùng thử ngay:
+  - [đây](http://18.136.159.214:5000/)
+  - Username: `minhAsv01` Password: `abc123`
+
