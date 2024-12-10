@@ -1,11 +1,10 @@
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Shopping_Online.Areas.Admin.Repository;
 using Shopping_Online.Data;
 using Shopping_Online.Models;
-
 var builder = WebApplication.CreateBuilder(args);
-
 // Kết nối db
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
