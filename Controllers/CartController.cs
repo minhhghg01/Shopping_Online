@@ -40,13 +40,13 @@ namespace Shopping_Online.Controllers
             if (cartItem == null)
             {
                 cart.Add(new CartItemModel(product));
+                HttpContext.Session.SetJson("Cart", cart);
+                return Json(new { success = true, message = $"{product.Name} đã được thêm vào giỏ hàng." });
             }
             else
             {
-                cartItem.Quantity++;
+                return Json(new { success = false, message = $"{product.Name} đã có trong giỏ hàng." });
             }
-            HttpContext.Session.SetJson("Cart", cart);
-            return Json(new { success = true, message = $"{product.Name} đã được thêm vào giỏ hàng." });
         }
 
         public async Task<IActionResult> Decrease(int Id)
